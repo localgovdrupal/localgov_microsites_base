@@ -40,4 +40,12 @@ body {
   --footer-text-colour: var(--color-white);
   --footer-link-colour: var(--color-white);
   --footer-link-hover-colour: yellow;
+  --pre-header-background-colour: var(--color-accent);
+  --pre-header-text-colour: var(--color-white);
+  --pre-header-link-colour: var(--color-white);
+  --pre-header-link-hover-colour: yellow;
+  --header-background-colour: var(--color-accent);
+  --header-text-colour: var(--color-white);
+  --header-link-colour: var(--color-white);
+  --header-link-hover-colour: yellow;
 }

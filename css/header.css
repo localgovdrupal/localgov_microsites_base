@@ -1,0 +1,50 @@
+.microsite-header__pre-header {
+  padding: var(--spacing);
+  background-color: var(--pre-header-background-colour);
+  color: var(--pre-header-text-colour);
+}
+
+.microsite-header__pre-header a {
+  color: var(--pre-header-link-colour);
+}
+
+.microsite-header__pre-header a:focus,
+.microsite-header__pre-header a:hover {
+  color: var(--pre-header-link-hover-colour);
+}
+
+.region-microsites-header {
+  padding: var(--spacing);
+  background-color: var(--header-background-colour);
+  color: var(--header-text-colour);
+}
+
+.region-microsites-header a {
+  color: var(--header-link-colour);
+}
+
+.region-microsites-header a:focus,
+.region-microsites-header a:hover {
+  color: var(--header-link-hover-colour);
+}
+
+.microsite-header__main {
+  display: flex;
+  gap: var(--spacing);
+}
+
+.microsite-header__logo {
+  max-width: var(--header-logo-width);
+}
+
+.microsite-header__menus {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.microsite-header__menu .field__items {
+  display: flex;
+  gap: var(--spacing);
+}

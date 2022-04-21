@@ -1,0 +1,88 @@
+{#
+/**
+* @file
+* LocalGovDrupal theme implementation to display a single page.
+*
+* The doctype, html, head and body tags are not in this template. Instead they
+* can be found in the html.html.twig template in this directory.
+*
+* Available variables:
+*
+* General utility variables:
+* - base_path: The base URL path of the Drupal installation. Will usually be
+*   "/" unless you have installed Drupal in a sub-directory.
+* - is_front: A flag indicating if the current page is the front page.
+* - logged_in: A flag indicating if the user is registered and signed in.
+* - is_admin: A flag indicating if the user has permission to access
+*   administration pages.
+* - has_sidebar_first: Can we expect any content in the first sidebar?
+* - has_sidebar_second: See above.
+*
+* Site identity:
+* - front_page: The URL of the front page. Use this instead of base_path when
+*   linking to the front page. This includes the language domain or prefix.
+*
+* Page content (in order of occurrence in the default page.html.twig):
+* - messages: Status and error messages. Should be displayed prominently.
+* - node: Fully loaded node, if there is an automatically-loaded node
+*   associated with the page and the node ID is the second argument in the
+*   page's path (e.g. node/12345 and node/12345/revisions, but not
+*   comment/reply/12345).
+*
+* Regions:
+* - page.header
+* - page.search
+* - page.mobile_search
+* - page.primary_menu
+* - page.secondary_menu
+* - page.banner
+* - page.breadcrumb
+* - page.messages
+* - page.content_top
+* - page.content
+* - page.content_bottom
+* - page.sidebar_first
+* - page.sidebar_second
+* - page.footer_first
+* - page.footer_second
+* - page.disabled
+* @see template_preprocess_page()
+* @see html.html.twig
+*
+* @ingroup themeable
+*/
+#}
+
+{{ attach_library('localgov_microsites_base/header') }}
+
+{% if has_tabs %}
+  {{ page.tabs }}
+{% endif %}
+
+<header class="microsite-header">
+  {{ page.microsites_header }}
+</header>
+
+{% if has_breadcrumb %}
+  {{ page.breadcrumb }}
+{% endif %}
+
+{% if has_messages %}
+  {{ page.messages }}
+{% endif %}
+
+<main class="main" id="main-content"> {# The "skip to content" link jumps to here. #}
+  <div class="lgd-container">
+      <div class="lgd-row">
+        <div class="lgd-row__full">
+          <div class="padding-horizontal">
+            {{ page.content }}
+          </div>
+        </div>
+      </div>
+  </div>
+</main>
+
+<footer class="microsite-footer">
+  {{ page.microsites_footer }}
+</footer>

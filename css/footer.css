@@ -1,0 +1,34 @@
+.region-microsites-footer {
+  padding: var(--spacing);
+  background-color: var(--footer-background-colour);
+  color: var(--footer-text-colour);
+}
+
+.region-microsites-footer a {
+  color: var(--footer-link-colour);
+}
+
+.region-microsites-footer a:focus,
+.region-microsites-footer a:hover {
+  color: var(--footer-link-hover-colour);
+}
+
+.microsite-footer__logos .field__items,
+.microsite-footer__housekeeping .field__items,
+.microsite-footer__copyright,
+.microsite-footer__powered_by {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing);
+  margin-bottom: var(--spacing);
+}
+
+.microsite-footer__text-block {
+  margin-top: var(--spacing);
+  margin-bottom: var(--spacing);
+}
+
+.region-microsites-footer .lgd-row + .lgd-row {
+  margin-top: var(--spacing);
+}

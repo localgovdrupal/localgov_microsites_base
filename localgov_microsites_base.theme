@@ -1,0 +1,82 @@
+<?php
+
+/**
+ * @file Theme function for the LocalGov Microsites Base theme.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function localgov_microsites_base_preprocess_html(&$variables) {
+  $route = \Drupal::request()->attributes->get('_route');
+
+  if ($route === 'entity.group.canonical' || $route === 'entity.group_content.canonical') {
+    $parent_group_id = \Drupal::request()->attributes->get('group')->get('id')->value;
+    $group = \Drupal::entityTypeManager()->getStorage('group')->load($parent_group_id);
+    // Footer background colour
+    if (!is_null($group->get('field_footer_background_colour')[0])) {
+      $footer_background_colour = $group->get('field_footer_background_colour')[0]->getValue()['value'];
+    }
+    if (isset($footer_background_colour)) {
+      $variables['attributes']['style'][] = '--footer-background-colour: ' . $footer_background_colour . ';';
+    }
+    // Footer text colour
+    if (!is_null($group->get('field_footer_text_colour')[0])) {
+      $footer_text_colour = $group->get('field_footer_text_colour')[0]->getValue()['value'];
+    }
+    if (isset($footer_text_colour)) {
+      $variables['attributes']['style'][] = '--footer-text-colour: ' . $footer_text_colour . ';';
+    }
+    // Footer link colour
+    if (!is_null($group->get('field_footer_link_colour')[0])) {
+      $footer_link_colour = $group->get('field_footer_link_colour')[0]->getValue()['value'];
+    }
+    if (isset($footer_link_colour)) {
+      $variables['attributes']['style'][] = '--footer-link-colour: ' . $footer_link_colour . ';';
+    }
+    // Footer link hover state colour
+    if (!is_null($group->get('field_footer_link_hover_colour')[0])) {
+      $footer_link_hover_colour = $group->get('field_footer_link_hover_colour')[0]->getValue()['value'];
+    }
+    if (isset($footer_link_hover_colour)) {
+      $variables['attributes']['style'][] = '--footer-link-hover-colour: ' . $footer_link_hover_colour . ';';
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function localgov_microsites_base_preprocess_region(&$variables) {
+  
+  $route = \Drupal::request()->attributes->get('_route');
+  
+  if ($route === 'entity.group.canonical' || $route === 'entity.group_content.canonical') {
+    $parent_group_id = \Drupal::request()->attributes->get('group')->get('id')->value;
+    $group = \Drupal::entityTypeManager()->getStorage('group')->load($parent_group_id);
+    $variables['microsites']['group']['entity'] = $group;
+    $variables['microsites']['group']['id'] = $parent_group_id;
+    if($variables['region'] === 'microsites_footer') {
+      if (!empty($group->get('field_footer_width')->getValue())) {
+        $width = $group->get('field_footer_width')->getValue()[0]['value'];
+        switch ($width) {
+          case 'full-width':
+            $variables['microsites']['footer']['width']['full_width'] = true;
+            break;
+          case 'full-width-content-centered':
+            $variables['microsites']['footer']['width']['full_width_content_centered'] = true;
+            break;
+          case 'content-centered':
+            $variables['microsites']['footer']['width']['content_centered'] = true;
+            break;
+          
+          default:
+            $variables['microsites']['footer']['width']['full_width_content_centered'] = true;
+            break;
+        }
+      }
+      // dpm($variables);
+    }
+  }
+  
+}

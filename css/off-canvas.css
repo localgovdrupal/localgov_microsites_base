@@ -1,0 +1,41 @@
+.dialog-off-canvas-main-canvas {
+  /* @TODO remove if this gets merged https://github.com/localgovdrupal/localgov_base/pull/188 */
+  position: relative;
+}
+
+.off-canvas {
+  background-color: var(--color-accent);
+  width: 500px;
+  max-width: 90%;
+  transition: var(--transition-time);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10000;
+  border-right: var(--border);
+  border-bottom: var(--border);
+  border-color: var(--off-canvas-border-color);
+}
+
+.off-canvas[data-expanded="false"] {
+  transform: translateX(-100%);
+}
+
+.off-canvas[data-expanded="true"] {
+  transform: translateX(0);
+}
+
+.off-canvas {
+  padding: var(--spacing);
+  background-color: var(--off-canvas-background-color);
+  color: var(--off-canvas-text-color);
+}
+
+.off-canvas a {
+  color: var(--off-canvas-link-color);
+}
+
+.off-canvas a:focus,
+.off-canvas a:hover {
+  color: var(--off-canvas-link-hover-color);
+}

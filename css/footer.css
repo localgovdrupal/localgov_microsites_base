@@ -1,16 +1,16 @@
 .region-microsites-footer {
   padding: var(--spacing);
-  background-color: var(--footer-background-colour);
-  color: var(--footer-text-colour);
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
 }
 
 .region-microsites-footer a {
-  color: var(--footer-link-colour);
+  color: var(--footer-link-color);
 }
 
 .region-microsites-footer a:focus,
 .region-microsites-footer a:hover {
-  color: var(--footer-link-hover-colour);
+  color: var(--footer-link-hover-color);
 }
 
 .microsite-footer__logos .field__items,

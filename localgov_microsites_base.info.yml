@@ -9,6 +9,7 @@ libraries:
 
 regions:
   tabs: "Tabs"
+  off_canvas: "Off Canvas"
   header: "Header"
   search: "Search"
   mobile_search: "Mobile search"

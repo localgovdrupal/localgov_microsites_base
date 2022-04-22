@@ -17,73 +17,73 @@ function localgov_microsites_base_preprocess_html(&$variables) {
     // Pre-header Background colour
     if (!is_null($group->get('field_pre_header_bg_colour')[0])) {
       $pre_header_background_colour = $group->get('field_pre_header_bg_colour')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--pre-header-background-colour: ' . $pre_header_background_colour . ';';
+      $variables['attributes']['style'][] = '--pre-header-background-color: ' . $pre_header_background_colour . ';';
     }
 
     // Pre-header text colour
     if (!is_null($group->get('field_pre_header_text_colour')[0])) {
       $pre_header_text_colour = $group->get('field_pre_header_text_colour')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--pre-header-text-colour: ' . $pre_header_text_colour . ';';
+      $variables['attributes']['style'][] = '--pre-header-text-color: ' . $pre_header_text_colour . ';';
     }
 
     // Pre-header link colour
     if (!is_null($group->get('field_pre_header_link_colour')[0])) {
       $pre_header_link_colour = $group->get('field_pre_header_link_colour')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--pre-header-link-colour: ' . $pre_header_link_colour . ';';
+      $variables['attributes']['style'][] = '--pre-header-link-color: ' . $pre_header_link_colour . ';';
     }
 
     // Pre-header link hover state colour
     if (!is_null($group->get('field_pre_header_link_hover')[0])) {
       $pre_header_link_hover_colour = $group->get('field_pre_header_link_hover')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--pre-header-link-hover-colour: ' . $pre_header_link_hover_colour . ';';
+      $variables['attributes']['style'][] = '--pre-header-link-hover-color: ' . $pre_header_link_hover_colour . ';';
     }
 
     // Header Background colour
     if (!is_null($group->get('field_header_bg_colour')[0])) {
       $header_background_colour = $group->get('field_header_bg_colour')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--header-background-colour: ' . $header_background_colour . ';';
+      $variables['attributes']['style'][] = '--header-background-color: ' . $header_background_colour . ';';
     }
 
     // Header text colour
     if (!is_null($group->get('field_header_text_colour')[0])) {
       $header_text_colour = $group->get('field_header_text_colour')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--header-text-colour: ' . $header_text_colour . ';';
+      $variables['attributes']['style'][] = '--header-text-color: ' . $header_text_colour . ';';
     }
 
     // Header link colour
     if (!is_null($group->get('field_header_link_colour')[0])) {
       $header_link_colour = $group->get('field_header_link_colour')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--header-link-colour: ' . $header_link_colour . ';';
+      $variables['attributes']['style'][] = '--header-link-color: ' . $header_link_colour . ';';
     }
 
     // Header link hover state colour
     if (!is_null($group->get('field_header_link_hover_colour')[0])) {
       $header_link_hover_colour = $group->get('field_header_link_hover_colour')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--header-link-hover-colour: ' . $header_link_hover_colour . ';';
+      $variables['attributes']['style'][] = '--header-link-hover-color: ' . $header_link_hover_colour . ';';
     }
 
     // Footer background colour
     if (!is_null($group->get('field_footer_background_colour')[0])) {
       $footer_background_colour = $group->get('field_footer_background_colour')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--footer-background-colour: ' . $footer_background_colour . ';';
+      $variables['attributes']['style'][] = '--footer-background-color: ' . $footer_background_colour . ';';
     }
 
     // Footer text colour
     if (!is_null($group->get('field_footer_text_colour')[0])) {
       $footer_text_colour = $group->get('field_footer_text_colour')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--footer-text-colour: ' . $footer_text_colour . ';';
+      $variables['attributes']['style'][] = '--footer-text-color: ' . $footer_text_colour . ';';
     }
 
     // Footer link colour
     if (!is_null($group->get('field_footer_link_colour')[0])) {
       $footer_link_colour = $group->get('field_footer_link_colour')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--footer-link-colour: ' . $footer_link_colour . ';';
+      $variables['attributes']['style'][] = '--footer-link-color: ' . $footer_link_colour . ';';
     }
 
     // Footer link hover state colour
     if (!is_null($group->get('field_footer_link_hover_colour')[0])) {
       $footer_link_hover_colour = $group->get('field_footer_link_hover_colour')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--footer-link-hover-colour: ' . $footer_link_hover_colour . ';';
+      $variables['attributes']['style'][] = '--footer-link-hover-color: ' . $footer_link_hover_colour . ';';
     }
   }
 }

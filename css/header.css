@@ -1,31 +1,31 @@
 .microsite-header__pre-header {
   padding: var(--spacing);
-  background-color: var(--pre-header-background-colour);
-  color: var(--pre-header-text-colour);
+  background-color: var(--pre-header-background-color);
+  color: var(--pre-header-text-color);
 }
 
 .microsite-header__pre-header a {
-  color: var(--pre-header-link-colour);
+  color: var(--pre-header-link-color);
 }
 
 .microsite-header__pre-header a:focus,
 .microsite-header__pre-header a:hover {
-  color: var(--pre-header-link-hover-colour);
+  color: var(--pre-header-link-hover-color);
 }
 
 .region-microsites-header {
   padding: var(--spacing);
-  background-color: var(--header-background-colour);
-  color: var(--header-text-colour);
+  background-color: var(--header-background-color);
+  color: var(--header-text-color);
 }
 
 .region-microsites-header a {
-  color: var(--header-link-colour);
+  color: var(--header-link-color);
 }
 
 .region-microsites-header a:focus,
 .region-microsites-header a:hover {
-  color: var(--header-link-hover-colour);
+  color: var(--header-link-hover-color);
 }
 
 .microsite-header__main {

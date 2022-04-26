@@ -17,39 +17,39 @@
 
 {% set microsite_fields_check = microsites.group.entity %}
 
-{% if microsite_fields_check.field_footer_banner.value %}
-  {% set microsite_footer_banner = drupal_field('field_footer_banner', 'group', microsite, 'microsite') %}
+{% if microsite_fields_check.lgms_footer_banner.value %}
+  {% set microsite_footer_banner = drupal_field('lgms_footer_banner', 'group', microsite, 'microsite') %}
 {% endif %}
 
-{% if microsite_fields_check.field_footer_text_block_1.value %}
-  {% set microsite_footer_text_block_1 = drupal_field('field_footer_text_block_1', 'group', microsite, 'microsite') %}
+{% if microsite_fields_check.lgms_footer_text_block_1.value %}
+  {% set microsite_footer_text_block_1 = drupal_field('lgms_footer_text_block_1', 'group', microsite, 'microsite') %}
 {% endif %}
 
-{% if microsite_fields_check.field_footer_text_block_2.value %}
-  {% set microsite_footer_text_block_2 = drupal_field('field_footer_text_block_2', 'group', microsite, 'microsite') %}
+{% if microsite_fields_check.lgms_footer_text_block_2.value %}
+  {% set microsite_footer_text_block_2 = drupal_field('lgms_footer_text_block_2', 'group', microsite, 'microsite') %}
 {% endif %}
 
-{% if microsite_fields_check.field_footer_text_block_3.value %}
-  {% set microsite_footer_text_block_3 = drupal_field('field_footer_text_block_3', 'group', microsite, 'microsite') %}
+{% if microsite_fields_check.lgms_footer_text_block_3.value %}
+  {% set microsite_footer_text_block_3 = drupal_field('lgms_footer_text_block_3', 'group', microsite, 'microsite') %}
 {% endif %}
 
-{% if microsite_fields_check.field_footer_text_block_4.value %}
-  {% set microsite_footer_text_block_4 = drupal_field('field_footer_text_block_4', 'group', microsite, 'microsite') %}
+{% if microsite_fields_check.lgms_footer_text_block_4.value %}
+  {% set microsite_footer_text_block_4 = drupal_field('lgms_footer_text_block_4', 'group', microsite, 'microsite') %}
 {% endif %}
 
-{% if microsite_fields_check.field_footer_logos.value %}
-  {% set microsite_footer_logos = drupal_field('field_footer_logos', 'group', microsite, 'microsite') %}
+{% if microsite_fields_check.lgms_footer_logos.value %}
+  {% set microsite_footer_logos = drupal_field('lgms_footer_logos', 'group', microsite, 'microsite') %}
 {% endif %}
 
-{% if microsite_fields_check.field_housekeepting_menu.value %}
-  {% set microsite_footer_housekeeping = drupal_field('field_housekeepting_menu', 'group', microsite, 'microsite') %}
+{% if microsite_fields_check.lgms_housekeepting_menu.value %}
+  {% set microsite_footer_housekeeping = drupal_field('lgms_housekeepting_menu', 'group', microsite, 'microsite') %}
 {% endif %}
 
-{% if microsite_fields_check.field_copyright.value == 1 %}
+{% if microsite_fields_check.lgms_copyright.value == 1 %}
   {% set microsite_footer_copyright = '©Copyright ' ~ "now"|date("Y") %}
 {% endif %}
 
-{% if microsite_fields_check.field_powered_by.value == 1 %}
+{% if microsite_fields_check.lgms_powered_by.value == 1 %}
   {% set powered_by_message %}
     Powered by <a href="https://localgovdrupal.org">LocalGov Drupal</a>
   {% endset %}

@@ -16,20 +16,20 @@
 {% set microsite = microsites.group.id %}
 {% set microsite_fields_check = microsites.group.entity %}
 
-{% if microsite_fields_check.field_main_logo.value %}
-  {% set microsite_header_logo = drupal_field('field_main_logo', 'group', microsite, 'microsite') %}
+{% if microsite_fields_check.lgms_main_logo.value %}
+  {% set microsite_header_logo = drupal_field('lgms_main_logo', 'group', microsite, 'microsite') %}
 {% endif %}
-{% if microsite_fields_check.field_site_name.value %}
-  {% set microsite_header_site_name = drupal_field('field_site_name', 'group', microsite, 'microsite') %}
+{% if microsite_fields_check.lgms_site_name.value %}
+  {% set microsite_header_site_name = drupal_field('lgms_site_name', 'group', microsite, 'microsite') %}
 {% endif %}
-{% if microsite_fields_check.field_site_slogan.value %}
-  {% set microsite_header_site_slogan = drupal_field('field_site_slogan', 'group', microsite, 'microsite') %}
+{% if microsite_fields_check.lgms_site_slogan.value %}
+  {% set microsite_header_site_slogan = drupal_field('lgms_site_slogan', 'group', microsite, 'microsite') %}
 {% endif %}
-{% if microsite_fields_check.field_utility_menu.value %}
-  {% set microsite_header_utility_menu = drupal_field('field_utility_menu', 'group', microsite, 'microsite') %}
+{% if microsite_fields_check.lgms_utility_menu.value %}
+  {% set microsite_header_utility_menu = drupal_field('lgms_utility_menu', 'group', microsite, 'microsite') %}
 {% endif %}
-{% if microsite_fields_check.field_main_menu.value %}
-  {% set microsite_header_main_menu = drupal_field('field_main_menu', 'group', microsite, 'microsite') %}
+{% if microsite_fields_check.lgms_main_menu.value %}
+  {% set microsite_header_main_menu = drupal_field('lgms_main_menu', 'group', microsite, 'microsite') %}
 {% endif %}
 
 {%

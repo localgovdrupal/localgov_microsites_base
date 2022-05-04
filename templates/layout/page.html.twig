@@ -54,6 +54,7 @@
 #}
 
 {{ attach_library('localgov_microsites_base/header') }}
+{{ attach_library('localgov_microsites_base/footer') }}
 
 {% if has_tabs %}
   {{ page.tabs }}
@@ -63,9 +64,15 @@
   {{ page.off_canvas }}
 </div>
 
-<header class="microsite-header">
+{% block header %}
+  <header class="microsite-header">
+    {% include "@localgov_microsites_base/layout/includes/microsites-header.html.twig" %}
+  </header>
+{% endblock %}
+
+{% if has_microsites_header %}
   {{ page.microsites_header }}
-</header>
+{% endif %}
 
 {% if has_breadcrumb %}
   {{ page.breadcrumb }}
@@ -87,6 +94,12 @@
   </div>
 </main>
 
-<footer class="microsite-footer">
+{% if has_microsites_footer %}
   {{ page.microsites_footer }}
-</footer>
+{% endif %}
+
+{% block footer %}
+  <footer class="microsite-footer">
+    {% include "@localgov_microsites_base/layout/includes/microsites-footer.html.twig" %}
+  </footer>
+{% endblock %}

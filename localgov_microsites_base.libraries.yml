@@ -7,10 +7,10 @@ variables:
       # on other libraries we create.
       css/variables.css: { weight: 200 }
 
-# sample-library
-#   css:
-#     theme:
-#       css/overrides.css: {}
+fonts:
+  css:
+    theme:
+      css/fonts.css: {}
 
 off-canvas:
   css:

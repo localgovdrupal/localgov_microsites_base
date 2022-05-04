@@ -14,6 +14,30 @@ function localgov_microsites_base_preprocess_html(&$variables) {
     $parent_group_id = \Drupal::request()->attributes->get('group')->get('id')->value;
     $group = \Drupal::entityTypeManager()->getStorage('group')->load($parent_group_id);
 
+    // Styleguide primary colour
+    if (!is_null($group->get('lgms_primary_colour')[0])) {
+      $primary_colour = $group->get('lgms_primary_colour')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--color-accent: ' . $primary_colour . ';';
+    }
+
+    // Styleguide line-height
+    if (!is_null($group->get('lgms_base_line_height')[0])) {
+      $line_height = $group->get('lgms_base_line_height')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--line-height: ' . $line_height . ';';
+    }
+
+    // Styleguide body font
+    if (!is_null($group->get('lgms_body_font')[0])) {
+      $body_font = $group->get('lgms_body_font')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = "--font-primary: '$body_font';";
+    }
+
+    // Styleguide font-size
+    if (!is_null($group->get('lgms_base_font_size')[0])) {
+      $font_size = $group->get('lgms_base_font_size')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--font-size: ' . $font_size . ';';
+    }
+
     // Pre-header Background colour
     if (!is_null($group->get('lgms_pre_header_bg_colour')[0])) {
       $pre_header_background_colour = $group->get('lgms_pre_header_bg_colour')[0]->getValue()['value'];
@@ -89,9 +113,9 @@ function localgov_microsites_base_preprocess_html(&$variables) {
 }
 
 /**
- * Implements hook_preprocess_HOOK().
+ * Implements hook_preprocess_page().
  */
-function localgov_microsites_base_preprocess_region(&$variables) {
+function localgov_microsites_base_preprocess_page(&$variables) {
   
   $route = \Drupal::request()->attributes->get('_route');
   
@@ -100,69 +124,60 @@ function localgov_microsites_base_preprocess_region(&$variables) {
     $group = \Drupal::entityTypeManager()->getStorage('group')->load($parent_group_id);
     $variables['microsites']['group']['entity'] = $group;
     $variables['microsites']['group']['id'] = $parent_group_id;
-    if($variables['region'] === 'microsites_footer') {
-      if (!empty($group->get('lgms_footer_width')->getValue())) {
-        $width = $group->get('lgms_footer_width')->getValue()[0]['value'];
-        switch ($width) {
-          case 'full-width':
-            $variables['microsites']['footer']['width']['full_width'] = true;
-            break;
-          case 'full-width-content-centered':
-            $variables['microsites']['footer']['width']['full_width_content_centered'] = true;
-            break;
-          case 'content-centered':
-            $variables['microsites']['footer']['width']['content_centered'] = true;
-            break;
-          
-          default:
-            $variables['microsites']['footer']['width']['full_width_content_centered'] = true;
-            break;
-        }
+    if (!empty($group->get('lgms_footer_width')->getValue())) {
+      $width = $group->get('lgms_footer_width')->getValue()[0]['value'];
+      switch ($width) {
+        case 'full-width':
+          $variables['microsites']['footer']['width']['full_width'] = true;
+          break;
+        case 'full-width-content-centered':
+          $variables['microsites']['footer']['width']['full_width_content_centered'] = true;
+          break;
+        case 'content-centered':
+          $variables['microsites']['footer']['width']['content_centered'] = true;
+          break;
+        
+        default:
+          $variables['microsites']['footer']['width']['full_width_content_centered'] = true;
+          break;
       }
-      // dpm($variables);
     }
     // Pre-header
-    if($variables['region'] === 'microsites_header') {
-      // dpm($variables);
-      if (!empty($group->get('lgms_pre_header_width')->getValue())) {
-        $width = $group->get('lgms_pre_header_width')->getValue()[0]['value'];
-        switch ($width) {
-          case 'full-width':
-            $variables['microsites']['pre_header']['width']['full_width'] = true;
-            break;
-          case 'full-width-content-centered':
-            $variables['microsites']['pre_header']['width']['full_width_content_centered'] = true;
-            break;
-          case 'content-centered':
-            $variables['microsites']['pre_header']['width']['content_centered'] = true;
-            break;
-          
-          default:
-            $variables['microsites']['pre_header']['width']['full_width_content_centered'] = true;
-            break;
-        }
+    if (!empty($group->get('lgms_pre_header_width')->getValue())) {
+      $width = $group->get('lgms_pre_header_width')->getValue()[0]['value'];
+      switch ($width) {
+        case 'full-width':
+          $variables['microsites']['pre_header']['width']['full_width'] = true;
+          break;
+        case 'full-width-content-centered':
+          $variables['microsites']['pre_header']['width']['full_width_content_centered'] = true;
+          break;
+        case 'content-centered':
+          $variables['microsites']['pre_header']['width']['content_centered'] = true;
+          break;
+        
+        default:
+          $variables['microsites']['pre_header']['width']['full_width_content_centered'] = true;
+          break;
       }
     }
     // Header
-    if($variables['region'] === 'microsites_header') {
-      // dpm($variables);
-      if (!empty($group->get('lgms_pre_header_width')->getValue())) {
-        $width = $group->get('lgms_pre_header_width')->getValue()[0]['value'];
-        switch ($width) {
-          case 'full-width':
-            $variables['microsites']['header']['width']['full_width'] = true;
-            break;
-          case 'full-width-content-centered':
-            $variables['microsites']['header']['width']['full_width_content_centered'] = true;
-            break;
-          case 'content-centered':
-            $variables['microsites']['header']['width']['content_centered'] = true;
-            break;
-          
-          default:
-            $variables['microsites']['header']['width']['full_width_content_centered'] = true;
-            break;
-        }
+    if (!empty($group->get('lgms_header_width')->getValue())) {
+      $width = $group->get('lgms_header_width')->getValue()[0]['value'];
+      switch ($width) {
+        case 'full-width':
+          $variables['microsites']['header']['width']['full_width'] = true;
+          break;
+        case 'full-width-content-centered':
+          $variables['microsites']['header']['width']['full_width_content_centered'] = true;
+          break;
+        case 'content-centered':
+          $variables['microsites']['header']['width']['content_centered'] = true;
+          break;
+        
+        default:
+          $variables['microsites']['header']['width']['full_width_content_centered'] = true;
+          break;
       }
     }
   }

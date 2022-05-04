@@ -53,4 +53,5 @@ body {
   --off-canvas-link-color: var(--header-link-color);
   --off-canvas-link-hover-color: var(--header-link-hover-color);
   --off-canvas-border-color: var(--color-white);
+  --font-primary: 'Helvetica';
 }

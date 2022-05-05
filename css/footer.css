@@ -1,7 +1,7 @@
 .region-microsites-footer {
   padding: var(--spacing);
-  background-color: var(--footer-background-color);
   color: var(--footer-text-color);
+  background-color: var(--footer-background-color);
 }
 
 .region-microsites-footer a {

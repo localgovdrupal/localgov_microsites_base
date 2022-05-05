@@ -4,17 +4,17 @@
 }
 
 .off-canvas {
-  background-color: var(--color-accent);
+  position: absolute;
+  z-index: 10000;
+  top: 0;
   width: 500px;
   max-width: 90%;
-  transition: var(--transition-time);
   height: 100%;
-  position: absolute;
-  top: 0;
-  z-index: 10000;
+  transition: var(--transition-time);
+  border-color: var(--off-canvas-border-color);
   border-right: var(--border);
   border-bottom: var(--border);
-  border-color: var(--off-canvas-border-color);
+  background-color: var(--color-accent);
 }
 
 .off-canvas[data-expanded="false"] {
@@ -27,8 +27,8 @@
 
 .off-canvas {
   padding: var(--spacing);
-  background-color: var(--off-canvas-background-color);
   color: var(--off-canvas-text-color);
+  background-color: var(--off-canvas-background-color);
 }
 
 .off-canvas a {

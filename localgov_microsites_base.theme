@@ -20,16 +20,34 @@ function localgov_microsites_base_preprocess_html(&$variables) {
       $variables['attributes']['style'][] = '--color-accent: ' . $primary_colour . ';';
     }
 
-    // Styleguide line-height
-    if (!is_null($group->get('lgms_base_line_height')[0])) {
-      $line_height = $group->get('lgms_base_line_height')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--line-height: ' . $line_height . ';';
+    // Styleguide heading font
+    if (!is_null($group->get('lgms_heading_font')[0])) {
+      $heading_font = $group->get('lgms_heading_font')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = "--font-secondary: '$heading_font';";
+    }
+
+    // Styleguide heading 1 font
+    if (!is_null($group->get('lgms_heading_1_font')[0])) {
+      $heading_1_font = $group->get('lgms_heading_1_font')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = "--font-heading-1: '$heading_1_font';";
+    }
+
+    // Styleguide heading 2 font
+    if (!is_null($group->get('lgms_heading_2_font')[0])) {
+      $heading_2_font = $group->get('lgms_heading_2_font')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = "--font-heading-2: '$heading_2_font';";
     }
 
     // Styleguide body font
     if (!is_null($group->get('lgms_body_font')[0])) {
       $body_font = $group->get('lgms_body_font')[0]->getValue()['value'];
       $variables['attributes']['style'][] = "--font-primary: '$body_font';";
+    }
+
+    // Styleguide line-height
+    if (!is_null($group->get('lgms_base_line_height')[0])) {
+      $line_height = $group->get('lgms_base_line_height')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--line-height: ' . $line_height . ';';
     }
 
     // Styleguide font-size

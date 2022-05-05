@@ -1,7 +1,7 @@
 .microsite-header__pre-header {
   padding: var(--spacing);
-  background-color: var(--pre-header-background-color);
   color: var(--pre-header-text-color);
+  background-color: var(--pre-header-background-color);
 }
 
 .microsite-header__pre-header a {
@@ -15,8 +15,8 @@
 
 .region-microsites-header {
   padding: var(--spacing);
-  background-color: var(--header-background-color);
   color: var(--header-text-color);
+  background-color: var(--header-background-color);
 }
 
 .region-microsites-header a {
@@ -38,10 +38,10 @@
 }
 
 .microsite-header__menus {
-  margin-left: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-left: auto;
 }
 
 .microsite-header__menu .field__items {

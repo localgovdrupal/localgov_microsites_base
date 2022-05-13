@@ -47,13 +47,13 @@
 {% endif %}
 <div class="microsite-header__pre-header">
 
-  {% if microsites.pre_header.width.full_width_content_centered %}
+  {% if microsites.pre_header.width.full_width_content_contained %}
     <div class="lgd-container padding-horizontal">
   {% endif %}
   <div class="microsite-header__search">
     <p>Search Form with <a href="#">link</a></p>
   </div>
-  {% if microsites.pre_header.width.full_width_content_centered %}
+  {% if microsites.pre_header.width.full_width_content_contained %}
     </div>
   {% endif %}
 </div>
@@ -65,7 +65,7 @@
 
 {# Begin Header #}
 <div{{ header_attributes.addClass(header_classes) }}>
-  {% if microsites.header.width.full_width_content_centered %}
+  {% if microsites.header.width.full_width_content_contained %}
     <div class="lgd-container padding-horizontal">
   {% endif %}
     
@@ -112,7 +112,7 @@
     {# End Microsite Header Main #}
   </div>
 
-  {% if microsites.footer.width.full_width_content_centered %}
+  {% if microsites.footer.width.full_width_content_contained %}
     </div> 
   {% endif %}
 </div>

@@ -148,15 +148,15 @@ function localgov_microsites_base_preprocess_page(&$variables) {
         case 'full-width':
           $variables['microsites']['footer']['width']['full_width'] = true;
           break;
-        case 'full-width-content-centered':
-          $variables['microsites']['footer']['width']['full_width_content_centered'] = true;
+        case 'full-width-content-contained':
+          $variables['microsites']['footer']['width']['full_width_content_contained'] = true;
           break;
         case 'content-centered':
           $variables['microsites']['footer']['width']['content_centered'] = true;
           break;
         
         default:
-          $variables['microsites']['footer']['width']['full_width_content_centered'] = true;
+          $variables['microsites']['footer']['width']['full_width_content_contained'] = true;
           break;
       }
     }
@@ -167,15 +167,15 @@ function localgov_microsites_base_preprocess_page(&$variables) {
         case 'full-width':
           $variables['microsites']['pre_header']['width']['full_width'] = true;
           break;
-        case 'full-width-content-centered':
-          $variables['microsites']['pre_header']['width']['full_width_content_centered'] = true;
+        case 'full-width-content-contained':
+          $variables['microsites']['pre_header']['width']['full_width_content_contained'] = true;
           break;
         case 'content-centered':
           $variables['microsites']['pre_header']['width']['content_centered'] = true;
           break;
         
         default:
-          $variables['microsites']['pre_header']['width']['full_width_content_centered'] = true;
+          $variables['microsites']['pre_header']['width']['full_width_content_contained'] = true;
           break;
       }
     }
@@ -186,15 +186,15 @@ function localgov_microsites_base_preprocess_page(&$variables) {
         case 'full-width':
           $variables['microsites']['header']['width']['full_width'] = true;
           break;
-        case 'full-width-content-centered':
-          $variables['microsites']['header']['width']['full_width_content_centered'] = true;
+        case 'full-width-content-contained':
+          $variables['microsites']['header']['width']['full_width_content_contained'] = true;
           break;
         case 'content-centered':
           $variables['microsites']['header']['width']['content_centered'] = true;
           break;
         
         default:
-          $variables['microsites']['header']['width']['full_width_content_centered'] = true;
+          $variables['microsites']['header']['width']['full_width_content_contained'] = true;
           break;
       }
     }

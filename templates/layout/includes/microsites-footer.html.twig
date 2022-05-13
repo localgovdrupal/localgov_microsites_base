@@ -74,7 +74,7 @@
 
 <div{{ footer_attributes.addClass(footer_classes) }}>
 
-{% if microsites.footer.width.full_width_content_centered %}
+{% if microsites.footer.width.full_width_content_contained %}
   <div class="lgd-container padding-horizontal">
 {% endif %}
   <div class="lgd-region__inner lgd-region__inner--{{ region|clean_class }}">
@@ -158,7 +158,7 @@
     </div> 
     {# End Footer Powered By #}
   </div>
-{% if microsites.footer.width.full_width_content_centered %}
+{% if microsites.footer.width.full_width_content_contained %}
   </div> 
 {% endif %}
 </div>

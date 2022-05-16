@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\domain_group\DomainGroupHelper;
+
 /**
  * @file Theme function for the LocalGov Microsites Base theme.
  */
@@ -8,10 +10,17 @@
  * Implements hook_preprocess_HOOK().
  */
 function localgov_microsites_base_preprocess_html(&$variables) {
-  $route = \Drupal::request()->attributes->get('_route');
 
-  if ($route === 'entity.group.canonical' || $route === 'entity.group_content.canonical') {
+  $parent_group_id = \Drupal::service('class_resolver')
+  ->getInstanceFromDefinition(DomainGroupHelper::class)
+    ->getActiveDomainGroup();
+
+    if (empty($parent_group_id)) {
     $parent_group_id = \Drupal::request()->attributes->get('group')->get('id')->value;
+  }
+
+  if ($parent_group_id) {
+
     $group = \Drupal::entityTypeManager()->getStorage('group')->load($parent_group_id);
 
     // Styleguide primary colour
@@ -134,11 +143,16 @@ function localgov_microsites_base_preprocess_html(&$variables) {
  * Implements hook_preprocess_page().
  */
 function localgov_microsites_base_preprocess_page(&$variables) {
-  
-  $route = \Drupal::request()->attributes->get('_route');
-  
-  if ($route === 'entity.group.canonical' || $route === 'entity.group_content.canonical') {
+
+  $parent_group_id = \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(DomainGroupHelper::class)
+    ->getActiveDomainGroup();
+
+  if (empty($parent_group_id)) {
     $parent_group_id = \Drupal::request()->attributes->get('group')->get('id')->value;
+  }
+
+  if ($parent_group_id) {
     $group = \Drupal::entityTypeManager()->getStorage('group')->load($parent_group_id);
     $variables['microsites']['group']['entity'] = $group;
     $variables['microsites']['group']['id'] = $parent_group_id;
@@ -154,7 +168,7 @@ function localgov_microsites_base_preprocess_page(&$variables) {
         case 'content-centered':
           $variables['microsites']['footer']['width']['content_centered'] = true;
           break;
-        
+
         default:
           $variables['microsites']['footer']['width']['full_width_content_contained'] = true;
           break;
@@ -173,7 +187,7 @@ function localgov_microsites_base_preprocess_page(&$variables) {
         case 'content-centered':
           $variables['microsites']['pre_header']['width']['content_centered'] = true;
           break;
-        
+
         default:
           $variables['microsites']['pre_header']['width']['full_width_content_contained'] = true;
           break;
@@ -192,7 +206,7 @@ function localgov_microsites_base_preprocess_page(&$variables) {
         case 'content-centered':
           $variables['microsites']['header']['width']['content_centered'] = true;
           break;
-        
+
         default:
           $variables['microsites']['header']['width']['full_width_content_contained'] = true;
           break;

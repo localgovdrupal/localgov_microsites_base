@@ -35,16 +35,40 @@ function localgov_microsites_base_preprocess_html(&$variables) {
       $variables['attributes']['style'][] = "--font-secondary: '$heading_font';";
     }
 
-    // Styleguide heading 1 font
+    // Heading Overrides heading 1 font
     if (!is_null($group->get('lgms_heading_1_font')[0])) {
       $heading_1_font = $group->get('lgms_heading_1_font')[0]->getValue()['value'];
       $variables['attributes']['style'][] = "--font-heading-1: '$heading_1_font';";
     }
 
-    // Styleguide heading 2 font
+    // Heading Overrides heading 2 font
     if (!is_null($group->get('lgms_heading_2_font')[0])) {
       $heading_2_font = $group->get('lgms_heading_2_font')[0]->getValue()['value'];
       $variables['attributes']['style'][] = "--font-heading-2: '$heading_2_font';";
+    }
+
+    // Heading Overrides heading 3 font
+    if (!is_null($group->get('lgms_heading_3_font')[0])) {
+      $heading_3_font = $group->get('lgms_heading_3_font')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = "--font-heading-3: '$heading_3_font';";
+    }
+
+    // Heading Overrides heading 4 font
+    if (!is_null($group->get('lgms_heading_4_font')[0])) {
+      $heading_4_font = $group->get('lgms_heading_4_font')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = "--font-heading-4: '$heading_4_font';";
+    }
+
+    // Heading Overrides heading 5 font
+    if (!is_null($group->get('lgms_heading_5_font')[0])) {
+      $heading_5_font = $group->get('lgms_heading_5_font')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = "--font-heading-5: '$heading_5_font';";
+    }
+
+    // Heading Overrides heading 6 font
+    if (!is_null($group->get('lgms_heading_6_font')[0])) {
+      $heading_6_font = $group->get('lgms_heading_6_font')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = "--font-heading-6: '$heading_6_font';";
     }
 
     // Styleguide body font
@@ -59,11 +83,156 @@ function localgov_microsites_base_preprocess_html(&$variables) {
       $variables['attributes']['style'][] = '--line-height: ' . $line_height . ';';
     }
 
+    // Heading Overrides heading 1 font weight
+    if (!is_null($group->get('lgms_heading_1_font_weight')[0])) {
+      $font_weight = $group->get('lgms_heading_1_font_weight')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--heading-1-font-weight: ' . $font_weight . ';';
+    }
+
+    // Heading Overrides heading 2 font weight
+    if (!is_null($group->get('lgms_heading_2_font_weight')[0])) {
+      $font_weight = $group->get('lgms_heading_2_font_weight')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--heading-2-font-weight: ' . $font_weight . ';';
+    }
+
+    // Heading Overrides heading 3 font weight
+    if (!is_null($group->get('lgms_heading_3_font_weight')[0])) {
+      $font_weight = $group->get('lgms_heading_3_font_weight')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--heading-3-font-weight: ' . $font_weight . ';';
+    }
+
+    // Heading Overrides heading 4 font weight
+    if (!is_null($group->get('lgms_heading_4_font_weight')[0])) {
+      $font_weight = $group->get('lgms_heading_4_font_weight')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--heading-4-font-weight: ' . $font_weight . ';';
+    }
+
+    // Heading Overrides heading 5 font weight
+    if (!is_null($group->get('lgms_heading_5_font_weight')[0])) {
+      $font_weight = $group->get('lgms_heading_5_font_weight')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--heading-5-font-weight: ' . $font_weight . ';';
+    }
+
+    // Heading Overrides heading 6 font weight
+    if (!is_null($group->get('lgms_heading_6_font_weight')[0])) {
+      $font_weight = $group->get('lgms_heading_6_font_weight')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--heading-6-font-weight: ' . $font_weight . ';';
+    }
+
+    // Heading Overrides heading 1 font colour
+    if (!is_null($group->get('lgms_heading_1_font_colour')[0])) {
+      $font_colour = $group->get('lgms_heading_1_font_colour')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--heading-1-colour: ' . $font_colour . ';';
+    }
+
+    // Heading Overrides heading 2 font colour
+    if (!is_null($group->get('lgms_heading_2_font_colour')[0])) {
+      $font_colour = $group->get('lgms_heading_2_font_colour')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--heading-2-colour: ' . $font_colour . ';';
+    }
+
+    // Heading Overrides heading 3 font colour
+    if (!is_null($group->get('lgms_heading_3_font_colour')[0])) {
+      $font_colour = $group->get('lgms_heading_3_font_colour')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--heading-3-colour: ' . $font_colour . ';';
+    }
+
+    // Heading Overrides heading 4 font colour
+    if (!is_null($group->get('lgms_heading_4_font_colour')[0])) {
+      $font_colour = $group->get('lgms_heading_4_font_colour')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--heading-4-colour: ' . $font_colour . ';';
+    }
+
+    // Heading Overrides heading 5 font colour
+    if (!is_null($group->get('lgms_heading_5_font_colour')[0])) {
+      $font_colour = $group->get('lgms_heading_5_font_colour')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--heading-5-colour: ' . $font_colour . ';';
+    }
+
+    // Heading Overrides heading 6 font colour
+    if (!is_null($group->get('lgms_heading_6_font_colour')[0])) {
+      $font_colour = $group->get('lgms_heading_6_font_colour')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--heading-6-colour: ' . $font_colour . ';';
+    }
+
+    // Heading Overrides heading 1 line height
+    if (!is_null($group->get('lgms_heading_1_line_height')[0])) {
+      $line_height = $group->get('lgms_heading_1_line_height')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--heading-1-line-height: ' . $line_height . ';';
+    }
+
+    // Heading Overrides heading 2 line height
+    if (!is_null($group->get('lgms_heading_2_line_height')[0])) {
+      $line_height = $group->get('lgms_heading_2_line_height')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--heading-2-line-height: ' . $line_height . ';';
+    }
+
+    // Heading Overrides heading 3 line height
+    if (!is_null($group->get('lgms_heading_3_line_height')[0])) {
+      $line_height = $group->get('lgms_heading_3_line_height')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--heading-3-line-height: ' . $line_height . ';';
+    }
+
+    // Heading Overrides heading 4 line height
+    if (!is_null($group->get('lgms_heading_4_line_height')[0])) {
+      $line_height = $group->get('lgms_heading_4_line_height')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--heading-4-line-height: ' . $line_height . ';';
+    }
+
+    // Heading Overrides heading 5 line height
+    if (!is_null($group->get('lgms_heading_5_line_height')[0])) {
+      $line_height = $group->get('lgms_heading_5_line_height')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--heading-5-line-height: ' . $line_height . ';';
+    }
+
+    // Heading Overrides heading 6 line height
+    if (!is_null($group->get('lgms_heading_6_line_height')[0])) {
+      $line_height = $group->get('lgms_heading_6_line_height')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--heading-6-line-height: ' . $line_height . ';';
+    }
+
+    // Heading Overrides heading 1 font-size
+    if (!is_null($group->get('lgms_heading_1_font_size')[0])) {
+      $font_size = $group->get('lgms_heading_1_font_size')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--font-size-h1: ' . $font_size . ';';
+    }
+
+    // Heading Overrides heading 2 font-size
+    if (!is_null($group->get('lgms_heading_2_font_size')[0])) {
+      $font_size = $group->get('lgms_heading_2_font_size')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--font-size-h2: ' . $font_size . ';';
+    }
+
+    // Heading Overrides heading 3 font-size
+    if (!is_null($group->get('lgms_heading_3_font_size')[0])) {
+      $font_size = $group->get('lgms_heading_3_font_size')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--font-size-h3: ' . $font_size . ';';
+    }
+
+    // Heading Overrides heading 4 font-size
+      if (!is_null($group->get('lgms_heading_4_font_size')[0])) {
+      $font_size = $group->get('lgms_heading_4_font_size')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--font-size-h4: ' . $font_size . ';';
+    }
+
+     // Heading Overrides heading 5 font-size
+    if (!is_null($group->get('lgms_heading_5_font_size')[0])) {
+      $font_size = $group->get('lgms_heading_5_font_size')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--font-size-h5: ' . $font_size . ';';
+    }
+
+    // Heading Overrides heading 6 font-size
+    if (!is_null($group->get('lgms_heading_6_font_size')[0])) {
+      $font_size = $group->get('lgms_heading_6_font_size')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--font-size-h6: ' . $font_size . ';';
+    }
+
     // Styleguide font-size
     if (!is_null($group->get('lgms_base_font_size')[0])) {
       $font_size = $group->get('lgms_base_font_size')[0]->getValue()['value'];
       $variables['attributes']['style'][] = '--font-size: ' . $font_size . ';';
     }
+
 
     // Pre-header Background colour
     if (!is_null($group->get('lgms_pre_header_bg_colour')[0])) {

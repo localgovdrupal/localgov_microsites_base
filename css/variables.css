@@ -34,22 +34,38 @@
 */
 body {
   --color-accent: #682558;
+  --color-accent-2: var(--color-white);
+  --color-text-light: var(--color-white);
+  --color-text-dark: var(--color-black);
+  --color-text: var(--color-text-dark);
   --line-height: 1.3;
   --footer-background-color: var(--color-accent);
-  --footer-text-color: var(--color-white);
-  --footer-link-color: var(--color-white);
-  --footer-link-hover-color: var(--color-yellow);
+  --footer-text-color: var(--color-text-light);
+  --footer-link-color: var(--color-text-light);
+  --footer-link-hover-color: var(--color-accent-2);
   --pre-header-background-color: var(--color-accent);
-  --pre-header-text-color: var(--color-white);
-  --pre-header-link-color: var(--color-white);
-  --pre-header-link-hover-color: var(--color-yellow);
+  --pre-header-text-color: var(--color-text-light);
+  --pre-header-link-color: var(--color-text-light);
+  --pre-header-link-hover-color: var(--color-accent-2);
   --header-background-color: var(--color-accent);
-  --header-text-color: var(--color-white);
-  --header-link-color: var(--color-white);
-  --header-link-hover-color: var(--color-yellow);
+  --header-text-color: var(--color-text-light);
+  --header-link-color: var(--color-text-light);
+  --header-link-hover-color: var(--color-accent-2);
   --off-canvas-background-color: var(--header-background-color);
   --off-canvas-text-color: var(--header-text-color);
   --off-canvas-link-color: var(--header-link-color);
   --off-canvas-link-hover-color: var(--header-link-hover-color);
   --off-canvas-border-color: var(--color-white);
+  --base-spacing: 1rem;
+
+  /* Widths and Spacing */
+  --spacing-smallest: calc(var(--base-spacing)/4);
+  --spacing-smaller: calc(var(--base-spacing)/2);
+  --spacing-small: calc(var(--base-spacing)*0.75);
+  --spacing: var(--base-spacing);
+  --spacing-large: calc(var(--base-spacing)*1.5);
+  --spacing-larger: calc(var(--base-spacing)*2);
+  --spacing-largest: calc(var(--base-spacing)*2.5);
+  --spacing-mega: calc(var(--base-spacing)*3);
+  --vertical-rhythm-spacing: calc(var(--line-height) * var(--base-spacing));
 }

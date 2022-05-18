@@ -29,10 +29,58 @@ function localgov_microsites_base_preprocess_html(&$variables) {
       $variables['attributes']['style'][] = '--color-accent: ' . $primary_colour . ';';
     }
 
+    // Styleguide secondary colour
+    if (!is_null($group->get('lgms_secondary_colour')[0])) {
+      $secondary_colour = $group->get('lgms_secondary_colour')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--color-accent-2: ' . $secondary_colour . ';';
+    }
+
+    // Styleguide text colour (light)
+    if (!is_null($group->get('lgms_text_colour_light')[0])) {
+      $text_colour_light = $group->get('lgms_text_colour_light')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--color-text-light: ' . $text_colour_light . ';';
+    }
+
+    // Styleguide base spacing
+    if (!is_null($group->get('lgms_base_spacing')[0])) {
+      $spacing = $group->get('lgms_base_spacing')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--base-spacing: ' . $spacing . ';';
+    }
+
+    // Styleguide text colour (dark)
+    if (!is_null($group->get('lgms_text_colour_dark')[0])) {
+      $text_colour_dark = $group->get('lgms_text_colour_dark')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--color-text-dark: ' . $text_colour_dark . ';';
+    }
+
     // Styleguide heading font
     if (!is_null($group->get('lgms_heading_font')[0])) {
       $heading_font = $group->get('lgms_heading_font')[0]->getValue()['value'];
       $variables['attributes']['style'][] = "--font-secondary: '$heading_font';";
+    }
+
+    // Styleguide heading font weight
+    if (!is_null($group->get('lgms_heading_font_weight')[0])) {
+      $heading_font_weight = $group->get('lgms_heading_font_weight')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = "--heading-font-weight: '$heading_font_weight';";
+    }
+
+    // Styleguide font-size
+    if (!is_null($group->get('lgms_base_font_size')[0])) {
+      $font_size = $group->get('lgms_base_font_size')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--font-size: ' . $font_size . ';';
+    }
+
+    // Styleguide body font
+    if (!is_null($group->get('lgms_body_font')[0])) {
+      $body_font = $group->get('lgms_body_font')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = "--font-primary: '$body_font';";
+    }
+
+    // Styleguide line-height
+    if (!is_null($group->get('lgms_base_line_height')[0])) {
+      $line_height = $group->get('lgms_base_line_height')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--line-height: ' . $line_height . ';';
     }
 
     // Heading Overrides heading 1 font
@@ -71,17 +119,6 @@ function localgov_microsites_base_preprocess_html(&$variables) {
       $variables['attributes']['style'][] = "--font-heading-6: '$heading_6_font';";
     }
 
-    // Styleguide body font
-    if (!is_null($group->get('lgms_body_font')[0])) {
-      $body_font = $group->get('lgms_body_font')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = "--font-primary: '$body_font';";
-    }
-
-    // Styleguide line-height
-    if (!is_null($group->get('lgms_base_line_height')[0])) {
-      $line_height = $group->get('lgms_base_line_height')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--line-height: ' . $line_height . ';';
-    }
 
     // Heading Overrides heading 1 font weight
     if (!is_null($group->get('lgms_heading_1_font_weight')[0])) {
@@ -226,13 +263,6 @@ function localgov_microsites_base_preprocess_html(&$variables) {
       $font_size = $group->get('lgms_heading_6_font_size')[0]->getValue()['value'];
       $variables['attributes']['style'][] = '--font-size-h6: ' . $font_size . ';';
     }
-
-    // Styleguide font-size
-    if (!is_null($group->get('lgms_base_font_size')[0])) {
-      $font_size = $group->get('lgms_base_font_size')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--font-size: ' . $font_size . ';';
-    }
-
 
     // Pre-header Background colour
     if (!is_null($group->get('lgms_pre_header_bg_colour')[0])) {

@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\domain_group\DomainGroupHelper;
+use Drupal\localgov_microsites_group\Entity\MicrositeGroupInterface;
 
 /**
  * @file Theme function for the LocalGov Microsites Base theme.
@@ -21,7 +22,7 @@ function localgov_microsites_base_preprocess_html(&$variables) {
     $group = \Drupal::request()->attributes->get('group');
   }
 
-  if (!empty($group)) {
+  if ($group instanceof MicrositeGroupInterface) {
 
     // Styleguide primary colour
     if (!is_null($group->get('lgms_primary_colour')[0])) {
@@ -154,8 +155,7 @@ function localgov_microsites_base_preprocess_page(&$variables) {
     $group = \Drupal::request()->attributes->get('group');
   }
 
-  if (!empty($group)) {
-    $group = \Drupal::entityTypeManager()->getStorage('group')->load($parent_group_id);
+  if ($group instanceof MicrositeGroupInterface) {
     $variables['microsites']['group']['entity'] = $group;
     $variables['microsites']['group']['id'] = $parent_group_id;
     if (!empty($group->get('lgms_footer_width')->getValue())) {

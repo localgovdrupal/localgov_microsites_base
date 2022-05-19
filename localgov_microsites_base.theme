@@ -44,7 +44,7 @@ function localgov_microsites_base_preprocess_html(&$variables) {
     // Styleguide base spacing
     if (!is_null($group->get('lgms_base_spacing')[0])) {
       $spacing = $group->get('lgms_base_spacing')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--base-spacing: ' . $spacing . ';';
+      $variables['attributes']['style'][] = '--spacing: ' . $spacing . ';';
     }
 
     // Styleguide text colour (dark)

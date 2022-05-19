@@ -56,16 +56,5 @@ body {
   --off-canvas-link-color: var(--header-link-color);
   --off-canvas-link-hover-color: var(--header-link-hover-color);
   --off-canvas-border-color: var(--color-white);
-  --base-spacing: 1rem;
-
-  /* Widths and Spacing */
-  --spacing-smallest: calc(var(--base-spacing)/4);
-  --spacing-smaller: calc(var(--base-spacing)/2);
-  --spacing-small: calc(var(--base-spacing)*0.75);
-  --spacing: var(--base-spacing);
-  --spacing-large: calc(var(--base-spacing)*1.5);
-  --spacing-larger: calc(var(--base-spacing)*2);
-  --spacing-largest: calc(var(--base-spacing)*2.5);
-  --spacing-mega: calc(var(--base-spacing)*3);
-  --vertical-rhythm-spacing: calc(var(--line-height) * var(--base-spacing));
+  --spacing: 1rem;
 }

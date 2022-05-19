@@ -50,9 +50,11 @@
   {% if microsites.pre_header.width.full_width_content_contained %}
     <div class="lgd-container padding-horizontal">
   {% endif %}
-  <div class="microsite-header__search">
-    <p>Search Form with <a href="#">link</a></p>
-  </div>
+  {% if has_search %}
+    <div class="microsite-header__search">
+      {{ search }}
+    </div>
+  {% endif %}
   {% if microsites.pre_header.width.full_width_content_contained %}
     </div>
   {% endif %}
@@ -68,7 +70,7 @@
   {% if microsites.header.width.full_width_content_contained %}
     <div class="lgd-container padding-horizontal">
   {% endif %}
-    
+
   <div class="lgd-region__inner lgd-region__inner--{{ region|clean_class }}">
     {# Begin Microsite Header Main #}
     <div class="microsite-header__main">
@@ -91,29 +93,32 @@
           {% endif %}
         </div>
       {% endif %}
-      {% if microsite_header_utility_menu or microsite_header_main_menu %}
+      {% if has_primary_menu or has_secondary_menu %}
         <div class="microsite-header__menus">
-          {% if microsite_header_utility_menu %}
+          {% if has_secondary_menu %}
             <div class="microsite-header__menu microsite-header__menu--utility">
-              {{ microsite_header_utility_menu}}
+              {{ secondary_menu }}
             </div>
           {% endif %}
-          {% if microsite_header_main_menu %}
+          {% if has_primary_menu %}
             <div class="microsite-header__menu microsite-header__menu--main">
-              {{ microsite_header_main_menu}}
+              {{ primary_menu }}
             </div>
           {% endif %}
         </div>
       {% endif %}
       <div class="microsite-header__off-canvas">
         <button class="microsite-header__off-canvas-toggle" aria-controls="#off-canvas" aria-expanded="false" aria-label="{{ 'menu toggle'|t }}">{{ 'Menu'|t }}</button>
+        {% if has_off_canvas %}
+          {{ off_canvas }}
+        {% endif %}
       </div>
     </div>
     {# End Microsite Header Main #}
   </div>
 
   {% if microsites.footer.width.full_width_content_contained %}
-    </div> 
+    </div>
   {% endif %}
 </div>
 {# End Header #}

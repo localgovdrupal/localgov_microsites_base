@@ -70,8 +70,12 @@
   </header>
 {% endblock %}
 
-{% if has_microsites_header %}
-  {{ page.microsites_header }}
+{% if has_header %}
+  {{ page.header }}
+{% endif %}
+
+{% if has_banner %}
+  {{ page.banner }}
 {% endif %}
 
 {% if has_breadcrumb %}
@@ -83,6 +87,11 @@
 {% endif %}
 
 <main class="main" id="main-content"> {# The "skip to content" link jumps to here. #}
+
+  {% if has_content_top %}
+    {{ page.content_top }}
+  {% endif %}
+
   <div class="lgd-container">
       <div class="lgd-row">
         <div class="lgd-row__full">
@@ -92,10 +101,14 @@
         </div>
       </div>
   </div>
+
+  {% if has_content_bottom %}
+    {{ page.content_bottom }}
+  {% endif %}
 </main>
 
-{% if has_microsites_footer %}
-  {{ page.microsites_footer }}
+{% if has_footer %}
+  {{ page.footer }}
 {% endif %}
 
 {% block footer %}

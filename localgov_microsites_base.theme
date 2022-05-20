@@ -160,37 +160,37 @@ function localgov_microsites_base_preprocess_html(&$variables) {
     // Heading Overrides heading 1 font colour
     if (!is_null($group->get('lgms_heading_1_font_colour')[0])) {
       $font_colour = $group->get('lgms_heading_1_font_colour')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--heading-1-colour: ' . $font_colour . ';';
+      $variables['attributes']['style'][] = '--heading-1-color: ' . $font_colour . ';';
     }
 
     // Heading Overrides heading 2 font colour
     if (!is_null($group->get('lgms_heading_2_font_colour')[0])) {
       $font_colour = $group->get('lgms_heading_2_font_colour')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--heading-2-colour: ' . $font_colour . ';';
+      $variables['attributes']['style'][] = '--heading-2-color: ' . $font_colour . ';';
     }
 
     // Heading Overrides heading 3 font colour
     if (!is_null($group->get('lgms_heading_3_font_colour')[0])) {
       $font_colour = $group->get('lgms_heading_3_font_colour')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--heading-3-colour: ' . $font_colour . ';';
+      $variables['attributes']['style'][] = '--heading-3-color: ' . $font_colour . ';';
     }
 
     // Heading Overrides heading 4 font colour
     if (!is_null($group->get('lgms_heading_4_font_colour')[0])) {
       $font_colour = $group->get('lgms_heading_4_font_colour')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--heading-4-colour: ' . $font_colour . ';';
+      $variables['attributes']['style'][] = '--heading-4-color: ' . $font_colour . ';';
     }
 
     // Heading Overrides heading 5 font colour
     if (!is_null($group->get('lgms_heading_5_font_colour')[0])) {
       $font_colour = $group->get('lgms_heading_5_font_colour')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--heading-5-colour: ' . $font_colour . ';';
+      $variables['attributes']['style'][] = '--heading-5-color: ' . $font_colour . ';';
     }
 
     // Heading Overrides heading 6 font colour
     if (!is_null($group->get('lgms_heading_6_font_colour')[0])) {
       $font_colour = $group->get('lgms_heading_6_font_colour')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--heading-6-colour: ' . $font_colour . ';';
+      $variables['attributes']['style'][] = '--heading-6-color: ' . $font_colour . ';';
     }
 
     // Heading Overrides heading 1 line height

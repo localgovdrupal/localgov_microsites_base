@@ -28,3 +28,8 @@ footer:
   css:
     theme:
       css/footer.css: {}
+
+admin:
+  css:
+    theme:
+      css/admin.css: {}

@@ -1,0 +1,21 @@
+/* Styling the custom microsites task block */
+
+.block-microsite-tasks-block {
+  display: flex;
+  width: 100%;
+  padding: var(--spacing) 0;
+  color: var(--color-text-light);
+}
+
+.block-microsite-tasks-block h2 {
+  margin: 0;
+}
+
+.block-microsite-tasks-block a {
+  color: var(--color-text-light);
+}
+
+.localgov-microsite-tasks a {
+  padding: 10px var(--spacing) 0;
+  display: inline-flex;
+}

@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - localgov_microsites_group
+  theme:
+    - localgov_microsites_base
+id: localgov_microsites_base_microsite_tasks
+theme: localgov_microsites_base
+region: tabs
+weight: 0
+provider: null
+plugin: microsite_tasks_block
+settings:
+  id: microsite_tasks_block
+  label: 'Microsite tasks'
+  label_display: visible
+  provider: localgov_microsites_group
+visibility: {  }

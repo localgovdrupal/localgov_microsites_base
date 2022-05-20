@@ -795,26 +795,26 @@
 
 /* sporting-grotesque-regular - latin */
 @font-face {
-  font-family: 'Sporting Grotesque';
+  font-family: 'Sporting Grotesk';
   font-style: normal;
   font-weight: 700;
-  src: url('../assets/fonts/junction/webfonts/Regular/Sporting_Grotesque-Regular_web.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/Sporting-Grotesque/webfonts/Regular/Sporting_Grotesque-Regular_web.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('../assets/fonts/junction/webfonts/Regular/Sporting_Grotesque-Regular_web.woff2') format('woff2'), /* Modern Browsers */
-       url('../assets/fonts/junction/webfonts/Regular/Sporting_Grotesque-Regular_web.woff') format('woff'), /* Modern Browsers */
-       url('../assets/fonts/junction/webfonts/Regular/Sporting_Grotesque-Regular_web.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../assets/fonts/junction/webfonts/Regular/Sporting_Grotesque-Regular_web.svg#font') format('svg'); /* Legacy iOS */
+       url('../assets/fonts/Sporting-Grotesque/webfonts/Regular/Sporting_Grotesque-Regular_web.woff2') format('woff2'), /* Modern Browsers */
+       url('../assets/fonts/Sporting-Grotesque/webfonts/Regular/Sporting_Grotesque-Regular_web.woff') format('woff'), /* Modern Browsers */
+       url('../assets/fonts/Sporting-Grotesque/webfonts/Regular/Sporting_Grotesque-Regular_web.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../assets/fonts/Sporting-Grotesque/webfonts/Regular/Sporting_Grotesque-Regular_web.svg#font') format('svg'); /* Legacy iOS */
 }
 
 /* sporting-grotesque-700 - latin */
 @font-face {
-  font-family: 'Sporting Grotesque';
+  font-family: 'Sporting Grotesk';
   font-style: normal;
   font-weight: 700;
-  src: url('../assets/fonts/junction/webfonts/Bold/Sporting_Grotesque-Bold_web.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/Sporting-Grotesque/webfonts/Bold/Sporting_Grotesque-Bold_web.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('../assets/fonts/junction/webfonts/Bold/Sporting_Grotesque-Bold_web.woff2') format('woff2'), /* Modern Browsers */
-       url('../assets/fonts/junction/webfonts/Bold/Sporting_Grotesque-Bold_web.woff') format('woff'), /* Modern Browsers */
-       url('../assets/fonts/junction/webfonts/Bold/Sporting_Grotesque-Bold_web.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../assets/fonts/junction/webfonts/Bold/Sporting_Grotesque-Bold_web.svg#font') format('svg'); /* Legacy iOS */
+       url('../assets/fonts/Sporting-Grotesque/webfonts/Bold/Sporting_Grotesque-Bold_web.woff2') format('woff2'), /* Modern Browsers */
+       url('../assets/fonts/Sporting-Grotesque/webfonts/Bold/Sporting_Grotesque-Bold_web.woff') format('woff'), /* Modern Browsers */
+       url('../assets/fonts/Sporting-Grotesque/webfonts/Bold/Sporting_Grotesque-Bold_web.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../assets/fonts/Sporting-Grotesque/webfonts/Bold/Sporting_Grotesque-Bold_web.svg#font') format('svg'); /* Legacy iOS */
 }

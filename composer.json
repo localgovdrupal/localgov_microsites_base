@@ -6,6 +6,7 @@
     "license": "GPL-2.0-or-later",
     "require": {
         "drupal/twig_tweak": "^3.1",
-        "localgovdrupal/localgov_base": "^1.0.0"
+        "localgovdrupal/localgov_base": "^1.0.0",
+        "localgovdrupal/localgov_microsites_group": "1.x-dev"
     }
 }

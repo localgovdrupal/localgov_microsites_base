@@ -4,6 +4,9 @@ type: theme
 core_version_requirement: ^8.8 || ^9
 base theme: "localgov_base"
 
+dependencies:
+  - localgov_microsites_group:localgov_microsites_group
+
 libraries:
   - localgov_microsites_base/fonts
   - localgov_microsites_base/variables

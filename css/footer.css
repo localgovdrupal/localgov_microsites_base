@@ -14,7 +14,7 @@
 }
 
 .microsite-footer__logos .field__items,
-.microsite-footer__housekeeping .field__items,
+.microsite-footer__housekeeping ul,
 .microsite-footer__copyright,
 .microsite-footer__powered_by {
   display: flex;

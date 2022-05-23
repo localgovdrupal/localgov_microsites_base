@@ -90,18 +90,13 @@
 
     {# Begin Footer Housekeeping Menu #}
     <div class="lgd-row">
-      {# {% if microsite_footer_housekeeping %} #}
-        <div class="lgd-row__full">
+      <div class="lgd-row__full">
+        {% if has_footer_menu %}
           <div class="menu microsite-footer__block microsite-footer__housekeeping">
-            <ul>
-              <li><a href="#">Housekeeping</a></li>
-              <li><a href="#">Menu</a></li>
-              <li><a href="#">Goes</a></li>
-              <li><a href="#">Here</a></li>
-            </ul>
+          {{ page.footer_menu }}
           </div>
-        </div>
-      {# {% endif %} #}
+        {% endif %}
+      </div>
     </div>
     {# End Footer Housekeeping Menu #}
 

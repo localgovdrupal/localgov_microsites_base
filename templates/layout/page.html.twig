@@ -107,12 +107,11 @@
   {% endif %}
 </main>
 
-{% if has_footer %}
-  {{ page.footer }}
-{% endif %}
-
 {% block footer %}
   <footer class="microsite-footer">
     {% include "@localgov_microsites_base/layout/includes/microsites-footer.html.twig" %}
+    {% if has_footer %}
+      {{ page.footer }}
+    {% endif %}
   </footer>
 {% endblock %}

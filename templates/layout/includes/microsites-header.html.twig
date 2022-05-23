@@ -74,16 +74,16 @@
           {% endif %}
         </div>
       {% endif %}
-      {% if has_primary_menu or has_secondary_menu %}
+      {% if has_main_menu or has_utility_menu %}
         <div class="microsite-header__menus">
-          {% if has_secondary_menu %}
+          {% if has_utility_menu %}
             <div class="microsite-header__menu microsite-header__menu--utility">
-              {{ page.secondary_menu }}
+              {{ page.utility_menu }}
             </div>
           {% endif %}
-          {% if has_primary_menu %}
+          {% if has_main_menu %}
             <div class="microsite-header__menu microsite-header__menu--main">
-              {{ page.primary_menu }}
+              {{ page.main_menu }}
             </div>
           {% endif %}
         </div>

@@ -383,10 +383,10 @@ function localgov_microsites_base_preprocess_page(&$variables) {
     ];
     foreach ($header_fields as $header_field) {
       if (!empty($group->get($header_field)->getValue())) {
-        $variables['microsites']['header']['items'][$header_field] = $group->get($header_field)->view('default');
+        $variables['microsites']['header']['items'][$header_field] = $group->get($header_field)->view('microsite');
       }
     }
-    
+
     // Footer Items
     if (!empty($group->get('lgms_footer_width')->getValue())) {
       $width = $group->get('lgms_footer_width')->getValue()[0]['value'];
@@ -417,14 +417,14 @@ function localgov_microsites_base_preprocess_page(&$variables) {
     ];
     foreach ($footer_fields as $footer_field) {
       if (!empty($group->get($footer_field)->getValue())) {
-        $variables['microsites']['footer']['items'][$footer_field] = $group->get($footer_field)->view('default');
+        $variables['microsites']['footer']['items'][$footer_field] = $group->get($footer_field)->view('microsite');
       }
     }
     if (!empty($group->get('lgms_powered_by')->getValue())) {
-      $variables['microsites']['footer']['items']['lgms_powered_by'] = t('Powered by <a href="https://localgovdrupal.org">LocalGov Drupal</a>');
+      $variables['microsites']['footer']['items']['lgms_powered_by'] = t('<span>Powered by <a href="https://localgovdrupal.org">LocalGov Drupal</a></span>');
     }
     if (!empty($group->get('lgms_copyright')->getValue())) {
-      $variables['microsites']['footer']['items']['lgms_copyright'] = t('©Copyright' . date('Y'));
+      $variables['microsites']['footer']['items']['lgms_copyright'] = t('©Copyright ' . date('Y'));
     }
 
     // Pre-header

@@ -9,8 +9,8 @@ dependencies:
     - localgov_microsites_base
 id: localgov_microsites_base_main_menu
 theme: localgov_microsites_base
-region: primary_menu
-weight: 0
+region: main_menu
+weight: -3
 provider: null
 plugin: 'microsites_group_content_menu:lgms_main_menu'
 settings:

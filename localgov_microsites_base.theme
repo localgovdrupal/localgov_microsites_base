@@ -355,8 +355,39 @@ function localgov_microsites_base_preprocess_page(&$variables) {
   }
 
   if ($group instanceof MicrositeGroupInterface) {
-    $variables['microsites']['group']['entity'] = $group;
-    $variables['microsites']['group']['id'] = $parent_group_id;
+
+    // Header
+    if (!empty($group->get('lgms_header_width')->getValue())) {
+      $width = $group->get('lgms_header_width')->getValue()[0]['value'];
+      switch ($width) {
+        case 'full-width':
+          $variables['microsites']['header']['width']['full_width'] = true;
+          break;
+        case 'full-width-content-contained':
+          $variables['microsites']['header']['width']['full_width_content_contained'] = true;
+          break;
+        case 'content-centered':
+          $variables['microsites']['header']['width']['content_centered'] = true;
+          break;
+
+        default:
+          $variables['microsites']['header']['width']['full_width_content_contained'] = true;
+          break;
+      }
+    }
+
+    $header_fields = [
+      'lgms_site_name',
+      'lgms_site_slogan',
+      'lgms_main_logo',
+    ];
+    foreach ($header_fields as $header_field) {
+      if (!empty($group->get($header_field)->getValue())) {
+        $variables['microsites']['header']['items'][$header_field] = $group->get($header_field)->view('default');
+      }
+    }
+    
+    // Footer Items
     if (!empty($group->get('lgms_footer_width')->getValue())) {
       $width = $group->get('lgms_footer_width')->getValue()[0]['value'];
       switch ($width) {
@@ -375,6 +406,27 @@ function localgov_microsites_base_preprocess_page(&$variables) {
           break;
       }
     }
+
+    $footer_fields = [
+      'lgms_footer_banner',
+      'lgms_footer_text_block_1',
+      'lgms_footer_text_block_2',
+      'lgms_footer_text_block_3',
+      'lgms_footer_text_block_4',
+      'lgms_footer_logos',
+    ];
+    foreach ($footer_fields as $footer_field) {
+      if (!empty($group->get($footer_field)->getValue())) {
+        $variables['microsites']['footer']['items'][$footer_field] = $group->get($footer_field)->view('default');
+      }
+    }
+    if (!empty($group->get('lgms_powered_by')->getValue())) {
+      $variables['microsites']['footer']['items']['lgms_powered_by'] = t('Powered by <a href="https://localgovdrupal.org">LocalGov Drupal</a>');
+    }
+    if (!empty($group->get('lgms_copyright')->getValue())) {
+      $variables['microsites']['footer']['items']['lgms_copyright'] = t('©Copyright' . date('Y'));
+    }
+
     // Pre-header
     if (!empty($group->get('lgms_pre_header_width')->getValue())) {
       $width = $group->get('lgms_pre_header_width')->getValue()[0]['value'];
@@ -391,25 +443,6 @@ function localgov_microsites_base_preprocess_page(&$variables) {
 
         default:
           $variables['microsites']['pre_header']['width']['full_width_content_contained'] = true;
-          break;
-      }
-    }
-    // Header
-    if (!empty($group->get('lgms_header_width')->getValue())) {
-      $width = $group->get('lgms_header_width')->getValue()[0]['value'];
-      switch ($width) {
-        case 'full-width':
-          $variables['microsites']['header']['width']['full_width'] = true;
-          break;
-        case 'full-width-content-contained':
-          $variables['microsites']['header']['width']['full_width_content_contained'] = true;
-          break;
-        case 'content-centered':
-          $variables['microsites']['header']['width']['content_centered'] = true;
-          break;
-
-        default:
-          $variables['microsites']['header']['width']['full_width_content_contained'] = true;
           break;
       }
     }

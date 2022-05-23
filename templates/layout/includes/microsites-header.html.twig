@@ -13,25 +13,6 @@
  */
 #}
 
-{% set microsite = microsites.group.id %}
-{% set microsite_fields_check = microsites.group.entity %}
-
-{% if microsite_fields_check.lgms_main_logo.value %}
-  {% set microsite_header_logo = drupal_field('lgms_main_logo', 'group', microsite, 'microsite') %}
-{% endif %}
-{% if microsite_fields_check.lgms_site_name.value %}
-  {% set microsite_header_site_name = drupal_field('lgms_site_name', 'group', microsite, 'microsite') %}
-{% endif %}
-{% if microsite_fields_check.lgms_site_slogan.value %}
-  {% set microsite_header_site_slogan = drupal_field('lgms_site_slogan', 'group', microsite, 'microsite') %}
-{% endif %}
-{% if microsite_fields_check.lgms_utility_menu.value %}
-  {% set microsite_header_utility_menu = drupal_field('lgms_utility_menu', 'group', microsite, 'microsite') %}
-{% endif %}
-{% if microsite_fields_check.lgms_main_menu.value %}
-  {% set microsite_header_main_menu = drupal_field('lgms_main_menu', 'group', microsite, 'microsite') %}
-{% endif %}
-
 {% set header_attributes = create_attribute() %}
 
 {%
@@ -74,21 +55,21 @@
   <div class="lgd-region__inner lgd-region__inner--{{ region|clean_class }}">
     {# Begin Microsite Header Main #}
     <div class="microsite-header__main">
-      {% if microsite_header_logo %}
+      {% if microsites.header.items.lgms_main_logo %}
         <div class="microsite-header__logo">
-          {{ microsite_header_logo }}
+          {{ microsites.header.items.lgms_main_logo }}
         </div>
       {% endif %}
-      {% if microsite_header_site_name or microsite_header_site_slogan %}
+      {% if microsites.header.items.lgms_site_name or microsites.header.items.lgms_site_slogan %}
         <div class="microsite-header__name-slogan">
-          {% if microsite_header_site_name %}
+          {% if microsites.header.items.lgms_site_name %}
             <div class="microsite-header__name">
-              {{ microsite_header_site_name}}
+              {{ microsites.header.items.lgms_site_name}}
             </div>
           {% endif %}
-          {% if microsite_header_site_slogan %}
+          {% if microsites.header.items.lgms_site_slogan %}
             <div class="microsite-header__slogan">
-              {{ microsite_header_site_slogan}}
+              {{ microsites.header.items.lgms_site_slogan}}
             </div>
           {% endif %}
         </div>

@@ -414,6 +414,7 @@ function localgov_microsites_base_preprocess_page(&$variables) {
       'lgms_footer_text_block_3',
       'lgms_footer_text_block_4',
       'lgms_footer_logos',
+      'lgms_footer_copyright_notice',
     ];
     foreach ($footer_fields as $footer_field) {
       if (!empty($group->get($footer_field)->getValue())) {
@@ -422,9 +423,6 @@ function localgov_microsites_base_preprocess_page(&$variables) {
     }
     if (!empty($group->get('lgms_powered_by')->getValue())) {
       $variables['microsites']['footer']['items']['lgms_powered_by'] = t('<span>Powered by <a href="https://localgovdrupal.org">LocalGov Drupal</a></span>');
-    }
-    if (!empty($group->get('lgms_copyright')->getValue())) {
-      $variables['microsites']['footer']['items']['lgms_copyright'] = t('©Copyright ' . date('Y'));
     }
 
     // Pre-header

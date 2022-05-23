@@ -24,9 +24,9 @@
 
 {{ attach_library('localgov_microsites_base/footer') }}
 
-{% if microsite_footer_banner %}
+{% if microsites.footer.items.lgms_footer_banner %}
   <div class="microsite-footer__banner">
-    {{ microsite_footer_banner }}
+    {{ microsites.footer.items.lgms_footer_banner }}
   </div>
 {% endif %}
 
@@ -77,14 +77,14 @@
           </div>
         </div>
       {% endif %}
-    </div> 
+    </div>
     {# End Footer Logos #}
 
     {# Begin Footer Housekeeping Menu #}
     <div class="lgd-row">
       {# {% if microsite_footer_housekeeping %} #}
         <div class="lgd-row__full">
-          <div class="microsite-footer__block microsite-footer__housekeeping">
+          <div class="menu microsite-footer__block microsite-footer__housekeeping">
             <ul>
               <li><a href="#">Housekeeping</a></li>
               <li><a href="#">Menu</a></li>
@@ -94,7 +94,7 @@
           </div>
         </div>
       {# {% endif %} #}
-    </div> 
+    </div>
     {# End Footer Housekeeping Menu #}
 
     {# Begin Footer Copyright Notice #}
@@ -106,7 +106,7 @@
           </div>
         </div>
       {% endif %}
-    </div> 
+    </div>
     {# End Footer Copyright Notice #}
 
     {# Begin Footer Powered By #}
@@ -118,10 +118,10 @@
           </div>
         </div>
       {% endif %}
-    </div> 
+    </div>
     {# End Footer Powered By #}
   </div>
 {% if microsites.footer.width.full_width_content_contained %}
-  </div> 
+  </div>
 {% endif %}
 </div>

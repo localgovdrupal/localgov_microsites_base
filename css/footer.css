@@ -32,3 +32,7 @@
 .region-microsites-footer .lgd-row + .lgd-row {
   margin-top: var(--spacing);
 }
+
+.microsite-footer__housekeeping ul{
+  list-style-type: none;
+}

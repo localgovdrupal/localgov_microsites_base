@@ -22,10 +22,18 @@
   ]
 %}
 
+{%
+  set footer_banner_classes = [
+    'microsite-footer__banner',
+    microsites.footer.width.content_centered ? 'lgd-container' : '',
+    microsites.footer.width.full_width_content_contained ? 'lgd-container padding-horizontal' : '',
+  ]
+%}
+
 {{ attach_library('localgov_microsites_base/footer') }}
 
 {% if microsites.footer.items.lgms_footer_banner %}
-  <div class="microsite-footer__banner">
+  <div {{ attributes.addClass(footer_banner_classes)}})>
     {{ microsites.footer.items.lgms_footer_banner }}
   </div>
 {% endif %}

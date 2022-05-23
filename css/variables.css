@@ -57,4 +57,5 @@ body {
   --off-canvas-link-hover-color: var(--header-link-hover-color);
   --off-canvas-border-color: var(--color-white);
   --spacing: 1rem;
+  --font-secondary: "Merriweather", georgia, "Times New Roman", times, serif;
 }

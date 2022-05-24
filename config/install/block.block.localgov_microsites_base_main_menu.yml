@@ -4,13 +4,14 @@ dependencies:
   config:
     - group_content_menu.group_content_menu_type.lgms_main_menu
   module:
+    - group_content_menu
     - localgov_microsites_group
   theme:
     - localgov_microsites_base
-id: localgov_microsites_base_off_canvas_main_menu
+id: localgov_microsites_base_main_menu
 theme: localgov_microsites_base
-region: off_canvas
-weight: 0
+region: main_menu
+weight: -3
 provider: null
 plugin: 'microsites_group_content_menu:lgms_main_menu'
 settings:
@@ -18,8 +19,7 @@ settings:
   label: 'Main menu'
   label_display: '0'
   provider: localgov_microsites_group
-  context_mapping:
-    group: '@group.group_route_context:group'
+  context_mapping: {  }
   level: '1'
   depth: '0'
   expand_all_items: 0

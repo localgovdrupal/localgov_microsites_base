@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - group_content_menu.group_content_menu_type.lgms_utility_menu
+  module:
+    - group_content_menu
+    - localgov_microsites_group
+  theme:
+    - localgov_microsites_base
+id: localgov_microsites_base_off_canvas_utility_menu
+theme: localgov_microsites_base
+region: utility_menu
+weight: -3
+provider: null
+plugin: 'microsites_group_content_menu:lgms_utility_menu'
+settings:
+  id: 'microsites_group_content_menu:lgms_utility_menu'
+  label: 'Utility menu'
+  label_display: '0'
+  provider: localgov_microsites_group
+  context_mapping:
+    group: '@group.group_route_context:group'
+  level: '1'
+  depth: '0'
+  expand_all_items: 0
+visibility: {  }

@@ -4,6 +4,7 @@ dependencies:
   config:
     - group_content_menu.group_content_menu_type.lgms_footer_housekeeping
   module:
+    - group_content_menu
     - localgov_microsites_group
   theme:
     - localgov_microsites_base

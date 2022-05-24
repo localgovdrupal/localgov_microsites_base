@@ -421,7 +421,7 @@ function localgov_microsites_base_preprocess_page(&$variables) {
         $variables['microsites']['footer']['items'][$footer_field] = $group->get($footer_field)->view('microsite');
       }
     }
-    if (!empty($group->get('lgms_powered_by')->getValue())) {
+    if (!empty($group->get('lgms_powered_by')->getValue()) && $group->get('lgms_powered_by')->getValue()[0]['value'] === '1') {
       $variables['microsites']['footer']['items']['lgms_powered_by'] = t('<span>Powered by <a href="https://localgovdrupal.org">LocalGov Drupal</a></span>');
     }
 

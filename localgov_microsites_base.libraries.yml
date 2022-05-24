@@ -28,3 +28,8 @@ footer:
   css:
     theme:
       css/footer.css: {}
+
+full:
+  css:
+    theme:
+      css/full.css: {}

@@ -21,6 +21,8 @@ header:
   css:
     theme:
       css/header.css: {}
+
+header-js:
   js:
     js/header.js: {}
   dependencies:

@@ -1,0 +1,10 @@
+.node__banner,
+.node__title,
+.node__breadcrumbs,
+.node__page-top {
+  margin-bottom: var(--spacing-large);
+}
+
+.node--view-mode-full .field--name-localgov-page-summary {
+  font-size: var(--font-size-h3);
+}

@@ -75,11 +75,7 @@
   {{ page.header }}
 {% endif %}
 
-{% if has_banner %}
-  {{ page.banner }}
-{% endif %}
-
-{% if has_breadcrumb %}
+{% if has_breadcrumb and not node %}
   {{ page.breadcrumb }}
 {% endif %}
 
@@ -89,19 +85,27 @@
 
 <main class="main" id="main-content"> {# The "skip to content" link jumps to here. #}
 
+  {% if has_page_title and not node %}
+    {{ page.page_title }}
+  {% endif %}
+
   {% if has_content_top %}
     {{ page.content_top }}
   {% endif %}
 
-  <div class="lgd-container">
-      <div class="lgd-row">
-        <div class="lgd-row__full">
-          <div class="padding-horizontal">
+  {% if not node %}
+    <div class="lgd-container">
+        <div class="lgd-row">
+          <div class="lgd-row__full">
+            <div class="padding-horizontal">
+  {% endif %}
             {{ page.content }}
+  {% if not node %}
+            </div>
           </div>
         </div>
-      </div>
-  </div>
+    </div>
+  {% endif %}
 
   {% if has_content_bottom %}
     {{ page.content_bottom }}

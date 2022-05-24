@@ -23,8 +23,15 @@ header:
       css/header.css: {}
   js:
     js/header.js: {}
+  dependencies:
+    - core/drupal
 
 footer:
   css:
     theme:
       css/footer.css: {}
+
+full:
+  css:
+    theme:
+      css/full.css: {}

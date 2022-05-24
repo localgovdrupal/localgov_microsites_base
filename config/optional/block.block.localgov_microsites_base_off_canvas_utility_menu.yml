@@ -7,7 +7,7 @@ dependencies:
     - localgov_microsites_group
   theme:
     - localgov_microsites_base
-id: localgov_microsites_base_utility_menu
+id: localgov_microsites_base_off_canvas_utility_menu
 theme: localgov_microsites_base
 region: utility_menu
 weight: -3

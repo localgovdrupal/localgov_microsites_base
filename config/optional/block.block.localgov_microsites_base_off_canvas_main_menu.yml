@@ -8,7 +8,7 @@ dependencies:
     - localgov_microsites_group
   theme:
     - localgov_microsites_base
-id: mainmenu
+id: localgov_microsites_base_off_canvas_main_menu
 theme: localgov_microsites_base
 region: off_canvas
 weight: 0

@@ -38,13 +38,42 @@
 }
 
 .microsite-header__menus {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .microsite-header__menus {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: auto;
+  }
+}
+
+.microsite-header__menu .menu {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  gap: var(--spacing);
+}
+
+.microsite-header__menu .menu-item {
+  list-style: none;
+}
+
+.microsite-header__menu .menu-item a {
+  text-decoration: none;
+}
+
+.microsite-header__menu .menu-item a:focus,
+.microsite-header__menu .menu-item a:hover {
+  text-decoration: underline;
+}
+
+.microsite-header__off-canvas {
   margin-left: auto;
 }
 
-.microsite-header__menu .field__items {
-  display: flex;
-  gap: var(--spacing);
+@media screen and (min-width: 768px) {
+  .microsite-header__off-canvas {
+    display: none;
+  }
 }

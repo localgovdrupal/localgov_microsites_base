@@ -7,7 +7,7 @@ dependencies:
     - localgov_microsites_group
   theme:
     - localgov_microsites_base
-id: footerhousekeeping
+id: localgov_microsites_base_footer_housekeeping_menu
 theme: localgov_microsites_base
 region: footer_menu
 weight: 0

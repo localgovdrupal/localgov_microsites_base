@@ -12,10 +12,10 @@
   height: 100%;
   padding: var(--spacing);
   transition: var(--transition-time);
+  color: var(--off-canvas-text-color);
   border-color: var(--off-canvas-border-color);
   border-right: var(--border);
   border-bottom: var(--border);
-  color: var(--off-canvas-text-color);
   background-color: var(--off-canvas-background-color);
 }
 
@@ -48,8 +48,8 @@
   position: absolute;
   top: var(--spacing);
   right: var(--spacing);
-  width: var(--spacing);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: var(--spacing);
 }

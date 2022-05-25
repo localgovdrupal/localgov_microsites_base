@@ -13,15 +13,15 @@
   gap: calc(var(--spacing));
 }
 
-.layout--twocol>.layout__region--first,
-.layout--twocol>.layout__region--second {
-  flex: 0 1 calc(50% - var(--spacing)/2);
+.layout--twocol > .layout__region--first,
+.layout--twocol > .layout__region--second {
+  flex: 0 1 calc(50% - var(--spacing) / 2);
 }
 
-.layout--threecol-33-34-33>.layout__region--first,
-.layout--threecol-33-34-33>.layout__region--second,
-.layout--threecol-33-34-33>.layout__region--third {
-  flex: 0 1 calc(calc(100% / 3) - var(--spacing)*2/3);
+.layout--threecol-33-34-33 > .layout__region--first,
+.layout--threecol-33-34-33 > .layout__region--second,
+.layout--threecol-33-34-33 > .layout__region--third {
+  flex: 0 1 calc(calc(100% / 3) - var(--spacing) * 2 / 3);
 }
 
 .field--name-localgov-page-summary,

@@ -1,3 +1,7 @@
+.node__banner img {
+  width: 100%;
+}
+
 .node__banner,
 .node__title,
 .node__breadcrumbs,

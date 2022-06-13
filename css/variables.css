@@ -74,19 +74,18 @@ body {
     "Times New Roman",
     times,
     serif;
+    --border-width: 0px;
+    --border-color: var(--color-accent-2);
   --image-with-caption-bg-color: var(--color-accent-2);
   --quote-bg-color: var(--color-accent-2);
   --featured-teaser-background: var(--color-accent-2);
+  --ia-block-bg-color: var(--page-background-color);
   --ia-block-bg-color-promoted: var(--color-accent-2);
   --table-bg-color: var(--color-accent-2);
   /* --vertical-rhythm-spacing: calc(var(--line-height) * 2rem); */
   /* --featured-teaser-content-padding: calc(var(--spacing)*2); */
-  --font-secondary: "Merriweather", georgia, "Times New Roman", times, serif;
-  --image-with-caption-bg-color: var(--color-accent-2);
   --quote-bg-color: var(--color-accent-2);
   --quote-author-color: var(--color-accent-2-contrast);
-  --border-color: var(--color-accent-2);
   --call-out-box-text-color: var(--color-accent-contrast);
-  --ia-block-bg-color: var(--page-background-color);
-  --ia-block-bg-color-promoted: var(--page-background-color);
+  --call-out-box-link-padding: 0;
 }

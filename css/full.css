@@ -14,21 +14,114 @@
 }
 
 .layout {
-  gap: calc(var(--spacing));
+  gap: 0 calc(var(--spacing)*2);
 }
 
 .layout--twocol > .layout__region--first,
 .layout--twocol > .layout__region--second {
-  flex: 0 1 calc(50% - var(--spacing) / 2);
+  flex: 0 1 calc(50% - var(--spacing));
 }
 
 .layout--threecol-33-34-33 > .layout__region--first,
 .layout--threecol-33-34-33 > .layout__region--second,
 .layout--threecol-33-34-33 > .layout__region--third {
-  flex: 0 1 calc(calc(100% / 3) - var(--spacing) * 2 / 3);
+  flex: 0 1 calc(calc(100% / 3) - var(--spacing) *4 / 3);
+  /* todo */
 }
 
 .field--name-localgov-page-summary,
 .field--name-localgov-text {
-  max-width: 900px;
-}
+  max-width: 800px;
+  }
+
+  /* Typography tweaks */
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: calc(var(--spacing) * 0.5);
+  }
+
+  h5,
+  h6 {
+    font-variant: none;
+    text-decoration: none;
+  }
+
+  .accordion-pane__title h3 {
+    margin: 0;
+  }
+
+  .accordion-pane__title button {
+    background: none;
+    padding: var(--spacing) 0;
+    border: var(--border-none);
+    /* border-bottom: 1px solid grey; */
+    color: black;
+    font-size: var(--font-size-h3);
+  }
+
+  .paragraph--type--localgov-accordion-pane {
+    border-bottom: 1px solid grey;
+    /* todo add top line on first accordion */
+  }
+
+  /* todo - add the icons to accordion */
+
+  .layout__region>* {
+    margin-bottom: var(--spacing-larger);
+  }
+
+  .media-with-text--media-left .media-with-text__body {
+    padding-left: var(--spacing-larger);
+  }
+
+  .media-with-text--media-right .media-with-text__body {
+    padding-right: var(--spacing-larger);
+  }
+
+  .featured-teaser {
+    background-color: var(--color-accent-2);
+    border: var(--border-none);
+  }
+
+  .call-out-box__link,
+  .media-with-text__link,
+  .featured-teaser a {
+    /* todo make bigger */
+    font-weight: bold;
+  }
+
+  .featured-teasers__teasers>.field__items>.field__item+.field__item {
+    margin-top: var(--spacing-larger);
+  }
+
+  .lgd-image--has-caption {
+    border: var(--border-none);
+  }
+
+  .ia-block--promoted {
+    border: var(--border-none);
+  }
+
+  .call-out-box__content h3,
+  .call-out-box__content h2 {
+    color: var(--color-white);
+  }
+
+  table caption {
+    text-align: start;
+    margin-bottom: var(--spacing-tiny);
+  }
+
+  table p {
+    margin-bottom: var(--spacing-tiny);
+  }
+
+  .pull-out-quote {
+    border-color: var(--color-accent);
+  }
+
+/* todo call out box link not button */

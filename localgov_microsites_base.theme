@@ -36,11 +36,11 @@ function localgov_microsites_base_preprocess_html(&$variables) {
       $variables['attributes']['style'][] = '--color-accent-2: ' . $secondary_colour . ';';
     }
 
-    // Styleguide text colour (light)
-    if (!is_null($group->get('lgms_text_colour_light')[0])) {
-      $text_colour_light = $group->get('lgms_text_colour_light')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--color-text-light: ' . $text_colour_light . ';';
-    }
+    // // Styleguide text colour (light)
+    // if (!is_null($group->get('lgms_text_colour_light')[0])) {
+    //   $text_colour_light = $group->get('lgms_text_colour_light')[0]->getValue()['value'];
+    //   $variables['attributes']['style'][] = '--color-text-light: ' . $text_colour_light . ';';
+    // }
 
     // Styleguide base spacing
     if (!is_null($group->get('lgms_base_spacing')[0])) {
@@ -49,9 +49,9 @@ function localgov_microsites_base_preprocess_html(&$variables) {
     }
 
     // Styleguide text colour (dark)
-    if (!is_null($group->get('lgms_text_colour_dark')[0])) {
-      $text_colour_dark = $group->get('lgms_text_colour_dark')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--color-text-dark: ' . $text_colour_dark . ';';
+    if (!is_null($group->get('lgms_text_colour')[0])) {
+      $text_colour = $group->get('lgms_text_colour')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--color-text-dark: ' . $text_colour . ';';
     }
 
     // Styleguide heading font

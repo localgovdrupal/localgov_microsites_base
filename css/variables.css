@@ -33,8 +33,8 @@
     hotpink, just set `--color-accent: hotpink;`
 */
 body {
-  --color-accent: #682558;
-  --color-accent-2: var(--color-white);
+  --color-accent: #222;
+  --color-accent-2: #ddd;
   --color-text-light: var(--color-white);
   --color-text-dark: var(--color-black);
   --color-text: var(--color-text-dark);
@@ -57,5 +57,26 @@ body {
   --off-canvas-link-hover-color: var(--header-link-hover-color);
   --off-canvas-border-color: var(--color-white);
   --spacing: 1rem;
-  --font-secondary: "Merriweather", georgia, "Times New Roman", times, serif;
+  --spacing-tiny: calc(var(--spacing)*0.5);
+  --spacing-large: calc(var(--spacing)*1.5);
+  --spacing-larger: calc(var(--spacing)*2);
+  --spacing-largest: calc(var(--spacing)*2.5);
+  --spacing-mega: calc(var(--spacing)*3);
+  --font-primary: "Public Sans",
+  georgia,
+  "Times New Roman",
+  times,
+  serif;
+  --font-secondary: "Public Sans",
+  georgia,
+  "Times New Roman",
+  times,
+  serif;
+  --image-with-caption-bg-color: var(--color-accent-2);
+  --quote-bg-color: var(--color-accent-2);
+  --featured-teaser-background: var(--color-accent-2);
+  --ia-block-bg-color-promoted: var(--color-accent-2);
+  --table-bg-color: var(--color-accent-2);
+  /* --vertical-rhythm-spacing: calc(var(--line-height) * 2rem); */
+  /* --featured-teaser-content-padding: calc(var(--spacing)*2); */
 }

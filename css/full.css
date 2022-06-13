@@ -14,7 +14,7 @@
 }
 
 .layout {
-  gap: calc(var(--spacing));
+  gap: 0 calc(var(--spacing));
 }
 
 .layout--twocol > .layout__region--first,
@@ -31,4 +31,13 @@
 .field--name-localgov-page-summary,
 .field--name-localgov-text {
   max-width: 900px;
+}
+
+.call-out-box__content h2,
+.call-out-box__content h3 {
+  color: var(--call-out-box-text-color);
+}
+
+body {
+  background-color: var(--page-background-color);
 }

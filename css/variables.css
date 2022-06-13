@@ -34,22 +34,24 @@
 */
 body {
   --color-accent: #682558;
-  --color-accent-2: var(--color-white);
-  --color-text-light: var(--color-white);
-  --color-text-dark: var(--color-black);
-  --color-text: var(--color-text-dark);
+  --color-accent-2: #f8baea;
+  --color-accent-contrast: var(--color-white);
+  --color-accent-2-contrast: var(--color-accent);
+  --page-background-color: var(--color-white);
+  /* --color-text-dark: var(--color-black); */
+  --color-text: var(--color-black);
   --line-height: 1.3;
   --footer-background-color: var(--color-accent);
-  --footer-text-color: var(--color-text-light);
-  --footer-link-color: var(--color-text-light);
+  --footer-text-color: var(--color-accent-contrast);
+  --footer-link-color: var(--color-accent-contrast);
   --footer-link-hover-color: var(--color-accent-2);
   --pre-header-background-color: var(--color-accent);
-  --pre-header-text-color: var(--color-text-light);
-  --pre-header-link-color: var(--color-text-light);
+  --pre-header-text-color: var(--color-accent-contrast);
+  --pre-header-link-color: var(--color-accent-contrast);
   --pre-header-link-hover-color: var(--color-accent-2);
   --header-background-color: var(--color-accent);
-  --header-text-color: var(--color-text-light);
-  --header-link-color: var(--color-text-light);
+  --header-text-color: var(--color-accent-contrast);
+  --header-link-color: var(--color-accent-contrast);
   --header-link-hover-color: var(--color-accent-2);
   --off-canvas-background-color: var(--header-background-color);
   --off-canvas-text-color: var(--header-text-color);
@@ -58,4 +60,8 @@ body {
   --off-canvas-border-color: var(--color-white);
   --spacing: 1rem;
   --font-secondary: "Merriweather", georgia, "Times New Roman", times, serif;
+  --image-with-caption-bg-color: var(--color-accent-2);
+  --quote-bg-color: var(--color-accent-2);
+  --border-color: var(--color-accent-2);
+  --call-out-box-text-color: var(--color-accent-contrast);
 }

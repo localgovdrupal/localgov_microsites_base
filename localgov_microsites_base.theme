@@ -21,9 +21,9 @@ function localgov_microsites_base_preprocess_html(&$variables) {
   if (empty($group)) {
     $group = \Drupal::request()->attributes->get('group');
   }
-  
+
   if ($group instanceof MicrositeGroupInterface) {
-    // Adds classes that can be used to let CSS target specifc microsites.
+    // Adds classes that can be used to let CSS target specific microsites.
     $variables['attributes']['class'][] = 'lgd-ms';
     $variables['attributes']['class'][] = 'lgd-ms--' . $parent_group_id;
 

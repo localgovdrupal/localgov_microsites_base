@@ -1,0 +1,7 @@
+.lgd-image__image+* {
+  color: var(--color-accent-2-contrast);
+}
+
+.pull-out-quote__content {
+  color: var(--color-accent-2-contrast);
+}

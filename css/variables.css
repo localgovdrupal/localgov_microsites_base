@@ -92,3 +92,15 @@ body {
   --call-out-box-text-color: var(--color-accent-contrast);
   --call-out-box-link-padding: 0;
 }
+
+/* New variables for style preferences */
+body {
+  --image-caption-background: var(--color-accent-2-contrast);
+  --image-border: var(--border-none);
+  --quote-border-color: var(--color-accent-2-contrast);
+  --quote-content-color: var(--color-accent-2-contrast);
+  --featured-teaser-color: var(--color-accent-2-contrast);
+  --featured-teaser-border: var(--border-none);
+  --ia-block-color: var(--border-none);
+  --ia-block-border: var(--color-accent-2-contrast);
+}

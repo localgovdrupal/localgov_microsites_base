@@ -26,7 +26,6 @@
 .layout--threecol-33-34-33>.layout__region--second,
 .layout--threecol-33-34-33>.layout__region--third {
   flex: 0 1 calc(calc(100% / 3) - var(--spacing-larger) *2 / 3);
-  /* todo */
 }
 
 .field--name-localgov-page-summary,

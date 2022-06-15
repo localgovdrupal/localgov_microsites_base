@@ -93,17 +93,64 @@
     {{ page.content_top }}
   {% endif %}
 
-  {% if not node %}
-    <div class="lgd-container">
+  {% if node %}
+    {# Begin Sidebars #}
+    {% if has_sidebars %}
+      <div class="lgd-container">
         <div class="lgd-row">
-          <div class="lgd-row__full">
-            <div class="padding-horizontal">
-  {% endif %}
-            {{ page.content }}
-  {% if not node %}
+          {% if has_sidebar_first and not has_sidebar_second %}
+            <aside class="lgd-row__one-third sidebar sidebar--first">
+              {{ page.sidebar_first }}
+            </aside>
+            <div class="lgd-row__two-thirds">
+              <div class="padding-horizontal">
+                {{ page.content }}
+              </div>
             </div>
+          {% endif %}
+
+          {% if has_sidebar_second and not has_sidebar_first %}
+            <div class="lgd-row__two-thirds">
+              <div class="padding-horizontal">
+                {{ page.content }}
+              </div>
+            </div>
+            <aside class="lgd-row__one-third sidebar sidebar--second">
+              {{ page.sidebar_second }}
+            </aside>
+          {% endif %}
+
+          {% if has_sidebar_first and has_sidebar_second %}
+            <aside class="lgd-row__one-quarter sidebar sidebar--first">
+              {{ page.sidebar_first }}
+            </aside>
+            <div class="lgd-row__one-half">
+              <div class="padding-horizontal">
+                {{ page.content }}
+              </div>
+            </div>
+            <aside class="lgd-row__one-quarter sidebar sidebar--second">
+              {{ page.sidebar_second }}
+            </aside>
+          {% endif %}
+        </div>
+      </div>
+
+    {% else %}
+      {# If there are no sidebars, the content region take up 100% of the space #}
+      {{ page.content }}
+    {% endif %}
+    {# End Sidebars #}
+    
+  {% else %}
+    <div class="lgd-container">
+      <div class="lgd-row">
+        <div class="lgd-row__full">
+          <div class="padding-horizontal">
+            {{ page.content }}
           </div>
         </div>
+      </div>
     </div>
   {% endif %}
 

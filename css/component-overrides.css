@@ -45,6 +45,7 @@
 }
 
 .featured-teaser {
+  background: var(--featured-teaser-background);
   color: var(--featured-teaser-color);
   border: var(--featured-teaser-border);
 }

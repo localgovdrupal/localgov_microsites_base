@@ -83,7 +83,6 @@ body {
   --border-color: var(--color-accent-2);
   --image-with-caption-bg-color: var(--color-accent-2);
   --quote-bg-color: var(--color-accent-2);
-  --featured-teaser-background: var(--color-accent-2);
   --ia-block-bg-color: var(--page-background-color);
   --ia-block-bg-color-promoted: var(--color-accent-2);
   --table-bg-color: var(--color-accent-2);
@@ -99,6 +98,7 @@ body {
   --image-border: var(--border-none);
   --quote-border-color: var(--color-accent-2-contrast);
   --quote-content-color: var(--color-accent-2-contrast);
+  --featured-teaser-background: var(--color-accent-2);
   --featured-teaser-color: var(--color-accent-2-contrast);
   --featured-teaser-border: var(--border-none);
   --ia-block-color: var(--border-none);

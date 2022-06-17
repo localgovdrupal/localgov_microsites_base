@@ -101,6 +101,10 @@ body {
   --featured-teaser-background: var(--color-accent-2);
   --featured-teaser-color: var(--color-accent-2-contrast);
   --featured-teaser-border: var(--border-none);
-  --ia-block-color: var(--border-none);
+  --ia-block-color: var(--color-accent-2-contrast);
   --ia-block-border: var(--color-accent-2-contrast);
+  --call-out-box-link-weight: var(--heading-1-font-weight);
+  --media-with-text-link-weight: var(--heading-1-font-weight);
+  --featured-teaser-link-weight: var(--heading-1-font-weight);
+  --table-header-text-color: var(--color-accent-2-contrast);
 }

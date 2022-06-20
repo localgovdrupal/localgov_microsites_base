@@ -23,6 +23,9 @@ function localgov_microsites_base_preprocess_html(&$variables) {
   }
 
   if ($group instanceof MicrositeGroupInterface) {
+    // Adds classes that can be used to let CSS target specific microsites.
+    $variables['attributes']['class'][] = 'lgd-ms';
+    $variables['attributes']['class'][] = 'lgd-ms--' . $parent_group_id;
 
     // Styleguide primary colour
     if (!is_null($group->get('lgms_primary_colour')[0])) {

@@ -37,3 +37,8 @@ full:
   css:
     theme:
       css/full.css: {}
+
+component-overrides:
+  css:
+    theme:
+      css/component-overrides.css: {}

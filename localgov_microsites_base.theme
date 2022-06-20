@@ -30,17 +30,27 @@ function localgov_microsites_base_preprocess_html(&$variables) {
       $variables['attributes']['style'][] = '--color-accent: ' . $primary_colour . ';';
     }
 
+    if (!is_null($group->get('lgms_primary_colour_contrast')[0])) {
+      $primary_colour_contrast = $group->get('lgms_primary_colour_contrast')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--color-accent-contrast: ' . $primary_colour_contrast . ';';
+    }
+
     // Styleguide secondary colour
     if (!is_null($group->get('lgms_secondary_colour')[0])) {
       $secondary_colour = $group->get('lgms_secondary_colour')[0]->getValue()['value'];
       $variables['attributes']['style'][] = '--color-accent-2: ' . $secondary_colour . ';';
     }
 
-    // // Styleguide text colour (light)
-    // if (!is_null($group->get('lgms_text_colour_light')[0])) {
-    //   $text_colour_light = $group->get('lgms_text_colour_light')[0]->getValue()['value'];
-    //   $variables['attributes']['style'][] = '--color-text-light: ' . $text_colour_light . ';';
-    // }
+    if (!is_null($group->get('lgms_secondary_colour_contrast')[0])) {
+      $secondary_colour_contrast = $group->get('lgms_secondary_colour_contrast')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--color-accent-2-contrast: ' . $secondary_colour_contrast . ';';
+    }
+
+    // Styleguide page background colour
+    if (!is_null($group->get('lgms_page_background_colour')[0])) {
+      $page_background_colour = $group->get('lgms_page_background_colour')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--page-background-color: ' . $page_background_colour . ';';
+    }
 
     // Styleguide base spacing
     if (!is_null($group->get('lgms_base_spacing')[0])) {
@@ -52,6 +62,12 @@ function localgov_microsites_base_preprocess_html(&$variables) {
     if (!is_null($group->get('lgms_text_colour')[0])) {
       $text_colour = $group->get('lgms_text_colour')[0]->getValue()['value'];
       $variables['attributes']['style'][] = '--color-text: ' . $text_colour . ';';
+    }
+
+    // Styleguide link colour
+    if (!is_null($group->get('lgms_link_colour')[0])) {
+      $link_colour = $group->get('lgms_link_colour')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--color-link: ' . $link_colour . ';';
     }
 
     // Styleguide heading font

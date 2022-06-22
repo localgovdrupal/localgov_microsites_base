@@ -1,0 +1,20 @@
+.node-preview-container {
+  padding: 0;
+  background-color: lightgrey;
+  position: relative;
+  box-shadow: -1px 0 3px 1px rgb(0 0 0 / 33%);
+}
+.node-preview-form-select {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+.form-item-view-mode {
+  margin-bottom: 0;
+}
+
+.node-preview-backlink {
+  padding: 1rem;
+  border-right: 2px solid;
+  margin-right: 1rem;
+}

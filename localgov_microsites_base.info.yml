@@ -11,6 +11,7 @@ libraries:
   - localgov_microsites_base/fonts
   - localgov_microsites_base/variables
   - localgov_microsites_base/component-overrides
+  - localgov_microsites_base/preview
 
 regions:
   tabs: "Tabs"

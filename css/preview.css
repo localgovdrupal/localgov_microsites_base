@@ -1,20 +1,21 @@
 .node-preview-container {
   padding: 0;
-  background-color: lightgrey;
+  background-color: var(--color-grey-light);
   position: relative;
-  box-shadow: -1px 0 3px 1px rgb(0 0 0 / 33%);
+  box-shadow: var(--box-shadow);
 }
 .node-preview-form-select {
   display: flex;
   align-items: center;
-  padding: 0.5rem;
+  padding: var(--spacing-smaller);
 }
+
 .form-item-view-mode {
   margin-bottom: 0;
 }
 
 .node-preview-backlink {
-  padding: 1rem;
-  border-right: 2px solid;
-  margin-right: 1rem;
+  padding: var(--spacing);
+  border-right: var(--border-large);
+  margin-right: var(--spacing);
 }

@@ -107,4 +107,5 @@ body {
   --media-with-text-link-weight: var(--heading-1-font-weight);
   --featured-teaser-link-weight: var(--heading-1-font-weight);
   --table-header-text-color: var(--color-accent-2-contrast);
+  --box-shadow: -1px 0 3px 1px rgb(0 0 0 / 33%);
 }

@@ -3,6 +3,7 @@ status: true
 dependencies:
   module:
     - localgov_microsites_group
+    - user
   theme:
     - localgov_microsites_base
 id: localgov_microsites_base_microsite_tasks
@@ -14,6 +15,13 @@ plugin: microsite_tasks_block
 settings:
   id: microsite_tasks_block
   label: 'Microsite tasks'
-  label_display: visible
+  label_display: '0'
   provider: localgov_microsites_group
-visibility: {  }
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

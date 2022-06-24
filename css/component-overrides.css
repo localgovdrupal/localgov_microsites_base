@@ -1,0 +1,115 @@
+.lgd-image__image+* {
+  color: var(--image-caption-background);
+}
+
+.lgd-image--has-caption {
+  border-width: var(--image-border);
+}
+
+/* Quote  */
+.pull-out-quote {
+  border-color: var(--quote-border-color);
+}
+.pull-out-quote__content {
+  color: var(--quote-content-color);
+}
+
+/* Accordion */
+.accordion-pane__title h3 {
+  margin: 0;
+}
+
+.accordion-pane__title button {
+  background: none;
+  padding: var(--spacing) 0;
+  border: var(--border-none);
+  font-family: var(--font-heading-3);
+  font-size: var(--font-size-h3);
+  color: var(--heading-3-color);
+  line-height: var(--heading-3-line-height);
+  font-weight: var(--heading-3-font-weight);
+}
+
+.paragraph--type--localgov-accordion-pane {
+  border-bottom: 1px solid grey;
+  /* todo add top line on first accordion */
+}
+
+.accordion-pane__title button {
+  background: url(../../localgov_base/templates/includes/icons/chevron-down.svg) 100% 50% no-repeat;
+  background-size: 1.5rem;
+}
+
+.accordion-pane__title button[aria-expanded="true"] {
+  background-image: url(../../localgov_base/templates/includes/icons/chevron-up.svg);
+}
+
+/* Media with text */
+.media-with-text__link {
+  font-weight: var(--media-with-text-link-weight);
+}
+.media-with-text--media-left .media-with-text__body {
+  padding-left: var(--spacing-larger);
+}
+
+.media-with-text--media-right .media-with-text__body {
+  padding-right: var(--spacing-larger);
+}
+
+/* Featured teaser  */
+.featured-teaser {
+  background-color: var(--featured-teaser-background);
+  color: var(--featured-teaser-color);
+  border: var(--featured-teaser-border);
+}
+
+.featured-teaser a {
+  font-weight: var(--featured-teaser-link-weight);
+}
+.featured-teaser * {
+  color: inherit;
+}
+
+.featured-teasers__teasers>.field__items>.field__item+.field__item {
+  margin-top: var(--spacing-larger) !important;
+}
+
+/* IA Block */
+.ia-block--promoted {
+  /* todo no border */
+  border: var(--ia-block-border) !important;
+  color: var(--ia-block-color);
+}
+
+.ia-block--promoted * {
+  color: inherit;
+}
+
+
+/* Table */
+table caption {
+  text-align: start;
+  margin-bottom: var(--spacing-tiny);
+}
+
+table th p {
+  color: var(--table-header-text-color);
+  margin: 0;
+}
+table p {
+  margin-bottom: var(--spacing-tiny);
+}
+
+/* Call out box */
+.call-out-box__content h2,
+.call-out-box__content h3 {
+  color: var(--call-out-box-text-color);
+  /* todo add this to the localgov_base */
+}
+
+.call-out-box__link {
+  color: var(--call-out-box-text-color) !important;
+  background-color: var(--call-out-box-bg-color) !important;
+  font-weight: var(--call-out-box-link-weight);
+  /* maybe an inverted colour or not choice ? todo add this to the localgov_base */
+}

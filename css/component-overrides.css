@@ -17,14 +17,12 @@
 /* Accordion */
 .accordion-pane__title h3 {
   margin: 0;
-
 }
 
 .accordion-pane__title button {
   background: none;
   padding: var(--spacing) 0;
   border: var(--border-none);
-  color: var(--color-accent-1);
   font-family: var(--font-heading-3);
   font-size: var(--font-size-h3);
   color: var(--heading-3-color);

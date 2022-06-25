@@ -42,3 +42,8 @@ component-overrides:
   css:
     theme:
       css/component-overrides.css: {}
+
+preview:
+  css:
+    theme:
+      css/preview.css: {}

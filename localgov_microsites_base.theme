@@ -5,7 +5,6 @@
  * Theme function for the LocalGov Microsites Base theme.
  */
 
-use Drupal\domain_group\DomainGroupHelper;
 use Drupal\localgov_microsites_group\Entity\MicrositeGroupInterface;
 
 /**

@@ -13,9 +13,7 @@ use Drupal\localgov_microsites_group\Entity\MicrositeGroupInterface;
  */
 function localgov_microsites_base_preprocess_html(&$variables) {
 
-  $parent_group_id = \Drupal::service('class_resolver')
-    ->getInstanceFromDefinition(DomainGroupHelper::class)
-    ->getActiveDomainGroup();
+  $parent_group_id = \Drupal::service('domain_group_resolver')->getActiveDomainGroupId();
   if ($parent_group_id) {
     $group = \Drupal::entityTypeManager()->getStorage('group')->load($parent_group_id);
   }
@@ -363,9 +361,7 @@ function localgov_microsites_base_preprocess_html(&$variables) {
  */
 function localgov_microsites_base_preprocess_page(&$variables) {
 
-  $parent_group_id = \Drupal::service('class_resolver')
-    ->getInstanceFromDefinition(DomainGroupHelper::class)
-    ->getActiveDomainGroup();
+  $parent_group_id = \Drupal::service('domain_group_resolver')->getActiveDomainGroupId();
   if ($parent_group_id) {
     $group = \Drupal::entityTypeManager()->getStorage('group')->load($parent_group_id);
   }

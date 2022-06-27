@@ -7,6 +7,11 @@ variables:
       # on other libraries we create.
       css/variables.css: { weight: 200 }
 
+base:
+  css:
+    theme:
+      css/base.css: {}
+
 fonts:
   css:
     theme:

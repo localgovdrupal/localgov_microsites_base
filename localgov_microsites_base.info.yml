@@ -8,8 +8,9 @@ dependencies:
   - localgov_microsites_group:localgov_microsites_group
 
 libraries:
-  - localgov_microsites_base/fonts
   - localgov_microsites_base/variables
+  - localgov_microsites_base/fonts
+  - localgov_microsites_base/base
   - localgov_microsites_base/component-overrides
 
 regions:

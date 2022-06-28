@@ -1,58 +1,41 @@
-.node__banner img {
+.full__banner img {
   width: 100%;
 }
 
-.node__banner,
-.node__title,
-.node__breadcrumbs,
-.node__page-top {
+.full__banner,
+.full__title,
+.full__breadcrumbs,
+.full__page-top {
   margin-bottom: var(--spacing-large);
 }
 
-.node--view-mode-full .field--name-localgov-page-summary {
+.full .field--name-localgov-page-summary {
   font-size: var(--font-size-h3);
+}
+
+.full .field--name-localgov-page-summary,
+.full .field--name-localgov-text {
+  max-width: var(--width-restricted-width-section);
 }
 
 .layout {
   gap: 0 var(--spacing-larger);
 }
 
-.layout--twocol>.layout__region--first,
-.layout--twocol>.layout__region--second {
-  flex: 0 1 calc(50% - var(--spacing-larger)/2);
+@media screen and (min-width: 40rem) { 
+  .layout--twocol > .layout__region--first,
+  .layout--twocol > .layout__region--second {
+    flex: 1 1 calc(50% - var(--spacing-larger) * 2);
+  }
+}
+@media screen and (min-width: 40rem) {
+  .layout--threecol-33-34-33 > .layout__region--first,
+  .layout--threecol-33-34-33 > .layout__region--second,
+  .layout--threecol-33-34-33 > .layout__region--third {
+    flex: 1 1 calc(calc(100% / 3) - var(--spacing-larger) * 3);
+  }
 }
 
-.layout--threecol-33-34-33>.layout__region--first,
-.layout--threecol-33-34-33>.layout__region--second,
-.layout--threecol-33-34-33>.layout__region--third {
-  flex: 0 1 calc(calc(100% / 3) - var(--spacing-larger) *2 / 3);
-}
-
-.field--name-localgov-page-summary,
-.field--name-localgov-text {
-  max-width: 800px;
-}
-
-/* Typography tweaks */
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: var(--spacing-tiny);
-}
-
-h5,
-h6 {
-  font-variant: none;
-  text-decoration: none;
-}
-
-body {
-  background-color: var(--page-background-color);
-}
-
-.layout__region>* {
+.layout__region > * {
   margin-bottom: var(--spacing-larger);
 }

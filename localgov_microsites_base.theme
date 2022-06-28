@@ -471,3 +471,14 @@ function localgov_microsites_base_preprocess_page(&$variables) {
     }
   }
 }
+
+function localgov_microsites_base_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $routeMatch = \Drupal::routeMatch();
+  $node_preview = $routeMatch->getParameter('node_preview');
+  if ($node_preview instanceof NodeInterface) {
+    $suggestions[] = 'page__node__preview__' . $node_preview->bundle();
+    if ($view_mode_id = $routeMatch->getParameter('view_mode_id')) {
+      $suggestions[] = 'page__node__preview__' . $node_preview->bundle() . '__' . $view_mode_id;
+    }
+  }
+}

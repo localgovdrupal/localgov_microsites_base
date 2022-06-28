@@ -7,6 +7,11 @@ variables:
       # on other libraries we create.
       css/variables.css: { weight: 200 }
 
+base:
+  css:
+    theme:
+      css/base.css: {}
+
 fonts:
   css:
     theme:
@@ -42,3 +47,8 @@ component-overrides:
   css:
     theme:
       css/component-overrides.css: {}
+
+preview:
+  css:
+    theme:
+      css/preview.css: {}

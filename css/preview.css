@@ -1,0 +1,21 @@
+.node-preview-container {
+  padding: 0;
+  background-color: var(--color-grey-light);
+  position: relative;
+  box-shadow: var(--box-shadow);
+}
+.node-preview-form-select {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-smaller);
+}
+
+.form-item-view-mode {
+  margin-bottom: 0;
+}
+
+.node-preview-backlink {
+  padding: var(--spacing);
+  border-right: var(--border-large);
+  margin-right: var(--spacing);
+}

@@ -60,5 +60,5 @@ footer .lgd-row > * {
 }
 
 .region-microsites-footer .lgd-region__inner > .lgd-row:first-of-type {
-  justify-content: space-between;
+  justify-content: var(--footer-grid-column-justification);
 }

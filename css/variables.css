@@ -44,10 +44,10 @@ body {
   --footer-text-color: var(--color-accent-contrast);
   --footer-link-color: var(--color-accent-contrast);
   --footer-link-hover-color: var(--color-accent-2);
-  --pre-header-background-color: var(--color-accent);
-  --pre-header-text-color: var(--color-accent-contrast);
-  --pre-header-link-color: var(--color-accent-contrast);
-  --pre-header-link-hover-color: var(--color-accent-2);
+  --pre-header-background-color: var(--color-accent-2);
+  --pre-header-text-color: var(--color-accent-2-contrast);
+  --pre-header-link-color: var(--color-accent-2-contrast);
+  --pre-header-link-hover-color: var(--color-accent-2-contrast);
   --header-background-color: var(--color-accent);
   --header-text-color: var(--color-accent-contrast);
   --header-link-color: var(--color-accent-contrast);
@@ -101,6 +101,7 @@ body {
   --table-header-text-color: var(--color-accent-2-contrast);
   --box-shadow: -1px 0 3px 1px rgb(0 0 0 / 33%);
   --footer-grid-column-spacing: var(--spacing-larger);
+  --footer-grid-column-justification: space-between;
   --site-name-font-size: var(--font-size-h2);
   --site-name-font: var(--font-secondary);
   --site-name-font-weight: var(--heading-font-weight);

@@ -91,16 +91,16 @@
 }
 
 .microsite-header__main {
-  align-items: var(--site-name-alignment);
+  align-items: var(--header-items-alignment);
 }
 
 
-.block-microsites-group-content-menulgms-main-menu {
+.lgms-main-menu {
   font-size: var(--menu-main-font-size);
   font-weight: var(--menu-main-font-weight);
 }
 
-.block-microsites-group-content-menulgms-utility-menu {
+.lgms-utility-menu {
   font-size: var(--menu-utility-font-size);
   font-weight: var(--menu-utility-font-weight);
 }

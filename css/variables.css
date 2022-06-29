@@ -100,4 +100,14 @@ body {
   --featured-teaser-link-weight: var(--heading-1-font-weight);
   --table-header-text-color: var(--color-accent-2-contrast);
   --box-shadow: -1px 0 3px 1px rgb(0 0 0 / 33%);
+  --footer-grid-column-spacing: var(--spacing-larger);
+  --site-name-font-size: var(--font-size-h2);
+  --site-name-font: var(--font-secondary);
+  --site-name-font-weight: var(--heading-font-weight);
+  --site-name-alignment: center;
+  --menu-main-font-size: var(--font-size-h3);
+  --menu-main-font-weight: var(--heading-font-weight);
+  --menu-utility-font-size: var(--font-size-h4);
+  --menu-utility-font-weight: normal;
+}
 }

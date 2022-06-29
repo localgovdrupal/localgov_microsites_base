@@ -24,6 +24,10 @@
   margin-bottom: var(--spacing);
 }
 
+.microsite-footer__logos .field__items {
+  align-items: center;
+}
+
 .microsite-footer__text-block {
   margin-top: var(--spacing);
   margin-bottom: var(--spacing);

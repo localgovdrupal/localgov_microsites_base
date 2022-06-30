@@ -24,6 +24,10 @@
   margin-bottom: var(--spacing);
 }
 
+.microsite-footer__logos .field__items {
+  align-items: center;
+}
+
 .microsite-footer__text-block {
   margin-top: var(--spacing);
   margin-bottom: var(--spacing);
@@ -35,4 +39,26 @@
 
 .microsite-footer__housekeeping ul {
   list-style-type: none;
+}
+
+.region-microsites-footer h2,
+.region-microsites-footer h3,
+.region-microsites-footer h4,
+.region-microsites-footer h5,
+.region-microsites-footer h6 {
+  color: var(--footer-text-color)
+}
+
+.microsite-footer .lgd-row__one-quarter,
+.microsite-footer .lgd-row--quarters > * {
+  width: calc(25% - var(--footer-grid-column-spacing));
+}
+
+.microsite-footer .lgd-row > * {
+  margin-right: calc(var(--footer-grid-column-spacing) / 2);
+  margin-left: calc(var(--footer-grid-column-spacing) / 2);
+}
+
+.region-microsites-footer .lgd-region__inner > .lgd-row:first-of-type {
+  justify-content: var(--footer-grid-column-justification);
 }

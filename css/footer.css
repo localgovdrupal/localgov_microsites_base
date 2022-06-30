@@ -49,12 +49,12 @@
   color: var(--footer-text-color)
 }
 
-footer .lgd-row__one-quarter,
-footer .lgd-row--quarters > * {
+.microsite-footer .lgd-row__one-quarter,
+.microsite-footer .lgd-row--quarters > * {
   width: calc(25% - var(--footer-grid-column-spacing));
 }
 
-footer .lgd-row > * {
+.microsite-footer .lgd-row > * {
   margin-right: calc(var(--footer-grid-column-spacing) / 2);
   margin-left: calc(var(--footer-grid-column-spacing) / 2);
 }

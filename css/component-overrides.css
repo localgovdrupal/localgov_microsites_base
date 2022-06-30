@@ -3,20 +3,12 @@
   color: var(--image-caption-background);
 }
 
-.lgd-image--has-caption {
-  border-width: var(--image-border);
-}
-
-/* Quote  */
-.pull-out-quote {
-  border-color: var(--quote-border-color);
-}
-
 .pull-out-quote__content {
   color: var(--quote-content-color);
 }
 
 /* Accordion */
+
 .accordion-pane__title h3 {
   margin: 0;
 }
@@ -32,9 +24,12 @@
   font-weight: var(--heading-3-font-weight);
 }
 
+.paragraph--type--localgov-accordion .field--name-localgov-paragraphs{
+  border-top: var(--border);
+}
+
 .paragraph--type--localgov-accordion-pane {
-  border-bottom: 1px solid grey;
-  /* todo add top line on first accordion */
+  border-bottom: var(--border);
 }
 
 .accordion-pane__title button {

@@ -71,8 +71,7 @@ body {
 body {
   --font-primary: "Public Sans", georgia, "Times New Roman", times, serif;
   --font-secondary: "Public Sans", georgia, "Times New Roman", times, serif;
-  --border-width: 0px;
-  --border-color: var(--color-accent-2);
+  --border-color: var(--color-text);
   --image-with-caption-bg-color: var(--color-accent-2);
   --ia-block-bg-color: var(--page-background-color);
   --ia-block-bg-color-promoted: var(--color-accent-2);
@@ -81,14 +80,22 @@ body {
   --quote-author-color: var(--color-accent-2-contrast);
   --call-out-box-text-color: var(--color-accent-contrast);
   --call-out-box-link-padding: 0;
+  --sidebar-exposed-form-bg-color: var(--color-accent-2);
+  --checkbox-select-outline-color: var(--color-accent-2-contrast);
+  --image-with-caption-border: var(--border-none);
+  --quote-border: var(--border-none);
+  --button-bg-color: var(--color-accent);
+  --button-text-color: var(--color-accent-contrast);
+  --button-bg-color-hover: var(--color-accent-contrast);
+  --button-text-color-hover: var(--color-accent);
+  --button-border-color: var(--color-accent-contrast);
 }
 
 /* New variables for style preferences */
 body {
+  --border-none: 0px solid;
   --width-restricted-width-section: 800px;
   --image-caption-background: var(--color-accent-2-contrast);
-  --image-border: var(--border-none);
-  --quote-border-color: var(--color-accent-2-contrast);
   --quote-content-color: var(--color-accent-2-contrast);
   --featured-teaser-background: var(--color-accent-2);
   --featured-teaser-color: var(--color-accent-2-contrast);
@@ -100,4 +107,8 @@ body {
   --featured-teaser-link-weight: var(--heading-1-font-weight);
   --table-header-text-color: var(--color-accent-2-contrast);
   --box-shadow: -1px 0 3px 1px rgb(0 0 0 / 33%);
+  --label-font-weight: bold;
+  --sidebar-exposed-form-padding: var(--spacing) 0;
+  --input-border: 2px solid var(--color-text);
+  --input-border-color: var(--color-text);
 }

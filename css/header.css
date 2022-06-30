@@ -53,6 +53,12 @@
 .microsite-header__menu .menu {
   display: flex;
   gap: var(--spacing);
+  justify-content: end;
+  margin-bottom: 0;
+}
+
+.microsite-header__menus .microsite-header__menu + .microsite-header__menu {
+  margin-top: var(--spacing);
 }
 
 .microsite-header__menu .menu-item {
@@ -76,4 +82,25 @@
   .microsite-header__off-canvas {
     display: none;
   }
+}
+
+.microsite-header__name {
+  font-size: var(--site-name-font-size);
+  font-family: var(--site-name-font);
+  font-weight: var(--site-name-font-weight);
+}
+
+.microsite-header__main {
+  align-items: var(--header-items-alignment);
+}
+
+
+.lgms-main-menu {
+  font-size: var(--menu-main-font-size);
+  font-weight: var(--menu-main-font-weight);
+}
+
+.lgms-utility-menu {
+  font-size: var(--menu-utility-font-size);
+  font-weight: var(--menu-utility-font-weight);
 }

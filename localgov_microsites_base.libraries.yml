@@ -10,22 +10,22 @@ variables:
 base:
   css:
     theme:
-      css/base.css: {}
+      css/base.css: { weight: 1 }
 
 fonts:
   css:
     theme:
-      css/fonts.css: {}
+      css/fonts.css: { weight: 1 }
 
 off-canvas:
   css:
     theme:
-      css/off-canvas.css: {}
+      css/off-canvas.css: { weight: 1 }
 
 header:
   css:
     theme:
-      css/header.css: {}
+      css/header.css: { weight: 1 }
 
 header-js:
   js:
@@ -36,19 +36,19 @@ header-js:
 footer:
   css:
     theme:
-      css/footer.css: {}
+      css/footer.css: { weight: 1 }
 
 full:
   css:
     theme:
-      css/full.css: {}
+      css/full.css: { weight: 1 }
 
 component-overrides:
   css:
     theme:
-      css/component-overrides.css: {}
+      css/component-overrides.css: { weight: 1 }
 
 preview:
   css:
     theme:
-      css/preview.css: {}
+      css/preview.css: { weight: 1 }

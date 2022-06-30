@@ -329,6 +329,36 @@ function localgov_microsites_base_preprocess_html(&$variables) {
       $variables['attributes']['style'][] = '--header-link-hover-color: ' . $header_link_hover_colour . ';';
     }
 
+    // Header site name font size.
+    if (!is_null($group->get('lgms_site_name_font_size')[0])) {
+      $site_name_font_size = $group->get('lgms_site_name_font_size')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--site-name-font-size: ' . $site_name_font_size . ';';
+    }
+
+    // Header site name font weight.
+    if (!is_null($group->get('lgms_site_name_font_weight')[0])) {
+      $site_name_font_weight = $group->get('lgms_site_name_font_weight')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--site-name-font-weight: ' . $site_name_font_weight . ';';
+    }
+
+    // Header vertical alignment.
+    if (!is_null($group->get('lgms_header_vertical_alignment')[0])) {
+      $header_vertical_alignment = $group->get('lgms_header_vertical_alignment')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--header-items-alignment: ' . $header_vertical_alignment . ';';
+    }
+
+    // Main menu site font size.
+    if (!is_null($group->get('lgms_main_menu_font_size')[0])) {
+      $main_menu_font_size = $group->get('lgms_main_menu_font_size')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--main-menu-font-size: ' . $main_menu_font_size . ';';
+    }
+
+    // Main menu site font weight.
+    if (!is_null($group->get('lgms_main_menu_font_weight')[0])) {
+      $main_menu_font_weight = $group->get('lgms_main_menu_font_weight')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--main-menu-font-weight: ' . $main_menu_font_weight . ';';
+    }
+
     // Footer background colour.
     if (!is_null($group->get('lgms_footer_background_colour')[0])) {
       $footer_background_colour = $group->get('lgms_footer_background_colour')[0]->getValue()['value'];
@@ -351,6 +381,12 @@ function localgov_microsites_base_preprocess_html(&$variables) {
     if (!is_null($group->get('lgms_footer_link_hover_colour')[0])) {
       $footer_link_hover_colour = $group->get('lgms_footer_link_hover_colour')[0]->getValue()['value'];
       $variables['attributes']['style'][] = '--footer-link-hover-color: ' . $footer_link_hover_colour . ';';
+    }
+
+    // Header vertical alignment.
+    if (!is_null($group->get('lgms_footer_items_alignment')[0])) {
+      $footer_items_alignment = $group->get('lgms_footer_items_alignment')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--footer-grid-column-justification: ' . $footer_items_alignment . ';';
     }
   }
 }

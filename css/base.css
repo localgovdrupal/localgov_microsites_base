@@ -30,3 +30,12 @@ table th p {
 table p {
   margin-bottom: var(--spacing-tiny);
 }
+
+thead {
+  border: var(--border);
+}
+
+input[type="date"], input[type="datetime-local"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], textarea, select, .select2-container--default .select2-search--dropdown .select2-search__field {
+  border: var(--input-border);
+}
+

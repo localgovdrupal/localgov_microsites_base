@@ -356,6 +356,63 @@ function localgov_microsites_base_preprocess_html(&$variables) {
 }
 
 /**
+ * Implements hook_preprocess_HOOK().
+ */
+function localgov_microsites_base_preprocess_node(&$variables) {
+  $variables['node'] = $variables['elements']['#node'];
+  $variables['view_mode'] = $variables['elements']['#view_mode'];
+  $variables['content_type'] = $variables['node']->getType();
+  $variables['teaser'] = $variables['view_mode'] == 'teaser';
+
+  $parent_group_id = \Drupal::service('domain_group_resolver')->getActiveDomainGroupId();
+  if ($parent_group_id) {
+    $group = \Drupal::entityTypeManager()->getStorage('group')->load($parent_group_id);
+  }
+  if (empty($group)) {
+    $group = \Drupal::request()->attributes->get('group');
+  }
+
+  if ($group instanceof MicrositeGroupInterface) {
+    if (!is_null($group->get('lgms_teaser_image_style')[0])) {
+      $teaser_image_style = $group->get('lgms_teaser_image_style')[0]->getValue()['value'];
+      if ($variables['teaser']) {
+        switch ($teaser_image_style) {
+          case 'square':
+            $variables['microsites']['advanced']['teaser_image_style'] = 'square_medium';
+            break;
+
+          case '3x2':
+            $variables['microsites']['advanced']['teaser_image_style'] = 'manual_3_2_crop';
+            break;
+
+          case '7x3':
+            $variables['microsites']['advanced']['teaser_image_style'] = 'manual_7_3_crop';
+            break;
+        }
+
+        if ($variables['content_type'] == 'localgov_event') {
+          $media_id = $variables['node']->localgov_event_image[0]->getValue()['target_id'];
+        }
+        elseif ($variables['content_type'] == 'localgov_news_article') {
+          $media_id = $variables['node']->field_media_image[0]->getValue()['target_id'];
+        }
+        if (isset($media_id)) {
+          $teaser_image_field = \Drupal::entityTypeManager()->getStorage('media')->load($media_id);
+          $variables['microsites']['advanced']['teaser_image'] = $teaser_image_field->field_media_image->view([
+            'type' => 'image',
+            'label' => 'hidden',
+            'settings' => [
+              'image_style' => $variables['microsites']['advanced']['teaser_image_style'],
+            ],
+          ]);
+        }
+      }
+    }
+  }
+
+}
+
+/**
  * Implements hook_preprocess_page().
  */
 function localgov_microsites_base_preprocess_page(&$variables) {
@@ -467,6 +524,9 @@ function localgov_microsites_base_preprocess_page(&$variables) {
   }
 }
 
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
 function localgov_microsites_base_theme_suggestions_page_alter(array &$suggestions, array $variables) {
   $routeMatch = \Drupal::routeMatch();
   $node_preview = $routeMatch->getParameter('node_preview');

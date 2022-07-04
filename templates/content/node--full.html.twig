@@ -108,8 +108,10 @@
     {% endif %}
 
     <div{{ content_attributes.addClass('full__content') }}>
-      {{ content|without('group_banner', 'group_page_top') }}
+      {{ content|without('group_banner', 'group_page_top', 'localgov_page_content') }}
     </div>
   </div>
+
+  {{ content.localgov_page_content }}
 
 </article>

@@ -59,8 +59,9 @@
 <div{{ attributes.addClass(classes) }}>
   
   {% if width == 'full-width-contained-content' %}
+    <div class="lgd-container padding-horizontal">
     {% elseif width == 'contained-breakout' %}
-    <div class="lgd-container lgd-container--mega padding-horizontal">
+      <div class="lgd-container lgd-container--mega padding-horizontal">
   {% endif %}
 
     {{ content }}

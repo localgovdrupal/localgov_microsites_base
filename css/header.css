@@ -95,12 +95,12 @@
 }
 
 
-.lgms-main-menu {
+.block-group-content-menulgms-main-menu {
   font-size: var(--menu-main-font-size);
   font-weight: var(--menu-main-font-weight);
 }
 
-.lgms-utility-menu {
+.block-group-content-menulgms-utility-menu {
   font-size: var(--menu-utility-font-size);
   font-weight: var(--menu-utility-font-weight);
 }

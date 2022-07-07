@@ -48,3 +48,10 @@ preview:
   css:
     theme:
       css/preview.css: {}
+
+menu:
+  css:
+    theme:
+      css/menu.css: {}
+  js:
+    js/menu.js: {}

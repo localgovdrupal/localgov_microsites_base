@@ -1,0 +1,34 @@
+/* 
+  @file Theming for menus.
+  Note: This is generic theming for _all_ menus. Specific theming for specific
+  menus can be achieved in individual menu/region files.
+*/
+
+.js .menu .menu {
+  display: none;
+}
+
+.menu {
+  padding-left: 0;
+}
+
+@media screen and (min-width: 48rem) {
+  .js .menu--menu-level-0 > .menu-item {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .js .menu--menu-level-0 > .menu-item > .menu {
+    position: absolute;
+    width: auto;
+  }
+}
+
+.menu--menu-level-0 .menu-item .menu-item {
+  padding-left: var(--spacing);
+}
+
+.menu__sub-menu-toggle {
+  padding: 0 var(--spacing-smaller);
+  border: 0;
+}

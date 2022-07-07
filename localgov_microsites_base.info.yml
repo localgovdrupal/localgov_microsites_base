@@ -7,11 +7,20 @@ base theme: "localgov_base"
 dependencies:
   - localgov_microsites_group:localgov_microsites_group
 
-libraries:
-  - localgov_microsites_base/variables
-  - localgov_microsites_base/fonts
-  - localgov_microsites_base/base
-  - localgov_microsites_base/component-overrides
+libraries-extend:
+  localgov_base/global:
+    - localgov_microsites_base/variables
+    - localgov_microsites_base/fonts
+    - localgov_microsites_base/base
+    - localgov_microsites_base/component-overrides
+  localgov_base/header:
+    - localgov_microsites_base/header
+  localgov_base/header-js:
+    - localgov_microsites_base/header-js
+  localgov_base/footer:
+    - localgov_microsites_base/footer
+  localgov_base/full:
+    - localgov_microsites_base/full
 
 regions:
   tabs: "Tabs"

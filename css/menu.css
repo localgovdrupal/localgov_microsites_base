@@ -48,9 +48,10 @@
 .menu > .menu-item .menu-item--expanded > .menu__sub-menu-toggle {
   /* 
     This margin top calc is created to take stock of the font-size of the main menu
-    item + it's line-height (hence the divide by 2).
+    item + it's line-height, so it _should_ align nicely centered with the first line
+    of the menu item's text.
   */
-  margin-top: calc(var(--menu-main-font-size) / 2);
+  margin-top: calc(var(--menu-main-font-size) / var(--line-height));
 }
 
 .menu > .menu-item .menu-item--expanded > a {

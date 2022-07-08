@@ -50,11 +50,15 @@
   }
 }
 
-.microsite-header__menu .menu {
+.microsite-header__menu .menu--menu-level-0 {
   display: flex;
   gap: var(--spacing);
   justify-content: end;
   margin-bottom: 0;
+  background-color: var(--header-background-color);
+}
+
+.microsite-header__menu .menu {
   background-color: var(--header-background-color);
 }
 

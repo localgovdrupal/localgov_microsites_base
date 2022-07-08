@@ -2,7 +2,7 @@
   Drupal.behaviors.menu = {
     attach: function (context, settings) {
       context = context || document;
-      const subMenuToggles = Array.from(document.querySelectorAll('.menu__sub-menu-toggle'));
+      const subMenuToggles = Array.from(context.querySelectorAll('.menu__sub-menu-toggle'));
 
       function handleSubMenuToggle(subMenuToggle) {
         subMenuToggle.removeAttribute('hidden');

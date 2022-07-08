@@ -118,6 +118,7 @@ body {
   --site-name-font: var(--font-secondary);
   --menu-utility-font-size: var(--font-size-h4);
   --menu-utility-font-weight: normal;
+  --menu-sub-menu-min-width: 200px;
   --label-font-weight: bold;
   --sidebar-exposed-form-padding: var(--spacing) 0;
   --input-border: 2px solid var(--color-text);

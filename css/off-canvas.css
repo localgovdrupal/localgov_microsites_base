@@ -53,3 +53,7 @@
   justify-content: center;
   width: var(--spacing);
 }
+
+.off-canvas .menu {
+  list-style: none;
+}

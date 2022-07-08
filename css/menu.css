@@ -5,7 +5,7 @@
 */
 
 .js .menu .menu {
-  display: none;
+  /* display: none; */
 }
 
 .menu {
@@ -18,13 +18,35 @@
     z-index: 1;
   }
   
-  .js .menu--menu-level-0 > .menu-item > .menu {
+  /* 1st left sub-menu */
+  .js .menu .menu {
     position: absolute;
-    width: auto;
+    left: 0;
+    min-width: var(--menu-sub-menu-min-width);
+  }
+  /* 2nd left sub-menu */
+  .js .menu .menu .menu {
+    padding-left: var(--spacing);
+  }
+  /* 3rd left sub-menu */
+  .js .menu .menu .menu .menu {
+    padding-left: calc(var(--spacing) * 2);
+  }
+  .js .menu .menu .menu .menu .menu {
+    padding-left: calc(var(--spacing) * 3);
+  }
+  .js .menu .menu .menu .menu .menu .menu {
+    padding-left: calc(var(--spacing) * 4);
+  }
+  .js .menu--menu-level-0 > .menu-item:last-child .menu {
+    right: 0;
+    left: unset;
   }
 }
 
-.menu--menu-level-0 .menu-item .menu-item {
+.menu-item .menu-item {
+  min-width: 100px;
+  padding-right: var(--spacing);
   padding-left: var(--spacing);
 }
 

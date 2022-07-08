@@ -55,6 +55,7 @@
   gap: var(--spacing);
   justify-content: end;
   margin-bottom: 0;
+  background-color: var(--header-background-color);
 }
 
 .microsite-header__menus .microsite-header__menu + .microsite-header__menu {

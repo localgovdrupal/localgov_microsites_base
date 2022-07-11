@@ -350,7 +350,7 @@ function localgov_microsites_base_preprocess_html(&$variables) {
     // Main menu site font size.
     if (!is_null($group->get('lgms_main_menu_font_size')[0])) {
       $main_menu_font_size = $group->get('lgms_main_menu_font_size')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--main-menu-font-size: ' . $main_menu_font_size . ';';
+      $variables['attributes']['style'][] = '--menu-main-font-size: ' . $main_menu_font_size . ';';
     }
 
     // Main menu site font weight.

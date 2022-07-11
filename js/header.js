@@ -8,7 +8,6 @@
         ".microsite-header__off-canvas-toggle"
       );
       const offCanvasClose = context.querySelector('.off-canvas__close');
-      console.log(offCanvasClose);
 
       function toggleStates() {
         toggleState = offCanvasToggle.getAttribute("aria-expanded");

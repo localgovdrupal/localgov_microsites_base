@@ -13,6 +13,7 @@ libraries-extend:
     - localgov_microsites_base/fonts
     - localgov_microsites_base/base
     - localgov_microsites_base/component-overrides
+    - localgov_microsites_base/layouts
   localgov_base/header:
     - localgov_microsites_base/header
   localgov_base/header-js:

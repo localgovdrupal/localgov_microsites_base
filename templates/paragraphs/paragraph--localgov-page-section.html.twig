@@ -57,7 +57,7 @@
 %}
 
 <div{{ attributes.addClass(classes) }}>
-  
+
   {% if width == 'full-width-contained-content' %}
     <div class="lgd-container padding-horizontal">
     {% elseif width == 'contained-breakout' %}
@@ -65,7 +65,7 @@
   {% endif %}
 
     {{ content }}
-  
+
   {% if width == 'full-width-contained-content' or width == 'contained-breakout' %}
     </div>
   {% endif %}

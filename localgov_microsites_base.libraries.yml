@@ -48,3 +48,8 @@ preview:
   css:
     theme:
       css/preview.css: {}
+
+layouts:
+  css:
+    theme:
+      css/layouts.css: {}

@@ -55,6 +55,20 @@
 }
 
 /* Featured teaser  */
+@media screen and (min-width: 768px) {
+  .featured-teasers .featured-teasers__teasers .field__items{
+    display: flex;
+    gap: var(--spacing-larger);
+  }
+  .featured-teasers .featured-teasers__teasers .field__items .field__item + .field__item{
+    margin-top: 0;
+  }
+}
+
+.featured-teasers .featured-teaser {
+  height: 100%;
+}
+
 .featured-teaser {
   background-color: var(--featured-teaser-background);
   color: var(--featured-teaser-color);

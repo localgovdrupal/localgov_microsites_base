@@ -43,6 +43,7 @@
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
 }
 
 .menu > .menu-item .menu-item--expanded > .menu__sub-menu-toggle {
@@ -126,3 +127,5 @@
     left: unset;
   }
 }
+
+

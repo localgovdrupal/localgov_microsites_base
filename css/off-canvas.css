@@ -27,8 +27,14 @@
   transform: translateX(0);
 }
 
-.region-off-canvas {
+.off-canvas[data-expanded="false"] .region-off-canvas {
+  /* Hide from the tab order when not needed */
+  display: none;
+}
+
+.off-canvas[data-expanded="true"] .region-off-canvas {
   display: flex;
+  padding-top: var(--minimum-clickable-icon-size);
 }
 
 .off-canvas a {
@@ -51,7 +57,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: var(--spacing);
+  width: var(--minimum-clickable-icon-size);
+  height: var(--minimum-clickable-icon-size);
 }
 
 .off-canvas .menu {

@@ -26,7 +26,7 @@
 
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
-    <button class="off-canvas__close"><span class="visually-hidden">{{ 'Close off-canvas region'|t }}</span>X</button>
+    <button class="off-canvas__close"><span class="visually-hidden">{{ 'Close off-canvas region '|t }}</span>X</button>
     <div class="lgd-region__inner lgd-region__inner--{{ region|clean_class }}">
       {{ content }}
     </div>

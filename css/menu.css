@@ -129,3 +129,12 @@
 }
 
 
+
+.lgd-region--off-canvas .block-group-content-menu {
+  font-size: var(--font-size);
+}
+
+.lgd-region--off-canvas .block-group-content-menu a{
+  min-height: var(--minimum-clickable-icon-size);
+  display: inline-block;
+}

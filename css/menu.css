@@ -1,4 +1,4 @@
-/* 
+/*
   @file Theming for menus.
   Note: This is generic theming for _all_ menus. Specific theming for specific
   menus can be achieved in individual menu/region files.
@@ -17,7 +17,7 @@
   This is a button element placed inside the li to trigger the sub-menu.
 */
 .menu__sub-menu-toggle {
-  padding: 0 var(--spacing-smallest);
+  padding: 0;
   width: var(--menu-sub-menu-toggle-width);
   height: var(--menu-sub-menu-toggle-height);
   border: 0;
@@ -46,7 +46,7 @@
 }
 
 .menu > .menu-item .menu-item--expanded > .menu__sub-menu-toggle {
-  /* 
+  /*
     This margin top calc is created to take stock of the font-size of the main menu
     item + it's line-height, so it _should_ align nicely centered with the first line
     of the menu item's text.
@@ -64,7 +64,7 @@
 
 /* 2nd+ level sub-menu */
 /*
-  The relative here is to reset the absolute from above for anything after the 
+  The relative here is to reset the absolute from above for anything after the
   first level. Then we use float, to make sure that the following siblings are not
   hidden behind the currently expanded sub-menu item.
 */
@@ -73,9 +73,9 @@
   float: left;
 }
 
-/* 
+/*
   We have CSS here to go 5 levels deep. \
-  Hopefully no one will be crazy enough to need this. 
+  Hopefully no one will be crazy enough to need this.
 */
 
 /* 1st level sub-menu links */
@@ -107,12 +107,17 @@
     position: relative;
     z-index: 1;
   }
-  
+
   /* 1st level sub-menu */
   .js .menu .menu {
     position: absolute;
     left: 0;
     min-width: var(--menu-sub-menu-min-width);
+    font-size: var(--menu-sub-menu-font-size);
+  }
+
+  .js .menu .menu--sub-menu-level-1 {
+    left: calc(var(--menu-item-padding)* -1);
   }
 
   /* We want to make sure any sub-items on the last menu item do not overflow the screen. */

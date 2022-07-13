@@ -359,6 +359,37 @@ function localgov_microsites_base_preprocess_html(&$variables) {
       $variables['attributes']['style'][] = '--main-menu-font-weight: ' . $main_menu_font_weight . ';';
     }
 
+    // Main menu submenu background colour.
+    if (!is_null($group->get('lgms_submenu_background_colour')[0])) {
+      $submenu_background_colour = $group->get('lgms_submenu_background_colour')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--menu-sub-menu-background-colour: ' . $submenu_background_colour . ';';
+    }
+
+    // Main menu submenu text colour.
+    if (!is_null($group->get('lgms_submenu_link_colour')[0])) {
+      $submenu_link_colour = $group->get('lgms_submenu_link_colour')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--menu-sub-menu-link-colour: ' . $submenu_link_colour . ';';
+    }
+
+    // Main menu submenu icon.
+    if (!is_null($group->get('lgms_submenu_icon')[0])) {
+      $submenu_icon = $group->get('lgms_submenu_icon')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--menu-sub-menu-icon: url(../assets/icons/' . $submenu_icon . '.svg) ;';
+    }
+
+    // Off canvas background colour.
+    if (!is_null($group->get('lgms_off_canvas_bg_colour')[0])) {
+      $off_canvas_bg_colour = $group->get('lgms_off_canvas_bg_colour')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--off-canvas-background-color: ' . $off_canvas_bg_colour . ';';
+    }
+
+    // Off canvas text colour.
+    if (!is_null($group->get('lgms_off_canvas_text_colour')[0])) {
+      $off_canvas_text_colour = $group->get('lgms_off_canvas_text_colour')[0]->getValue()['value'];
+      $variables['attributes']['style'][] = '--off-canvas-link-color: ' . $off_canvas_text_colour . ';';
+    }
+
+
     // Footer background colour.
     if (!is_null($group->get('lgms_footer_background_colour')[0])) {
       $footer_background_colour = $group->get('lgms_footer_background_colour')[0]->getValue()['value'];

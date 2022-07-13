@@ -70,11 +70,12 @@ body {
   --menu-main-font-size: var(--font-size-h3);
   --menu-main-font-weight: var(--heading-font-weight);
   --minimum-clickable-icon-size: 44px; /* Setting default to 44px as per https://www.w3.org/WAI/WCAG21/Understanding/target-size.html */
+  --menu-sub-menu-icon-size: 1.2rem;
   --menu-sub-menu-toggle-width: var(--minimum-clickable-icon-size);
   --menu-sub-menu-toggle-height: var(--minimum-clickable-icon-size);
   --menu-sub-menu-font-size: var(--font-size-h4);
   --menu-item-padding: var(--spacing-small);
-  --menu-item-toggle-icon-rotation: 45deg;
+  --menu-item-toggle-icon-rotation: 90deg;
   --footer-grid-column-justification: space-between;
   --site-name-font-size: var(--font-size-h2);
 }

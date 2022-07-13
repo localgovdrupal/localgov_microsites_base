@@ -129,12 +129,39 @@
 }
 
 
+@media screen and (min-width: 48rem) {
+  .js .microsite-header__menu .menu .menu {
+    background: var(--menu-sub-menu-background-colour);
+  }
 
-.lgd-region--off-canvas .block-group-content-menu {
-  font-size: var(--font-size);
-}
+  .js  .microsite-header__menu .menu .menu a {
+    color: var(--menu-sub-menu-link-colour);
+  }
 
-.lgd-region--off-canvas .block-group-content-menu a{
-  min-height: var(--minimum-clickable-icon-size);
-  display: inline-block;
+  .js .menu__sub-menu-toggle-icon {
+    /* Use mask to update the colour of the icons, the background colour is the colour the icons appear  */
+    -webkit-mask: var(--menu-sub-menu-icon) no-repeat 100% 100%;
+    mask: var(--menu-sub-menu-icon) no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: var(--header-link-color);
+    width: var(--menu-sub-menu-icon-size);
+    height: var(--menu-sub-menu-icon-size);
+  }
+
+  .js .menu__sub-menu-toggle:focus .menu__sub-menu-toggle-icon,
+  .js .menu__sub-menu-toggle:hover .menu__sub-menu-toggle-icon {
+    /* Keep the icons visible on focus and hover*/
+    background-color: var(--header-background-color);
+  }
+
+  .js .menu--menu-level-0 .menu .menu__sub-menu-toggle {
+    /* Update the icon background to match the submenu*/
+    background-color: var(--menu-sub-menu-background-colour);
+  }
+
+  .js .menu--menu-level-0 .menu .menu__sub-menu-toggle-icon {
+    /* Update the icon colour to be visible the submenu background*/
+    background-color: var(--menu-sub-menu-link-colour);
+  }
 }

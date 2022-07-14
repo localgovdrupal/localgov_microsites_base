@@ -128,25 +128,49 @@
   }
 }
 
+/* Dealing with the submenu icons in all their states */
+
+/* For the offcanvas version */
+.js .menu__sub-menu-toggle {
+  background-color: var(--off-canvas-link-color);
+  border: 2px solid transparent;
+}
+
+.js .menu__sub-menu-toggle:hover {
+  background-color: var(--off-canvas-background-color);
+  border-color: var(--off-canvas-link-color);
+}
+
+.js .menu__sub-menu-toggle-icon {
+  /* Use mask to update the colour of the icons, the background colour is the colour the icons appear  */
+  -webkit-mask: var(--menu-sub-menu-icon) no-repeat 100% 100%;
+  mask: var(--menu-sub-menu-icon) no-repeat 100% 100%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: var(--off-canvas-background-color);
+  width: var(--menu-sub-menu-icon-size);
+  height: var(--menu-sub-menu-icon-size);
+}
+
+.js .menu__sub-menu-toggle:hover .menu__sub-menu-toggle-icon {
+  background-color: var(--off-canvas-link-color);
+}
 
 @media screen and (min-width: 48rem) {
-  .js .microsite-header__menu .menu .menu {
-    background: var(--menu-sub-menu-background-colour);
-  }
-
-  .js  .microsite-header__menu .menu .menu a {
-    color: var(--menu-sub-menu-link-colour);
+  /* Desktop first level  */
+  .js .menu__sub-menu-toggle {
+    background-color: var(--header-background-color);
+    border: 2px solid transparent;
   }
 
   .js .menu__sub-menu-toggle-icon {
     /* Use mask to update the colour of the icons, the background colour is the colour the icons appear  */
-    -webkit-mask: var(--menu-sub-menu-icon) no-repeat 100% 100%;
-    mask: var(--menu-sub-menu-icon) no-repeat 100% 100%;
-    -webkit-mask-size: cover;
-    mask-size: cover;
     background-color: var(--header-link-color);
-    width: var(--menu-sub-menu-icon-size);
-    height: var(--menu-sub-menu-icon-size);
+  }
+
+  .js .menu__sub-menu-toggle:hover {
+    background-color: var(--header-link-color);
+    border-color: var(--header-link-color);
   }
 
   .js .menu__sub-menu-toggle:focus .menu__sub-menu-toggle-icon,
@@ -155,9 +179,23 @@
     background-color: var(--header-background-color);
   }
 
+  /* Desktop submenus  */
+  .js .microsite-header__menu .menu .menu {
+    background: var(--menu-sub-menu-background-colour);
+  }
+
+  .js  .microsite-header__menu .menu .menu a {
+    color: var(--menu-sub-menu-link-colour);
+  }
+
   .js .menu--menu-level-0 .menu .menu__sub-menu-toggle {
     /* Update the icon background to match the submenu*/
     background-color: var(--menu-sub-menu-background-colour);
+  }
+
+  .js .menu--menu-level-0 .menu .menu__sub-menu-toggle:hover {
+    /* Update the icon background to match the submenu*/
+    border-color: var(--menu-sub-menu-link-colour);
   }
 
   .js .menu--menu-level-0 .menu .menu__sub-menu-toggle-icon {

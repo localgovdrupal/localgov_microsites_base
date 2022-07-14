@@ -39,3 +39,13 @@ input[type="date"], input[type="datetime-local"], input[type="email"], input[typ
   border: var(--input-border);
 }
 
+a:focus-visible {
+  outline: -webkit-focus-ring-color auto 2px;
+}
+
+a:focus {
+  background-color: transparent;
+  box-shadow: none;
+  outline: -webkit-focus-ring-color auto 2px;
+  color: inherit;
+}

@@ -5,7 +5,6 @@ dependencies:
     - group_content_menu.group_content_menu_type.lgms_footer_housekeeping
   module:
     - group_content_menu
-    - localgov_microsites_group
   theme:
     - localgov_microsites_base
 id: localgov_microsites_base_footer_housekeeping_menu
@@ -13,15 +12,15 @@ theme: localgov_microsites_base
 region: footer_menu
 weight: 0
 provider: null
-plugin: 'microsites_group_content_menu:lgms_footer_housekeeping'
+plugin: 'group_content_menu:lgms_footer_housekeeping'
 settings:
-  id: 'microsites_group_content_menu:lgms_footer_housekeeping'
+  id: 'group_content_menu:lgms_footer_housekeeping'
   label: 'Footer housekeeping'
   label_display: '0'
-  provider: localgov_microsites_group
+  provider: group_content_menu
   context_mapping:
-    group: '@group.group_route_context:group'
-  level: '1'
-  depth: '1'
-  expand_all_items: 0
+    group: '@domain_group.domain_group_context:group'
+  level: 1
+  depth: 1
+  expand_all_items: false
 visibility: {  }

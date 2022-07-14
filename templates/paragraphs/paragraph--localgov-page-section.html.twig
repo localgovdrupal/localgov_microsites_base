@@ -39,8 +39,8 @@
  */
 #}
 
-{% if paragraph.lgms_width_of_section.value %}
-  {% set width = paragraph.lgms_width_of_section.value %}
+{% if paragraph.localgov_width_of_section.value %}
+  {% set width = paragraph.localgov_width_of_section.value %}
 {% endif %}
 {%
   set classes = [
@@ -57,7 +57,7 @@
 %}
 
 <div{{ attributes.addClass(classes) }}>
-  
+
   {% if width == 'full-width-contained-content' %}
     <div class="lgd-container padding-horizontal">
     {% elseif width == 'contained-breakout' %}
@@ -65,7 +65,7 @@
   {% endif %}
 
     {{ content }}
-  
+
   {% if width == 'full-width-contained-content' or width == 'contained-breakout' %}
     </div>
   {% endif %}

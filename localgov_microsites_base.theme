@@ -401,7 +401,6 @@ function localgov_microsites_base_preprocess_html(&$variables) {
       $variables['attributes']['style'][] = '--off-canvas-link-color: ' . $off_canvas_text_colour . ';';
     }
 
-
     // Footer background colour.
     if (!is_null($group->get('lgms_footer_background_colour')[0])) {
       $footer_background_colour = $group->get('lgms_footer_background_colour')[0]->getValue()['value'];

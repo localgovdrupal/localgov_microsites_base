@@ -13,6 +13,11 @@
   display: none;
 }
 
+/* Show sub-menus on hover */
+.js .menu > .menu-item--expanded:hover > .menu {
+  display: block;
+}
+
 /*
   This is a button element placed inside the li to trigger the sub-menu.
 */

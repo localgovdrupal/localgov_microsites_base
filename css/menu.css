@@ -15,7 +15,7 @@
 
 /* Show sub-menus on hover */
 .js .menu > .menu-item--expanded:hover > .menu {
-  display: block;
+  display: block !important; /* Needed to override the inline display: none; from JS */
 }
 
 /*

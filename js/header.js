@@ -8,6 +8,7 @@
         ".microsite-header__off-canvas-toggle"
       );
       const offCanvasClose = context.querySelector('.off-canvas__close');
+      const focusable = offCanvas.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
 
       function toggleStates() {
         toggleState = offCanvasToggle.getAttribute("aria-expanded");
@@ -27,7 +28,6 @@
         toggleStates();
         offCanvasToggle.setAttribute("aria-expanded", "true");
         offCanvas.setAttribute("data-expanded", "true");
-        const focusable = offCanvas.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
         focusable[0].focus();
       }
 
@@ -36,6 +36,31 @@
         offCanvasToggle.focus();
         offCanvasToggle.setAttribute("aria-expanded", "false");
         offCanvas.setAttribute("data-expanded", "false");
+      }
+
+      function trapFocusInOffCanvasArea(element) {
+        const firstFocusableElement = focusable[0];  
+        const lastFocusableElement = focusable[focusable.length - 1];
+      
+        element.addEventListener('keydown', function(e) {
+          const isTabPressed = (e.code === 'Tab');
+          if (!isTabPressed) { 
+            return; 
+          }
+          /* shift + tab */
+          if ( e.shiftKey ) {
+            if (context.activeElement === firstFocusableElement) {
+              lastFocusableElement.focus();
+                e.preventDefault();
+              }
+            } else {
+            /* tab */ 
+            if (context.activeElement === lastFocusableElement) {
+              firstFocusableElement.focus();
+                e.preventDefault();
+              }
+            }
+        });
       }
 
       if (!offCanvasToggle) {
@@ -47,10 +72,12 @@
             handleCloseOffCanvas();
           }
         });
+        trapFocusInOffCanvasArea(offCanvas);
       }
       offCanvasClose.addEventListener('click', () => {
         handleCloseOffCanvas();
-      })
+      });
+
     },
   };
 })(Drupal);

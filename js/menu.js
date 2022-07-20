@@ -3,6 +3,7 @@
     attach: function (context, settings) {
       context = context || document;
       const subMenuToggles = Array.from(context.querySelectorAll('.menu__sub-menu-toggle'));
+      const topLevelMenuItems = context.querySelectorAll('.menu-item--level-0');
 
       function handleSubMenuToggle(subMenuToggle) {
         subMenuToggle.removeAttribute('hidden');
@@ -35,6 +36,14 @@
             toggle.setAttribute('aria-expanded', 'false');
             toggle.nextElementSibling.style.display = 'none';
           });
+
+          topLevelMenuItems.forEach(item => {
+            item.addEventListener('mouseleave', function() {
+              subMenuToggle.setAttribute('aria-expanded', 'false');
+              subMenuToggle.nextElementSibling.style.display = 'none';
+            })
+          });
+
         })
       }
 

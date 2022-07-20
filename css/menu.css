@@ -16,6 +16,7 @@
 /* Show sub-menus on hover */
 .js .menu > .menu-item--expanded:hover > .menu {
   display: block !important; /* Needed to override the inline display: none; from JS */
+  width: 100%;
 }
 
 /*
@@ -41,6 +42,19 @@
 
 .menu-item .menu-item > a {
   display: block;
+}
+
+@media screen and (max-width: 48rem) {
+  .menu-item--level-0.menu-item--expanded {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu__sub-menu-toggle[aria-expanded="true"] + .menu {
+    width: 100%;
+  }
 }
 
 .menu > .menu-item .menu-item--expanded {

@@ -80,7 +80,7 @@ function localgov_microsites_base_preprocess_html(&$variables) {
     // Styleguide heading font weight.
     if (!is_null($group->get('lgms_heading_font_weight')[0])) {
       $heading_font_weight = $group->get('lgms_heading_font_weight')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = "--heading-font-weight: '$heading_font_weight';";
+      $variables['attributes']['style'][] = "--heading-font-weight: $heading_font_weight;";
     }
 
     // Styleguide font-size.
@@ -140,37 +140,37 @@ function localgov_microsites_base_preprocess_html(&$variables) {
     // Heading Overrides heading 1 font weight.
     if (!is_null($group->get('lgms_heading_1_font_weight')[0])) {
       $font_weight = $group->get('lgms_heading_1_font_weight')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--heading-1-font-weight: ' . $font_weight . ';';
+      $variables['attributes']['style'][] = '--heading-1-font-weight:' . $font_weight . ';';
     }
 
     // Heading Overrides heading 2 font weight.
     if (!is_null($group->get('lgms_heading_2_font_weight')[0])) {
       $font_weight = $group->get('lgms_heading_2_font_weight')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--heading-2-font-weight: ' . $font_weight . ';';
+      $variables['attributes']['style'][] = '--heading-2-font-weight:' . $font_weight . ';';
     }
 
     // Heading Overrides heading 3 font weight.
     if (!is_null($group->get('lgms_heading_3_font_weight')[0])) {
       $font_weight = $group->get('lgms_heading_3_font_weight')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--heading-3-font-weight: ' . $font_weight . ';';
+      $variables['attributes']['style'][] = '--heading-3-font-weight:' . $font_weight . ';';
     }
 
     // Heading Overrides heading 4 font weight.
     if (!is_null($group->get('lgms_heading_4_font_weight')[0])) {
       $font_weight = $group->get('lgms_heading_4_font_weight')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--heading-4-font-weight: ' . $font_weight . ';';
+      $variables['attributes']['style'][] = '--heading-4-font-weight:' . $font_weight . ';';
     }
 
     // Heading Overrides heading 5 font weight.
     if (!is_null($group->get('lgms_heading_5_font_weight')[0])) {
       $font_weight = $group->get('lgms_heading_5_font_weight')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--heading-5-font-weight: ' . $font_weight . ';';
+      $variables['attributes']['style'][] = '--heading-5-font-weight:' . $font_weight . ';';
     }
 
     // Heading Overrides heading 6 font weight.
     if (!is_null($group->get('lgms_heading_6_font_weight')[0])) {
       $font_weight = $group->get('lgms_heading_6_font_weight')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--heading-6-font-weight: ' . $font_weight . ';';
+      $variables['attributes']['style'][] = '--heading-6-font-weight:' . $font_weight . ';';
     }
 
     // Heading Overrides heading 1 font colour.

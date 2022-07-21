@@ -1,4 +1,4 @@
-/* 
+/*
   @file Theming for menus.
   Note: This is generic theming for _all_ menus. Specific theming for specific
   menus can be achieved in individual menu/region files.
@@ -13,11 +13,17 @@
   display: none;
 }
 
+/* Show sub-menus on hover */
+.js .menu > .menu-item--expanded:hover > .menu {
+  display: block !important; /* Needed to override the inline display: none; from JS */
+  width: 100%;
+}
+
 /*
   This is a button element placed inside the li to trigger the sub-menu.
 */
 .menu__sub-menu-toggle {
-  padding: 0 var(--spacing-smallest);
+  padding: 0;
   width: var(--menu-sub-menu-toggle-width);
   height: var(--menu-sub-menu-toggle-height);
   border: 0;
@@ -38,15 +44,29 @@
   display: block;
 }
 
+@media screen and (max-width: 48rem) {
+  .menu-item--level-0.menu-item--expanded {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu__sub-menu-toggle[aria-expanded="true"] + .menu {
+    width: 100%;
+  }
+}
+
 .menu > .menu-item .menu-item--expanded {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
 }
 
 .menu > .menu-item .menu-item--expanded > .menu__sub-menu-toggle {
-  /* 
+  /*
     This margin top calc is created to take stock of the font-size of the main menu
     item + it's line-height, so it _should_ align nicely centered with the first line
     of the menu item's text.
@@ -64,7 +84,7 @@
 
 /* 2nd+ level sub-menu */
 /*
-  The relative here is to reset the absolute from above for anything after the 
+  The relative here is to reset the absolute from above for anything after the
   first level. Then we use float, to make sure that the following siblings are not
   hidden behind the currently expanded sub-menu item.
 */
@@ -73,9 +93,9 @@
   float: left;
 }
 
-/* 
+/*
   We have CSS here to go 5 levels deep. \
-  Hopefully no one will be crazy enough to need this. 
+  Hopefully no one will be crazy enough to need this.
 */
 
 /* 1st level sub-menu links */
@@ -107,17 +127,98 @@
     position: relative;
     z-index: 1;
   }
-  
+
   /* 1st level sub-menu */
   .js .menu .menu {
     position: absolute;
     left: 0;
     min-width: var(--menu-sub-menu-min-width);
+    font-size: var(--menu-sub-menu-font-size);
+  }
+
+  .js .menu .menu--sub-menu-level-1 {
+    left: calc(var(--menu-item-padding)* -1);
   }
 
   /* We want to make sure any sub-items on the last menu item do not overflow the screen. */
   .js .menu--menu-level-0 > .menu-item:last-child .menu {
     right: 0;
     left: unset;
+  }
+}
+
+/* Dealing with the submenu icons in all their states */
+
+/* For the offcanvas version */
+.js .menu__sub-menu-toggle {
+  background-color: var(--off-canvas-link-color);
+  border: 2px solid transparent;
+}
+
+.js .menu__sub-menu-toggle:hover {
+  background-color: var(--off-canvas-background-color);
+  border-color: var(--off-canvas-link-color);
+}
+
+.js .menu__sub-menu-toggle-icon {
+  /* Use mask to update the colour of the icons, the background colour is the colour the icons appear  */
+  -webkit-mask: var(--menu-sub-menu-icon) no-repeat 100% 100%;
+  mask: var(--menu-sub-menu-icon) no-repeat 100% 100%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: var(--off-canvas-background-color);
+  width: var(--menu-sub-menu-icon-size);
+  height: var(--menu-sub-menu-icon-size);
+}
+
+.js .menu__sub-menu-toggle:hover .menu__sub-menu-toggle-icon {
+  background-color: var(--off-canvas-link-color);
+}
+
+@media screen and (min-width: 48rem) {
+  /* Desktop first level  */
+  .js .menu__sub-menu-toggle {
+    background-color: var(--header-background-color);
+    border: 2px solid transparent;
+  }
+
+  .js .menu__sub-menu-toggle-icon {
+    /* Use mask to update the colour of the icons, the background colour is the colour the icons appear  */
+    background-color: var(--header-link-color);
+  }
+
+  .js .menu__sub-menu-toggle:hover {
+    background-color: var(--header-link-color);
+    border-color: var(--header-link-color);
+  }
+
+  .js .menu__sub-menu-toggle:focus .menu__sub-menu-toggle-icon,
+  .js .menu__sub-menu-toggle:hover .menu__sub-menu-toggle-icon {
+    /* Keep the icons visible on focus and hover*/
+    background-color: var(--header-background-color);
+  }
+
+  /* Desktop submenus  */
+  .js .microsite-header__menu .menu .menu {
+    background: var(--menu-sub-menu-background-colour);
+  }
+
+  .js  .microsite-header__menu .menu .menu a {
+    color: var(--menu-sub-menu-link-colour);
+  }
+
+  .js .menu--menu-level-0 .menu .menu__sub-menu-toggle {
+    /* Update the icon background to match the submenu*/
+    background-color: var(--menu-sub-menu-background-colour);
+  }
+
+  .js .menu--menu-level-0 .menu .menu__sub-menu-toggle:hover {
+    /* Update the icon background to match the submenu*/
+    border-color: var(--menu-sub-menu-link-colour);
+  }
+
+  .js .menu--menu-level-0 .menu .menu__sub-menu-toggle-icon {
+    /* Update the icon colour to be visible the submenu background*/
+    background-color: var(--menu-sub-menu-link-colour);
   }
 }

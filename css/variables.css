@@ -57,6 +57,7 @@ body {
   --off-canvas-link-color: var(--header-link-color);
   --off-canvas-link-hover-color: var(--header-link-hover-color);
   --off-canvas-border-color: var(--color-white);
+  --off-canvas-menu-icon: url(../includes/icons/menu.svg);
   --spacing: 1rem;
   /* discuss moving the following spacing variables to localgov_base */
   --spacing-tiny: calc(var(--spacing)*0.5);
@@ -69,10 +70,16 @@ body {
   --header-items-alignment: center;
   --menu-main-font-size: var(--font-size-h3);
   --menu-main-font-weight: var(--heading-font-weight);
-  --menu-sub-menu-toggle-width: var(--spacing-large);
-  --menu-sub-menu-toggle-height: var(--spacing-large);
+  --minimum-clickable-icon-size: 44px; /* Setting default to 44px as per https://www.w3.org/WAI/WCAG21/Understanding/target-size.html */
+  --menu-sub-menu-icon: url(../includes/icons/chevron-right.svg);
+  --menu-sub-menu-icon-size: 1.2rem;
+  --menu-sub-menu-toggle-width: var(--minimum-clickable-icon-size);
+  --menu-sub-menu-toggle-height: var(--minimum-clickable-icon-size);
+  --menu-sub-menu-font-size: var(--font-size-h4);
+  --menu-sub-menu-background-colour: var(--header-link-color);
+  --menu-sub-menu-link-colour: var(--header-background-color);
   --menu-item-padding: var(--spacing-small);
-  --menu-item-toggle-icon-rotation: 45deg;
+  --menu-item-toggle-icon-rotation: 90deg;
   --footer-grid-column-justification: space-between;
   --site-name-font-size: var(--font-size-h2);
 }

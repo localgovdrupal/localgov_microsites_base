@@ -26,7 +26,13 @@
 
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
-    <button class="off-canvas__close"><span class="visually-hidden">{{ 'Close off-canvas region'|t }}</span>X</button>
+    <button class="off-canvas__close">{{'Close'|t}}<span class="visually-hidden">{{ ' off-canvas region '|t }}</span>
+    {% include "@localgov_base/includes/icons/icon.html.twig" with {
+        icon_name: 'plus',
+        icon_classes: 'off-canvas__close--icon',
+      }
+    %}
+    </button>
     <div class="lgd-region__inner lgd-region__inner--{{ region|clean_class }}">
       {{ content }}
     </div>

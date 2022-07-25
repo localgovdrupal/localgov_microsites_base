@@ -8,7 +8,8 @@
   margin-bottom: var(--spacing-large);
 }
 
-.full__page-top > * {
+.full__page-top > *,
+.full__page-top > .field--name-localgov-event-location > article > * {
   margin-bottom: var(--spacing-large);
 }
 
@@ -53,7 +54,8 @@
   margin-bottom: var(--spacing-larger);
 }
 
-.full__page-top .field--name-localgov-news-categories {
+.full__page-top .field--name-localgov-news-categories,
+.full__page-top .field--name-localgov-event-categories {
   display: flex;
   gap: var(--spacing);
 }

@@ -4,8 +4,12 @@
 
 .full__banner,
 .full__title,
-.full__breadcrumbs,
-.full__page-top {
+.full__breadcrumbs {
+  margin-bottom: var(--spacing-large);
+}
+
+.full__page-top > *,
+.full__page-top > .field--name-localgov-event-location > article > * {
   margin-bottom: var(--spacing-large);
 }
 
@@ -45,9 +49,15 @@
 }
 
 
-/* Probably move to a directory css file  */
+/* Probably move to a directory css file (esp if we add any more CSS for directories */
 .full .field--name-localgov-directory-files {
   margin-bottom: var(--spacing-larger);
+}
+
+.full__page-top .field--name-localgov-news-categories,
+.full__page-top .field--name-localgov-event-categories {
+  display: flex;
+  gap: var(--spacing);
 }
 
 .field__label{

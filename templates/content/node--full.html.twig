@@ -108,10 +108,13 @@
     {% endif %}
 
     <div{{ content_attributes.addClass('full__content') }}>
-      {{ content|without('group_banner', 'group_page_top', 'localgov_page_content') }}
+      {{ content|without('group_banner', 'group_page_top', 'localgov_paragraph_content') }}
     </div>
   </div>
-
-  {{ content.localgov_page_content }}
+  {% if node.localgov_paragraph_content.value %}
+    <div class="full__layout-section">
+      {{ content.localgov_paragraph_content }}
+    </div>
+  {% endif %}
 
 </article>

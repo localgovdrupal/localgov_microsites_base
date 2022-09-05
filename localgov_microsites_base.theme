@@ -467,12 +467,18 @@ function localgov_microsites_base_preprocess_node(&$variables) {
             $variables['microsites']['advanced']['teaser_image_style'] = 'manual_7_3_crop';
             break;
         }
-
-        if ($variables['content_type'] == 'localgov_event') {
-          $media_id = $variables['node']->localgov_event_image[0]->getValue()['target_id'];
-        }
-        elseif ($variables['content_type'] == 'localgov_news_article') {
-          $media_id = $variables['node']->field_media_image[0]->getValue()['target_id'];
+        switch ($variables['content_type']) {
+          case 'localgov_event':
+            $media_id = $variables['node']->localgov_event_image[0]->getValue()['target_id'];
+            break;
+          case 'localgov_news_article':
+            $media_id = $variables['node']->field_media_image[0]->getValue()['target_id'];
+            break;
+          case 'localgov_directory_promo_page':
+            $banner_paragraph_id = $variables['node']->localgov_directory_banner[0]->getValue()['target_id'];
+            $banner_paragraph = \Drupal::entityTypeManager()->getStorage('paragraph')->load($banner_paragraph_id);
+            $media_id = $banner_paragraph->localgov_image[0]->getValue()['target_id'];
+            break;
         }
         if (isset($media_id)) {
           $teaser_image_field = \Drupal::entityTypeManager()->getStorage('media')->load($media_id);

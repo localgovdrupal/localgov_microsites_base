@@ -76,3 +76,11 @@ fieldset .field + .field {
 .facet-group__title {
   color: var(--color-accent-2-contrast);
 }
+
+.full--localgov-news-article .full__related {
+  margin-top: var(--spacing-largest);
+}
+
+.full .field--name-localgov-news-related > .field__items > .field__item + .field__item {
+  margin-top: var(--spacing);
+}

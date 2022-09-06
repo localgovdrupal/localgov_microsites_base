@@ -75,6 +75,7 @@
   set classes = [
     'full',
     'full--' ~ node.bundle|clean_class,
+    'newsroom',
     'node',
     'node--type-' ~ node.bundle|clean_class,
     node.isPromoted() ? 'node--promoted',
@@ -84,13 +85,10 @@
   ]
 %}
 
-{{ attach_library('localgov_microsites_base/full') }}
+{{ attach_library('localgov_base/sidebar') }}
+{{ attach_library('localgov_base/news') }}
 
 <article{{ attributes.addClass(classes).removeAttribute('role') }}>
-
-  {% if content.group_banner %}
-    {{ content.group_banner }}
-  {% endif %}
 
   <div class="lgd-container padding-horizontal">
 
@@ -104,18 +102,24 @@
     </h1>
     {{ title_suffix }}
 
-    {% if content.group_page_top %}
-      {{ content.group_page_top }}
-    {% endif %}
-
-    <div{{ content_attributes.addClass('full__content') }}>
-      {{ content|without('group_banner', 'group_page_top', 'localgov_paragraph_content') }}
+    <div{{ content_attributes.addClass('newsroom__content', 'node__content') }}>
+      
+      {{ content|without('localgov_news_search', 'localgov_news_facets', 'localgov_newsroom_all_view') }} 
+      
+      {# 
+        Render the search, facets, etc here, followed by the news items
+      #}
+      <div class="lgd-row">
+        <aside class="lgd-row__one-third">
+          <div class="newsroom__sidebar">
+            {{ content.localgov_news_search }}
+            {{ content.localgov_news_facets }}
+          </div>
+        </aside>
+        <div class="lgd-row__two-thirds">
+          {{ content.localgov_newsroom_all_view }}
+        </div>
+      </div>
     </div>
   </div>
-  {% if node.localgov_paragraph_content.value %}
-    <div class="full__layout-section">
-      {{ content.localgov_paragraph_content }}
-    </div>
-  {% endif %}
-
 </article>

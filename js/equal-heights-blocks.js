@@ -11,16 +11,21 @@
       const layoutsWithTextBlocks = layouts.filter(item => item.querySelector('.paragraph--type--localgov-text'));
 
       function equaliseHeightsOfTheseBlocks(layoutWithBlocks, typeOfBlock) {
-        layoutWithBlocks.forEach(layoutWithBlock => {
-          const blocksToEqualiseHeights = layoutWithBlock.querySelectorAll(typeOfBlock);
+        layoutWithBlocks.forEach(item => {
+          const blocksToEqualiseHeights = item.querySelectorAll(typeOfBlock);
           const blockHeights = [];
 
-          blocksToEqualiseHeights.forEach(block => {
-            blockHeights.push(block.offsetHeight);
-            const tallestBlock = Math.max(...blockHeights);
-            block.style.height = `${tallestBlock}px`;
-          });
+          function handleGetHeights() {
+            blocksToEqualiseHeights.forEach(block => {
+              blockHeights.push(block.offsetHeight);
+            });
+            let tallestBlock = Math.max(...blockHeights);
+            blocksToEqualiseHeights.forEach(block => {
+              block.style.height = `${tallestBlock}px`;
+            });
+          }
 
+          handleGetHeights();
         })
       }
 

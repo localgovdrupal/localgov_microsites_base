@@ -8,10 +8,10 @@ dependencies:
     - domain_group
   theme:
     - localgov_microsites_base
-id: localgov_microsites_base_off_canvas_utility_menu
+id: localgov_microsites_base_utility_menu
 theme: localgov_microsites_base
-region: off_canvas
-weight: 1
+region: utility_menu
+weight: -3
 provider: null
 plugin: 'group_content_menu:lgms_utility_menu'
 settings:

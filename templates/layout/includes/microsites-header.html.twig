@@ -57,7 +57,9 @@
     <div class="microsite-header__main">
       {% if microsites.header.items.lgms_main_logo %}
         <div class="microsite-header__logo">
-          {{ microsites.header.items.lgms_main_logo }}
+          <a href="/">
+            {{ microsites.header.items.lgms_main_logo }}
+          </a>
         </div>
       {% endif %}
       {% if microsites.header.items.lgms_site_name or microsites.header.items.lgms_site_slogan %}

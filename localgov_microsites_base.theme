@@ -503,6 +503,11 @@ function localgov_microsites_base_preprocess_node(&$variables) {
  */
 function localgov_microsites_base_preprocess_page(&$variables) {
 
+  // Load the site name out of configuration.
+  $config = \Drupal::config('system.site');
+  $variables['site_name'] = $config->get('name');
+  $variables['site_slogan'] = $config->get('slogan');
+
   $parent_group_id = \Drupal::service('domain_group_resolver')->getActiveDomainGroupId();
   if ($parent_group_id) {
     $group = \Drupal::entityTypeManager()->getStorage('group')->load($parent_group_id);

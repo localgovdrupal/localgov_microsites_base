@@ -110,3 +110,9 @@
   font-size: var(--menu-utility-font-size);
   font-weight: var(--menu-utility-font-weight);
 }
+
+/*Pre Header */
+
+.microsite-header__pre-header .lgd-region--search label {
+  color: var(--pre-header-text-color);
+}

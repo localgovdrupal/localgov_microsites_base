@@ -485,6 +485,10 @@ function localgov_microsites_base_preprocess_node(&$variables) {
             $media_id = $variables['node']->field_media_image[0]->getValue()['target_id'];
             break;
 
+          case 'localgov_blog_post':
+              $media_id = $variables['node']->field_media_image[0]->getValue()['target_id'];
+              break;
+
           case 'localgov_directory_promo_page':
             $banner_paragraph_id = $variables['node']->localgov_directory_banner[0]->getValue()['target_id'];
             $banner_paragraph = \Drupal::entityTypeManager()->getStorage('paragraph')->load($banner_paragraph_id);

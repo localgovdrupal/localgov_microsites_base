@@ -64,12 +64,12 @@
       {% endif %}
       {% if microsites.header.items.lgms_site_name or microsites.header.items.lgms_site_slogan %}
         <div class="microsite-header__name-slogan">
-          {% if microsites.header.items.lgms_site_name %}
+          {% if microsites.header.items.lgms_site_name.0['#markup'] == 'On' %}
             <div class="microsite-header__name">
               {{ site_name }}
             </div>
           {% endif %}
-          {% if microsites.header.items.lgms_site_slogan %}
+          {% if microsites.header.items.lgms_site_slogan.0['#markup'] == 'On' %}
             <div class="microsite-header__slogan">
               {{ site_slogan}}
             </div>

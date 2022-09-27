@@ -451,6 +451,15 @@ function localgov_microsites_base_preprocess_node(&$variables) {
   }
 
   if ($group instanceof MicrositeGroupInterface) {
+
+    if ($variables['content_type'] === 'localgov_page' && $variables['view_mode'] === 'full') {
+      if (isset($group->get('lgms_hide_title')[0])) {
+        if ($group->get('lgms_hide_title')[0]->getValue()['value'] === "1") {
+          unset($variables['label']);
+        }
+      }
+    }
+
     if (!is_null($group->get('lgms_teaser_image_style')[0])) {
       $teaser_image_style = $group->get('lgms_teaser_image_style')[0]->getValue()['value'];
       if ($variables['teaser']) {
@@ -473,6 +482,10 @@ function localgov_microsites_base_preprocess_node(&$variables) {
             break;
 
           case 'localgov_news_article':
+            $media_id = $variables['node']->field_media_image[0]->getValue()['target_id'];
+            break;
+
+          case 'localgov_blog_post':
             $media_id = $variables['node']->field_media_image[0]->getValue()['target_id'];
             break;
 

@@ -22,6 +22,8 @@ libraries-extend:
     - localgov_microsites_base/footer
   localgov_base/full:
     - localgov_microsites_base/full
+  localgov_base/blog:
+    - localgov_microsites_base/blog
 
 regions:
   tabs: "Tabs"

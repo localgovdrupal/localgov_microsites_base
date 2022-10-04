@@ -105,7 +105,11 @@
     {{ title_suffix }}
 
     {% if content.group_page_top %}
-      {{ content.group_page_top }}
+      {% block blog_meta %}
+        {# Populated in the node--localgov-blog-post--full.html.twig template #}
+      {% endblock %}
+      
+      {{ content.group_page_top|without('localgov_blog_author', 'localgov_blog_date', 'localgov_blog_categories') }}
     {% endif %}
 
     <div{{ content_attributes.addClass('full__content') }}>

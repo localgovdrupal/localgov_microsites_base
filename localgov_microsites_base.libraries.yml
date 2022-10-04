@@ -45,6 +45,11 @@ full:
     theme:
       css/full.css: {}
 
+blog:
+  css:
+    theme:
+      css/blog.css: {}
+
 component-overrides:
   css:
     theme:

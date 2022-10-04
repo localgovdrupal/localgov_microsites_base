@@ -1,5 +1,10 @@
 {% extends "@localgov_microsites_base/content/node--full.html.twig" %}
 
+{% block library_extend %}
+  {{ attach_library('localgov_base/blog') }}
+{% endblock %}
+
+
 {% block blog_meta %}
   <div class="blog-post__meta">
     {% if node.localgov_blog_author.value %}
@@ -11,7 +16,7 @@
         {{'-' | t}}
       </div>
     {% endif %}
-    
+
     {% if node.localgov_blog_date.value %}
       <div class="blog-post__meta-item blog-post__meta-item--date">
         {{ content.group_page_top.localgov_blog_date }}

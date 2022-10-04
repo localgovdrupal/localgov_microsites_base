@@ -73,6 +73,7 @@
 
 {%
   set classes = [
+    'blog-channel',
     'full',
     'full--' ~ node.bundle|clean_class,
     'node',
@@ -85,8 +86,8 @@
 %}
 
 {{ attach_library('localgov_microsites_base/full') }}
-  {{ attach_library('localgov_base/sidebar') }}
-  {{ attach_library('localgov_base/blog') }}
+{{ attach_library('localgov_base/sidebar') }}
+{{ attach_library('localgov_base/blog') }}
 
 <article{{ attributes.addClass(classes).removeAttribute('role') }}>
 
@@ -111,10 +112,13 @@
     {% endif %}
 
     <div class="lgd-row">
-      <div class="lgd-blog--featured">
-       {{ content.localgov_blog_channel_featured }}
+      <div class="lgd-row__full">
+        <div class="lgd-blog--featured">
+         {{ content.localgov_blog_channel_featured }}
+        </div>
       </div>
     </div>
+
     <div class="lgd-row">
       <div class="lgd-row__two-thirds">
         {{ content|without('body', 'localgov_blog_channel_featured') }}

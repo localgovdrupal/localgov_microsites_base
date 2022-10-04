@@ -109,7 +109,7 @@
     {% endif %}
 
     <div{{ content_attributes.addClass('full__content') }}>
-      {{ content|without('group_banner', 'group_page_top', 'localgov_paragraph_content') }}
+      {{ content|without('group_banner', 'group_page_top', 'group_page_bottom', 'localgov_paragraph_content') }}
     </div>
   </div>
   {% if node.localgov_paragraph_content.value %}
@@ -117,5 +117,11 @@
       {{ content.localgov_paragraph_content }}
     </div>
   {% endif %}
+
+  <div class="lgd-container padding-horizontal">
+    {% if content.group_page_bottom %}
+      {{ content.group_page_bottom }}
+    {% endif %}
+  </div>
 
 </article>

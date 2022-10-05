@@ -52,6 +52,11 @@ body {
   --header-text-color: var(--color-accent-contrast);
   --header-link-color: var(--color-accent-contrast);
   --header-link-hover-color: var(--color-accent-2);
+  --header-search-button-color:  var(--pre-header-background-color);
+  --header-search-button-bg-color:  var(--pre-header-text-color);
+  --header-search-button-color-hover:  var(--color-accent);
+  --header-search-button-bg-color-hover:  var(--color-white);
+  --header-search-input-border:  none;
   --off-canvas-background-color: var(--header-background-color);
   --off-canvas-text-color: var(--header-text-color);
   --off-canvas-link-color: var(--header-link-color);

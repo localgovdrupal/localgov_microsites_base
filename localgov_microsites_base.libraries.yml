@@ -23,6 +23,12 @@ header:
     theme:
       css/header.css: {}
 
+equal-heights-blocks:
+  js:
+    js/equal-heights-blocks.js: {}
+  dependencies:
+    - core/drupal
+
 header-js:
   js:
     js/header.js: {}
@@ -38,6 +44,11 @@ full:
   css:
     theme:
       css/full.css: {}
+
+blog:
+  css:
+    theme:
+      css/blog.css: {}
 
 component-overrides:
   css:

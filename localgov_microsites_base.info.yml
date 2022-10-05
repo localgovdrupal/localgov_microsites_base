@@ -12,6 +12,7 @@ libraries-extend:
     - localgov_microsites_base/variables
     - localgov_microsites_base/fonts
     - localgov_microsites_base/base
+    - localgov_microsites_base/equal-heights-blocks
     - localgov_microsites_base/component-overrides
   localgov_base/header:
     - localgov_microsites_base/header
@@ -21,6 +22,8 @@ libraries-extend:
     - localgov_microsites_base/footer
   localgov_base/full:
     - localgov_microsites_base/full
+  localgov_base/blog:
+    - localgov_microsites_base/blog
 
 regions:
   tabs: "Tabs"

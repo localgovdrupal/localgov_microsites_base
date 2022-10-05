@@ -49,3 +49,7 @@ a:focus {
   outline: -webkit-focus-ring-color auto 2px;
   color: inherit;
 }
+
+.callout-primary {
+  color: var(--color-accent-contrast);
+}

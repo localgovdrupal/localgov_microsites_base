@@ -6,6 +6,7 @@
  */
 
 use Drupal\localgov_microsites_group\Entity\MicrositeGroupInterface;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -516,20 +517,20 @@ function localgov_microsites_base_preprocess_node(&$variables) {
 /**
  * Implements hook_views_pre_render().
  */
-function localgov_microsites_base_views_pre_render($view) {
-  $parent_group_id = \Drupal::service('domain_group_resolver')->getActiveDomainGroupId();
-  if ($parent_group_id) {
-    $group = \Drupal::entityTypeManager()->getStorage('group')->load($parent_group_id);
-  }
-  if (empty($group)) {
-    $group = \Drupal::request()->attributes->get('group');
-  }
+function localgov_microsites_base_views_pre_render(ViewExecutable $view) {
 
   if ($view->id() === 'localgov_events_listing' && $view->current_display === 'page_all_events') {
-    if (!is_null($group->get('lgms_teaser_image_style')[0])) {
 
+    $parent_group_id = \Drupal::service('domain_group_resolver')->getActiveDomainGroupId();
+    if ($parent_group_id) {
+      $group = \Drupal::entityTypeManager()->getStorage('group')->load($parent_group_id);
+    }
+    else {
+      $group = \Drupal::request()->attributes->get('group');
+    }
+
+    if (!is_null($group) && !empty($group->get('lgms_teaser_image_style')->getValue())) {
       $teaser_image_style = $group->get('lgms_teaser_image_style')[0]->getValue()['value'];
-
       switch ($teaser_image_style) {
         case 'square':
           $image_style = 'square_medium';
@@ -542,19 +543,10 @@ function localgov_microsites_base_views_pre_render($view) {
         case '7x3':
           $image_style = 'manual_7_3_crop';
           break;
-
-        foreach ($view->result as $key => $value) {
-          if (isset($value->_entity->localgov_event_image->getValue()[0]['target_id'])) {
-            $media_id = $value->_entity->localgov_event_image->getValue()[0]['target_id'];
-            $teaser_image = \Drupal::entityTypeManager()->getStorage('media')->load($media_id);
-            // I expect to be able to set the image style for the $teaser_image,
-            // but am failing - undefined offset #image_style
-            $teaser_image->field_media_image->getValue()[0]['#image_style'] = $image_style;
-            $value->_entity->set('localgov_event_image', $teaser_image);
-          }
-        }
-
       }
+
+      $image_field = $view->field['localgov_event_image'];
+      $image_field->options['settings']['view_mode'] = $image_style;
     }
   }
 }

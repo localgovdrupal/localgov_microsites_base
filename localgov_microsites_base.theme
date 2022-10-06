@@ -530,23 +530,30 @@ function localgov_microsites_base_views_pre_render(ViewExecutable $view) {
     }
 
     if (!is_null($group) && !empty($group->get('lgms_teaser_image_style')->getValue())) {
+
       $teaser_image_style = $group->get('lgms_teaser_image_style')[0]->getValue()['value'];
       switch ($teaser_image_style) {
         case 'square':
           $image_style = 'square_medium';
           break;
-
         case '3x2':
           $image_style = 'manual_3_2_crop';
           break;
-
         case '7x3':
           $image_style = 'manual_7_3_crop';
           break;
       }
 
+      // Set image to display as thumbnail.
       $image_field = $view->field['localgov_event_image'];
-      $image_field->options['settings']['view_mode'] = $image_style;
+      $image_field->options['type'] = 'media_thumbnail';
+      $image_field->options['settings'] = [
+        'image_link' => '',
+        'image_style' => $image_style,
+        'image_loading' => [
+          'attribute' => 'lazy',
+        ],
+      ];
     }
   }
 }

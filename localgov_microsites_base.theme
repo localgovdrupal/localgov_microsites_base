@@ -536,9 +536,11 @@ function localgov_microsites_base_views_pre_render(ViewExecutable $view) {
         case 'square':
           $image_style = 'square_medium';
           break;
+
         case '3x2':
           $image_style = 'manual_3_2_crop';
           break;
+
         case '7x3':
           $image_style = 'manual_7_3_crop';
           break;

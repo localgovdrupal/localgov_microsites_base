@@ -1,7 +1,14 @@
 /* Image */
 .lgd-image__image + * {
-  color: var(--image-caption-background);
+  background-color: var(--image-with-caption-bg-color);
+  color: var(--image-with-caption-color);
 }
+
+.lgd-page-section--bg-colour-2 .lgd-image__image + * {
+  background-color: var(--image-with-caption-color);
+  color: var(--image-with-caption-bg-color);
+}
+
 
 .pull-out-quote__content {
   color: var(--quote-content-color);
@@ -19,7 +26,7 @@
   border: var(--border-none);
   font-family: var(--font-heading-3);
   font-size: var(--font-size-h3);
-  color: var(--heading-3-color);
+  color: inherit;
   line-height: var(--heading-3-line-height);
   font-weight: var(--heading-3-font-weight);
 }
@@ -95,4 +102,58 @@
   background-color: var(--call-out-box-bg-color);
   font-weight: var(--call-out-box-link-weight);
   /* maybe an inverted colour or not choice ? todo add this to the localgov_base */
+}
+
+.lgd-page-section--bg-colour-1 {
+  color: var(--color-accent-contrast);
+}
+.lgd-page-section--bg-colour-2 {
+  color: var(--color-accent-2-contrast);
+}
+
+.lgd-page-section--bg-colour-3 {
+  color: var(--color-black);
+}
+
+.lgd-page-section--has-bg-colour h2,
+.lgd-page-section--has-bg-colour h3,
+.lgd-page-section--has-bg-colour h4,
+.lgd-page-section--has-bg-colour h5,
+.lgd-page-section--has-bg-colour h6 {
+  color: inherit;
+}
+
+
+.lgd-page-section--bg-colour-1 .call-out-box .call-out-box__content {
+  color: var(--call-out-box-bg-color);
+  background: var(--call-out-box-text-color);
+}
+
+.lgd-page-section--bg-colour-1 .call-out-box--has-image .call-out-box__content{
+  background: linear-gradient(to right, var(--call-out-box-text-color) 75%, transparent);
+  color: var(--call-out-box-bg-color);
+}
+
+.lgd-page-section--bg-colour-1 .call-out-box__content h2,
+.lgd-page-section--bg-colour-1 .call-out-box__content h3 {
+  color: var(--call-out-box-bg-color);
+}
+
+.lgd-page-section--bg-colour-1 .call-out-box__link {
+  color: var(--call-out-box-bg-color);
+  background-color: var(--call-out-box-text-color);
+}
+
+.media-with-text__link,
+.paragraph--type--localgov-link a {
+  color: inherit;
+}
+
+.lgd-page-section--bg-colour-1  .lgd-icon {
+  fill: var(--color-accent-contrast);
+}
+
+.paragraph--type--localgov-accordion .field--name-localgov-paragraphs,
+.paragraph--type--localgov-accordion-pane {
+  border-color: inherit;
 }

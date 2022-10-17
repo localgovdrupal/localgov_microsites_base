@@ -470,11 +470,11 @@ function localgov_microsites_base_preprocess_node(&$variables) {
           break;
 
         case '3x2':
-          $variables['microsites']['advanced']['teaser_image_style'] = 'manual_3_2_crop';
+          $variables['microsites']['advanced']['teaser_image_style'] = 'medium_3_2_600x400';
           break;
 
         case '7x3':
-          $variables['microsites']['advanced']['teaser_image_style'] = 'manual_7_3_crop';
+          $variables['microsites']['advanced']['teaser_image_style'] = 'small_21_9';
           break;
       }
 

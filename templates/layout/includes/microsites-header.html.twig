@@ -31,7 +31,7 @@
   {% if microsites.pre_header.width.full_width_content_contained %}
     <div class="lgd-container padding-horizontal">
   {% endif %}
-  {% if has_search %}
+  {% if has_search and microsites.pre_header.items.lgms_display_sitewide_search.0['#markup'] == 'On' %}
     <div class="microsite-header__search">
       {{ page.search }}
     </div>

@@ -173,3 +173,181 @@
 .lgd-page-section--has-bg-colour .lgd-icon {
   fill: inherit;
 }
+
+
+.preview-theme .swatch-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.preview-theme .swatch {
+  content: "";
+  /*display: flex;*/
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+  margin-right: 1rem;
+}
+
+.preview-theme .combined {
+  display: flex;
+}
+
+.preview-theme .swatch-combined {
+  display: flex;
+  height: 150px;
+  width: 150px;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-right: 1rem;
+  padding: 0.5rem;
+}
+
+.preview-theme .accent-1 {
+  background-color: var(--color-accent);
+  color: var(--color-accent-contrast);
+}
+
+.preview-theme .accent-contrast  {
+  color: var(--color-accent);
+  background-color: var(--color-accent-contrast);
+}
+
+.preview-theme .accent-2  {
+  background-color: var(--color-accent-2);
+  color: var(--color-accent-2-contrast);
+}
+
+.preview-theme .accent-2-contrast  {
+  color: var(--color-accent-2);
+  background-color: var(--color-accent-2-contrast);
+}
+
+.preview-theme .swatch.link-colour  {
+  background-color: var(--color-link);
+}
+
+.preview-theme .page-colour  {
+  background-color: var(--page-background-color);
+}
+
+.preview-theme .swatch-combined.text-colour {
+  color: var(--color-text);
+}
+
+.preview-theme .swatch-combined.link-colour {
+  color: var(--color-link);
+}
+
+.preview-theme .swatch.text-colour  {
+  background-color: var(--color-text);
+}
+
+.preview-theme .preheader-background  {
+  background-color: var(--pre-header-background-color);
+}
+
+.preview-theme .heading-1-colour {
+  background-color: var(--heading-1-color);
+}
+.preview-theme .heading-2-colour {
+  background-color: var(--heading-2-color);
+}
+.preview-theme .heading-3-colour {
+  background-color: var(--heading-3-color);
+}
+.preview-theme .heading-4-colour {
+  background-color: var(--heading-4-color);
+}
+.preview-theme .heading-5-colour {
+  background-color: var(--heading-5-color);
+}
+.preview-theme .heading-6-colour {
+  background-color: var(--heading-6-color);
+}
+
+.preview-theme .footer-background-colour {
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
+}
+.preview-theme .swatch.footer-text-colour {
+  background-color: var(--footer-text-color);
+}
+.preview-theme .swatch.footer-link-colour {
+  background-color: var(--footer-link-color);
+}
+.preview-theme .swatch.footer-hover-colour {
+  background-color: var(--footer-link-hover-color);
+}
+
+.preview-theme .swatch-combined.footer-link-colour {
+  color: var(--footer-link-color);
+}
+
+.preview-theme .swatch-combined.footer-hover-colour {
+  color: var(--footer-link-hover-color);
+}
+
+.preview-theme .header-background-colour {
+  background-color: var(--header-background-color);
+  color: var(--header-text-color);
+}
+.preview-theme .swatch.header-text-colour {
+  background-color: var(--header-text-color);
+}
+.preview-theme .swatch.header-link-colour {
+  background-color: var(--header-link-color);
+}
+.preview-theme .swatch.header-hover-colour {
+  background-color: var(--header-link-hover-color);
+}
+
+.preview-theme .swatch-combined.header-link-colour {
+  color: var(--header-link-color);
+}
+
+.preview-theme .swatch-combined.header-hover-colour {
+  color: var(--header-link-hover-color);
+}
+
+.preview-theme .off-canvas-background-colour {
+  background-color: var(--off-canvas-background-color);
+  color: var(--off-canvas-text-color);
+}
+
+.preview-theme .swatch.off-canvas-text-colour {
+  background-color: var(--off-canvas-text-color);
+}
+
+.preview-theme .pre-header-background-colour {
+  background-color: var(--pre-header-background-color);
+  color: var(--pre-header-text-color);
+}
+.preview-theme .swatch.pre-header-text-colour {
+  background-color: var(--pre-header-text-color);
+}
+.preview-theme .swatch.pre-header-link-colour {
+  background-color: var(--pre-header-link-color);
+}
+.preview-theme .swatch.pre-header-hover-colour {
+  background-color: var(--pre-header-link-hover-color);
+}
+
+.preview-theme .swatch-combined.pre-header-link-colour {
+  color: var(--pre-header-link-color);
+}
+
+.preview-theme .swatch-combined.pre-header-hover-colour {
+  color: var(--pre-header-link-hover-color);
+}
+
+.preview-theme .submenu-background-colour {
+  background-color: var(--menu-sub-menu-background-colour);
+  color: var(--menu-sub-menu-link-colour);
+}
+.preview-theme .swatch.submenu-link-colour {
+  background-color: var(--menu-sub-menu-link-colour);
+}

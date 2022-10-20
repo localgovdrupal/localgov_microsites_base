@@ -105,10 +105,10 @@ body {
   --quote-author-color: var(--color-accent-2-contrast);
   --call-out-box-text-color: var(--color-accent-contrast);
   --call-out-box-link-padding: 0;
-  --sidebar-exposed-form-bg-color: var(--color-accent-2);
-  --checkbox-select-outline-color: var(--color-accent-2-contrast);
+  --sidebar-exposed-form-bg-color: var(--page-background-color);
+  /*--checkbox-select-outline-color: var(--color-accent-2-contrast);*/
   --image-with-caption-border: var(--border-none);
-  --quote-border: var(--border-none);
+  --quote-border: var(--border-large);
   --button-bg-color: var(--color-accent);
   --button-text-color: var(--color-accent-contrast);
   --button-bg-color-hover: var(--color-accent-contrast);
@@ -120,7 +120,6 @@ body {
 body {
   --border-none: 0px solid;
   --width-restricted-width-section: 800px;
-  /*--image-caption-background: var(--color-accent-2-contrast);*/
   --quote-content-color: var(--quote-author-color);
   --featured-teaser-background: var(--color-accent-2);
   --featured-teaser-color: var(--color-accent-2-contrast);
@@ -138,7 +137,7 @@ body {
   --menu-utility-font-weight: normal;
   --menu-sub-menu-min-width: 200px;
   --label-font-weight: bold;
-  --sidebar-exposed-form-padding: var(--spacing) 0;
+  --sidebar-border: var(--border);
   --input-border: 2px solid var(--color-text);
   --input-border-color: var(--color-text);
 }

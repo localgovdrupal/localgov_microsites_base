@@ -8,7 +8,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: var(--spacing-tiny);
+  margin-bottom: var(--spacing-smaller);
 }
 
 h5,
@@ -20,7 +20,7 @@ h6 {
 /* Table */
 table caption {
   text-align: start;
-  margin-bottom: var(--spacing-tiny);
+  margin-bottom: var(--spacing-smaller);
 }
 
 table th p {
@@ -28,7 +28,7 @@ table th p {
   margin: 0;
 }
 table p {
-  margin-bottom: var(--spacing-tiny);
+  margin-bottom: var(--spacing-smaller);
 }
 
 thead {

@@ -1,0 +1,25 @@
+/* Embedded Events need to pick up teaser styles*/
+.view-lgms-embed-view-events .views-row {
+  margin-bottom: var(--vertical-rhythm-spacing);
+  padding-bottom: var(--vertical-rhythm-spacing);
+  border-bottom: var(--border);
+}
+
+@media screen and (min-width: 48rem) {
+  .view-lgms-embed-view-events .views-row {
+    display: flex;
+    gap: var(--spacing);
+  }
+}
+
+.view-lgms-embed-view-events .views-field-localgov-event-image {
+  flex-basis: 200px;
+}
+
+.view-lgms-embed-view-events .views-field-body {
+  flex-basis: fit-content;
+}
+
+.view-lgms-embed-view-events .event-date {
+  margin-bottom: var(--spacing-small);
+}

@@ -1,0 +1,4 @@
+.ia-block--promoted {
+  border: var(--ia-block-border);
+  color: var(--ia-block-color);
+}

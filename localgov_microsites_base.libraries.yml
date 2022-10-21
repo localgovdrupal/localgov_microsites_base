@@ -11,7 +11,7 @@ base:
 fonts:
   css:
     theme:
-      css/components/fonts.css: {}
+      css/base/fonts.css: {}
 
 off-canvas:
   css:

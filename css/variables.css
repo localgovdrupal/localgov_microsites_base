@@ -38,17 +38,30 @@ body {
   --color-accent-contrast: var(--color-white);
   --color-accent-2-contrast: var(--color-accent);
   --page-background-color: var(--color-white);
+  --font-primary: "Public Sans", georgia, "Times New Roman", times, serif;
+  --font-secondary: "Public Sans", georgia, "Times New Roman", times, serif;
   --color-text: var(--color-black);
   --color-link: var(--color-text);
   --line-height: 1.3;
-  --footer-background-color: var(--color-accent);
-  --footer-text-color: var(--color-accent-contrast);
-  --footer-link-color: var(--color-accent-contrast);
-  --footer-link-hover-color: var(--color-accent-2);
+  --border-color: var(--color-text);
+  --border-none: 0px solid;
+  --width-restricted-width-section: 800px;
+  --box-shadow: -1px 0 3px 1px rgb(0 0 0 / 33%);
+  --label-font-weight: bold; 
+}
+
+
+/* Applying Variables */
+body {
+  /* Applying variables for Pre-Header */
   --pre-header-background-color: var(--color-accent-2);
   --pre-header-text-color: var(--color-accent-2-contrast);
   --pre-header-link-color: var(--color-accent-2-contrast);
   --pre-header-link-hover-color: var(--color-accent-2-contrast);
+
+  /* Applying variables for Header */
+  --site-name-font-weight: var(--heading-font-weight);
+  --site-name-font-size: var(--font-size-h2);
   --header-background-color: var(--color-accent);
   --header-text-color: var(--color-accent-contrast);
   --header-link-color: var(--color-accent-contrast);
@@ -58,22 +71,11 @@ body {
   --header-search-button-color-hover:  var(--color-accent);
   --header-search-button-bg-color-hover:  var(--color-white);
   --header-search-input-border:  none;
-  --off-canvas-background-color: var(--header-background-color);
-  --off-canvas-text-color: var(--header-text-color);
-  --off-canvas-link-color: var(--header-link-color);
-  --off-canvas-link-hover-color: var(--header-link-hover-color);
-  --off-canvas-border-color: var(--color-white);
-  --off-canvas-menu-icon: url(../includes/icons/menu.svg);
-  --spacing: 1rem;
-  /* discuss moving the following spacing variables to localgov_base */
-  --spacing-tiny: calc(var(--spacing)*0.5);
-  --spacing-large: calc(var(--spacing)*1.5);
-  --spacing-larger: calc(var(--spacing)*2);
-  --spacing-largest: calc(var(--spacing)*2.5);
-  --spacing-mega: calc(var(--spacing)*3);
-
-  --site-name-font-weight: var(--heading-font-weight);
   --header-items-alignment: center;
+  --site-name-font: var(--font-secondary);
+  --menu-utility-font-size: var(--font-size-h4);
+  --menu-utility-font-weight: normal;
+  --menu-sub-menu-min-width: 200px;
   --menu-main-font-size: var(--font-size-h3);
   --menu-main-font-weight: var(--heading-font-weight);
   --minimum-clickable-icon-size: 44px; /* Setting default to 44px as per https://www.w3.org/WAI/WCAG21/Understanding/target-size.html */
@@ -86,16 +88,27 @@ body {
   --menu-sub-menu-link-colour: var(--header-background-color);
   --menu-item-padding: var(--spacing-small);
   --menu-item-toggle-icon-rotation: 90deg;
+
+  /* Applying variables for Off Canvas */
+  --off-canvas-background-color: var(--header-background-color);
+  --off-canvas-text-color: var(--header-text-color);
+  --off-canvas-link-color: var(--header-link-color);
+  --off-canvas-link-hover-color: var(--header-link-hover-color);
+  --off-canvas-border-color: var(--color-white);
+  --off-canvas-menu-icon: url(../includes/icons/menu.svg);
+
+  /* Applying variables for Footer */
+  --footer-background-color: var(--color-accent);
+  --footer-text-color: var(--color-accent-contrast);
+  --footer-link-color: var(--color-accent-contrast);
+  --footer-link-hover-color: var(--color-accent-2);
+  --footer-grid-column-spacing: var(--spacing-larger);
   --footer-grid-column-justification: space-between;
-  --site-name-font-size: var(--font-size-h2);
-}
 
-
-/* Style preferences */
-body {
-  --font-primary: "Public Sans", georgia, "Times New Roman", times, serif;
-  --font-secondary: "Public Sans", georgia, "Times New Roman", times, serif;
-  --border-color: var(--color-text);
+  /* Applying variableas for Sidebar(s) */
+  --sidebar-border: var(--border);
+  
+  /* Applying variables for paragraphs */
   --image-with-caption-bg-color: var(--color-accent-2);
   --image-with-caption-color: var(--color-accent-2-contrast);
   --ia-block-bg-color: var(--page-background-color);
@@ -106,20 +119,8 @@ body {
   --call-out-box-text-color: var(--color-accent-contrast);
   --call-out-box-link-padding: 0;
   --sidebar-exposed-form-bg-color: var(--page-background-color);
-  /*--checkbox-select-outline-color: var(--color-accent-2-contrast);*/
   --image-with-caption-border: var(--border-none);
   --quote-border: var(--border-large);
-  --button-bg-color: var(--color-accent);
-  --button-text-color: var(--color-accent-contrast);
-  --button-bg-color-hover: var(--color-accent-contrast);
-  --button-text-color-hover: var(--color-accent);
-  --button-border-color: var(--color-accent-contrast);
-}
-
-/* New variables for style preferences */
-body {
-  --border-none: 0px solid;
-  --width-restricted-width-section: 800px;
   --quote-content-color: var(--quote-author-color);
   --featured-teaser-background: var(--color-accent-2);
   --featured-teaser-color: var(--color-accent-2-contrast);
@@ -130,19 +131,17 @@ body {
   --media-with-text-link-weight: var(--heading-1-font-weight);
   --featured-teaser-link-weight: var(--heading-1-font-weight);
   --table-header-text-color: var(--color-accent-2-contrast);
-  --box-shadow: -1px 0 3px 1px rgb(0 0 0 / 33%);
-  --footer-grid-column-spacing: var(--spacing-larger);
-  --site-name-font: var(--font-secondary);
-  --menu-utility-font-size: var(--font-size-h4);
-  --menu-utility-font-weight: normal;
-  --menu-sub-menu-min-width: 200px;
-  --label-font-weight: bold;
-  --sidebar-border: var(--border);
+  
+  /* Applying variables for Form Items */
+  --button-bg-color: var(--color-accent);
+  --button-text-color: var(--color-accent-contrast);
+  --button-bg-color-hover: var(--color-accent-contrast);
+  --button-text-color-hover: var(--color-accent);
+  --button-border-color: var(--color-accent-contrast);
   --input-border: 2px solid var(--color-text);
   --input-border-color: var(--color-text);
-}
-
-body {
+ 
+  /* Applying variables for Page Sections */
   --color-page-section-background-color-1: var(--color-accent);
   --color-page-section-background-color-1-text-color: var(--color-accent-contrast);
   --color-page-section-background-color-1-link-color: var(--color-page-section-background-color-1-link-color);

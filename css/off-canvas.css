@@ -63,7 +63,7 @@
 
 .off-canvas__close--icon {
   transform: rotate(45deg);
-  margin-left: var(--spacing-tiny);
+  margin-left: var(--spacing-smaller);
 }
 
 .off-canvas .menu {
@@ -84,7 +84,7 @@
   display: flex;
   align-items: center;
   justify-items: center;
-  padding: var(--spacing-tiny);
+  padding: var(--spacing-smaller);
 }
 
 .microsite-header__off-canvas-toggle:before {
@@ -97,5 +97,5 @@
   width: var(--menu-sub-menu-icon-size);
   height: var(--menu-sub-menu-icon-size);
   display: inline-flex;
-  margin-right: var(--spacing-tiny);
+  margin-right: var(--spacing-smaller);
 }

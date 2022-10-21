@@ -50,15 +50,60 @@ blog:
     theme:
       css/blog.css: {}
 
-component-overrides:
-  css:
-    theme:
-      css/component-overrides.css: {}
-
 preview:
   css:
     theme:
       css/preview.css: {}
+
+featured-teasers:
+  css:
+    theme:
+      css/featured-teasers.css: {}
+
+sidebar:
+  css:
+    theme:
+      css/sidebar.css: {}
+
+quote:
+  css:
+    theme:
+      css/quote.css: {}
+
+accordion:
+  css:
+    theme:
+      css/accordion.css: {}
+
+media-with-text:
+  css:
+    theme:
+      css/media-with-text.css: {}
+
+ia-block:
+  css:
+    theme:
+      css/ia-block.css: {}
+
+view-events:
+  css:
+    theme:
+      css/view-events.css: {}
+
+callout-box:
+  css:
+    theme:
+      css/callout-box.css: {}
+
+image-with-caption:
+  css:
+    theme:
+      css/image-with-caption.css: {}
+
+page-sections:
+  css:
+    theme:
+      css/page-sections.css: {}
 
 menu:
   css:

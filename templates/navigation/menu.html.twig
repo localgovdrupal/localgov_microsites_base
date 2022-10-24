@@ -76,7 +76,9 @@
       <li{{ item.attributes.addClass(classes).setAttribute('data-index', loop.index).setAttribute('data-level', menu_level) }}>
         {{ link(item.title, item.url) }}
         {% if item.below %}
-          <button id="{{ 'menu__sub-menu-toggle--' ~ random }}" data-id="{{ random }}" class="menu__sub-menu-toggle" aria-label="{{ 'Toggles '|t }}{{item.title}}{{' submenu'|t }}" aria-expanded="false" hidden><span class="menu__sub-menu-toggle-icon"></span></button>
+          <button id="{{ 'menu__sub-menu-toggle--' ~ random }}" data-id="{{ random }}" class="menu__sub-menu-toggle" aria-label="{{ 'Toggles '|t }}{{item.title}}{{' submenu'|t }}" aria-expanded="false" hidden>
+            <span class="menu__sub-menu-toggle-icon"></span>
+          </button>
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}
       </li>

@@ -176,17 +176,18 @@
 }
 
 @media screen and (min-width: 48rem) {
-  /* Desktop first level  */
+  /* Desktop first level */
   .js .menu__sub-menu-toggle {
     background-color: var(--header-background-color);
     border: 2px solid transparent;
   }
 
   .js .menu__sub-menu-toggle-icon {
-    /* Use mask to update the colour of the icons, the background colour is the colour the icons appear  */
+    /* Use mask to update the colour of the icons, the background colour is the colour the icons appear */
     background-color: var(--header-link-color);
   }
 
+  .js .menu__sub-menu-toggle:focus,
   .js .menu__sub-menu-toggle:hover {
     background-color: var(--header-link-color);
     border-color: var(--header-link-color);
@@ -194,7 +195,7 @@
 
   .js .menu__sub-menu-toggle:focus .menu__sub-menu-toggle-icon,
   .js .menu__sub-menu-toggle:hover .menu__sub-menu-toggle-icon {
-    /* Keep the icons visible on focus and hover*/
+    /* Keep the icons visible on focus and hover */
     background-color: var(--header-background-color);
   }
 
@@ -203,22 +204,22 @@
     background: var(--menu-sub-menu-background-colour);
   }
 
-  .js  .microsite-header__menu .menu .menu a {
+  .js .microsite-header__menu .menu .menu a {
     color: var(--menu-sub-menu-link-colour);
   }
 
   .js .menu--menu-level-0 .menu .menu__sub-menu-toggle {
-    /* Update the icon background to match the submenu*/
+    /* Update the icon background to match the submenu */
     background-color: var(--menu-sub-menu-background-colour);
   }
 
   .js .menu--menu-level-0 .menu .menu__sub-menu-toggle:hover {
-    /* Update the icon background to match the submenu*/
+    /* Update the icon background to match the submenu */
     border-color: var(--menu-sub-menu-link-colour);
   }
 
   .js .menu--menu-level-0 .menu .menu__sub-menu-toggle-icon {
-    /* Update the icon colour to be visible the submenu background*/
+    /* Update the icon colour to be visible the submenu background */
     background-color: var(--menu-sub-menu-link-colour);
   }
 }

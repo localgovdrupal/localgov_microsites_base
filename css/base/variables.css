@@ -79,7 +79,7 @@ body {
   --menu-main-font-size: var(--font-size-h3);
   --menu-main-font-weight: var(--heading-font-weight);
   --minimum-clickable-icon-size: 44px; /* Setting default to 44px as per https://www.w3.org/WAI/WCAG21/Understanding/target-size.html */
-  --menu-sub-menu-icon: url(../includes/icons/chevron-right.svg);
+  --menu-sub-menu-icon: url(../../includes/icons/chevron-right.svg);
   --menu-sub-menu-icon-size: 1.2rem;
   --menu-sub-menu-toggle-width: var(--minimum-clickable-icon-size);
   --menu-sub-menu-toggle-height: var(--minimum-clickable-icon-size);
@@ -95,7 +95,7 @@ body {
   --off-canvas-link-color: var(--header-link-color);
   --off-canvas-link-hover-color: var(--header-link-hover-color);
   --off-canvas-border-color: var(--color-white);
-  --off-canvas-menu-icon: url(../includes/icons/menu.svg);
+  --off-canvas-menu-icon: url(../../includes/icons/menu.svg);
 
   /* Applying variables for Footer */
   --footer-background-color: var(--color-accent);

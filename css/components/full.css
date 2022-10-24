@@ -68,15 +68,6 @@ fieldset .field + .field {
   margin-top: var(--spacing);
 }
 
-.sidebar .lgd-region__inner > *, .newsroom__sidebar > * {
-  padding: var(--sidebar-exposed-form-bg-color);
-  color: var(--color-accent-2-contrast);
-}
-
-.facet-group__title {
-  color: var(--color-accent-2-contrast);
-}
-
 .full--localgov-news-article .full__related {
   margin-top: var(--spacing-largest);
 }

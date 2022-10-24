@@ -685,7 +685,7 @@ function localgov_microsites_base_preprocess_page(&$variables) {
       'lgms_display_sitewide_search',
     ];
     foreach ($pre_header_fields as $pre_header_field) {
-      if (!empty($group->get($pre_header_field)->getValue())) {
+      if ($group->hasField($pre_header_field) && !empty($group->get($pre_header_field)->getValue())) {
         $variables['microsites']['pre_header']['items'][$pre_header_field] = $group->get($pre_header_field)->view('microsite');
       }
     }

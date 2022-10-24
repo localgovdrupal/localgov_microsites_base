@@ -23,26 +23,29 @@
 %}
 
 {# Begin pre-header #}
-{% if microsites.pre_header.width.content_centered %}
-  <div class="lgd-container">
-{% endif %}
-<div class="microsite-header__pre-header">
+{% if has_search and microsites.pre_header.items.lgms_display_sitewide_search.0['#markup'] == 'On' %}
 
-  {% if microsites.pre_header.width.full_width_content_contained %}
-    <div class="lgd-container padding-horizontal">
+  {% if microsites.pre_header.width.content_centered %}
+    <div class="lgd-container">
   {% endif %}
-  {% if has_search and microsites.pre_header.items.lgms_display_sitewide_search.0['#markup'] == 'On' %}
-    <div class="microsite-header__search">
-      {{ page.search }}
-    </div>
-  {% endif %}
-  {% if microsites.pre_header.width.full_width_content_contained %}
-    </div>
-  {% endif %}
-</div>
+  <div class="microsite-header__pre-header">
 
-{% if microsites.pre_header.width.content_centered %}
+    {% if microsites.pre_header.width.full_width_content_contained %}
+      <div class="lgd-container padding-horizontal">
+    {% endif %}
+    {% if has_search and microsites.pre_header.items.lgms_display_sitewide_search.0['#markup'] == 'On' %}
+      <div class="microsite-header__search">
+        {{ page.search }}
+      </div>
+    {% endif %}
+    {% if microsites.pre_header.width.full_width_content_contained %}
+      </div>
+    {% endif %}
   </div>
+
+  {% if microsites.pre_header.width.content_centered %}
+    </div>
+  {% endif %}
 {% endif %}
 {# End pre-header #}
 

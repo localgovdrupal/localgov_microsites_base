@@ -2,3 +2,7 @@
   border: var(--ia-block-border);
   color: var(--ia-block-color);
 }
+
+.ia-block--promoted * {
+  color: inherit;
+}

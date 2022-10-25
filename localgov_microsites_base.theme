@@ -455,7 +455,7 @@ function localgov_microsites_base_preprocess_node(&$variables) {
 
     $node_id = $variables['node']->nid[0]->getValue()['value'];
     $front_page = \Drupal::config('domain.config.group_' . $parent_group_id . '.system.site')->get('page.front');
-    strstr($front_page, 'node') ? $front_page_id = explode("/node/", $front_page )[1] : '';
+    strstr($front_page, 'node') ? $front_page_id = explode("/node/", $front_page)[1] : '';
 
     if ($front_page_id && $front_page_id === $node_id && $variables['view_mode'] === 'full') {
       if (isset($group->get('lgms_hide_title')[0])) {
@@ -685,7 +685,7 @@ function localgov_microsites_base_preprocess_page(&$variables) {
       'lgms_display_sitewide_search',
     ];
     foreach ($pre_header_fields as $pre_header_field) {
-      if (!empty($group->get($pre_header_field)->getValue())) {
+      if ($group->hasField($pre_header_field) && !empty($group->get($pre_header_field)->getValue())) {
         $variables['microsites']['pre_header']['items'][$pre_header_field] = $group->get($pre_header_field)->view('microsite');
       }
     }

@@ -357,7 +357,7 @@ function localgov_microsites_base_preprocess_html(&$variables) {
     // Main menu site font weight.
     if (!is_null($group->get('lgms_main_menu_font_weight')[0])) {
       $main_menu_font_weight = $group->get('lgms_main_menu_font_weight')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--main-menu-font-weight: ' . $main_menu_font_weight . ';';
+      $variables['attributes']['style'][] = '--menu-main-font-weight: ' . $main_menu_font_weight . ';';
     }
 
     // Main menu submenu background colour.

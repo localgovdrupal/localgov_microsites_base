@@ -17,12 +17,17 @@
 .js .menu > .menu-item--expanded:hover > .menu {
   display: block !important; /* Needed to override the inline display: none; from JS */
   width: 100%;
+  position: absolute;
+  top: 40px;
 }
 
 /*
   This is a button element placed inside the li to trigger the sub-menu.
 */
 .menu__sub-menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
   width: var(--menu-sub-menu-toggle-width);
   height: var(--menu-sub-menu-toggle-height);
@@ -126,6 +131,8 @@
   .js .menu--menu-level-0 > .menu-item {
     position: relative;
     z-index: 1;
+    display: flex;
+    align-items: center;
   }
 
   /* 1st level sub-menu */

@@ -47,7 +47,7 @@ body {
   --border-none: 0px solid;
   --width-restricted-width-section: 800px;
   --box-shadow: -1px 0 3px 1px rgb(0 0 0 / 33%);
-  --label-font-weight: bold; 
+  --label-font-weight: bold;
 }
 
 
@@ -107,7 +107,7 @@ body {
 
   /* Applying variableas for Sidebar(s) */
   --sidebar-border: var(--border);
-  
+
   /* Applying variables for paragraphs */
   --image-with-caption-bg-color: var(--color-accent-2);
   --image-with-caption-color: var(--color-accent-2-contrast);
@@ -131,7 +131,7 @@ body {
   --media-with-text-link-weight: var(--heading-1-font-weight);
   --featured-teaser-link-weight: var(--heading-1-font-weight);
   --table-header-text-color: var(--color-accent-2-contrast);
-  
+
   /* Applying variables for Form Items */
   --button-bg-color: var(--color-accent);
   --button-text-color: var(--color-accent-contrast);
@@ -140,7 +140,7 @@ body {
   --button-border-color: var(--color-accent-contrast);
   --input-border: 2px solid var(--color-text);
   --input-border-color: var(--color-text);
- 
+
   /* Applying variables for Page Sections */
   --color-page-section-background-color-1: var(--color-accent);
   --color-page-section-background-color-1-text-color: var(--color-accent-contrast);
@@ -151,4 +151,9 @@ body {
   --color-page-section-background-color-3: var(--color-grey-lightest);
   --color-page-section-background-color-3-text-color: var(--color-black);
   --color-page-section-background-color-3-link-color: var(--color-page-section-background-color-3-text-color);
+
+  /* Banner */
+  --banner-content-text-color: var(--color-accent-contrast);
+  --banner-title-font: var(--font-secondary);
+
 }

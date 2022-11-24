@@ -1,4 +1,5 @@
 /* Embedded Events need to pick up teaser styles*/
+.view-localgov-events-listing .views-row,
 .view-lgms-embed-view-events .views-row {
   margin-bottom: var(--vertical-rhythm-spacing);
   padding-bottom: var(--vertical-rhythm-spacing);
@@ -13,13 +14,45 @@
 }
 
 .view-lgms-embed-view-events .views-field-localgov-event-image {
-  flex-basis: 200px;
+  flex-shrink: 0;
+  width: var(--teaser-image-with);
 }
 
 .view-lgms-embed-view-events .views-field-body {
   flex-basis: fit-content;
 }
-
+.view-localgov-events-listing .views-field-localgov-event-date-value-1,
 .view-lgms-embed-view-events .event-date {
   margin-bottom: var(--spacing-small);
+}
+
+.view-localgov-events-listing .views-row p:last-of-type,
+.view-lgms-embed-view-events .views-row p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Override the styles from localgov_events to better match other teasers */
+
+.views-field-localgov-event-image img, .media--view-mode-localgov-event-thumbnail img {
+  float: none;
+  width: initial ;
+  margin-bottom: 0;
+}
+
+.view-localgov-events-listing .views-row {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: var(--teaser-image-with)  auto;
+  gap: 0 var(--spacing) ;
+}
+
+.view-localgov-events-listing .views-row * {
+  grid-column: 2;
+
+}
+
+.view-localgov-events-listing .views-row .views-field-localgov-event-image {
+  order: -1;
+  grid-column: 1;
+  grid-row: 1 / span 4;
 }

@@ -375,7 +375,7 @@ function localgov_microsites_base_preprocess_html(&$variables) {
     // Main menu submenu icon.
     if (!is_null($group->get('lgms_submenu_icon')[0])) {
       $submenu_icon = $group->get('lgms_submenu_icon')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--menu-sub-menu-icon: url(../includes/icons/' . $submenu_icon . '.svg) ;';
+      $variables['attributes']['style'][] = '--menu-sub-menu-icon: url(../../includes/icons/' . $submenu_icon . '.svg) ;';
     }
 
     // Main menu submenu icon rotation.
@@ -387,7 +387,7 @@ function localgov_microsites_base_preprocess_html(&$variables) {
     // Off canvas menu icon.
     if (!is_null($group->get('lgms_off_canvas_menu_icon')[0])) {
       $off_canvas_menu_icon = $group->get('lgms_off_canvas_menu_icon')[0]->getValue()['value'];
-      $variables['attributes']['style'][] = '--off-canvas-menu-icon: url(../includes/icons/' . $off_canvas_menu_icon . '.svg) ;';
+      $variables['attributes']['style'][] = '--off-canvas-menu-icon: url(../../includes/icons/' . $off_canvas_menu_icon . '.svg) ;';
     }
 
     // Off canvas background colour.

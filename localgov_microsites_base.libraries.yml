@@ -111,3 +111,8 @@ menu:
       css/components/menu.css: {}
   js:
     js/menu.js: {}
+
+banner:
+  css:
+    theme:
+      css/components/banner.css: {}

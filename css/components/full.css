@@ -75,3 +75,11 @@ fieldset .field + .field {
 .full .field--name-localgov-news-related > .field__items > .field__item + .field__item {
   margin-top: var(--spacing);
 }
+
+.node--unpublished:before,
+.node--unpublished:after {
+  background: #ffcfd6;
+  content: "Unpublished";
+  display: block;
+  padding: var(--spacing-smaller);
+}

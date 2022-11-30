@@ -1,0 +1,19 @@
+.webform-required {
+  margin-bottom: var(--vertical-rhythm-spacing);
+}
+
+.form-required:after {
+  content: var(--form-item-required-pseudocontent);
+  display: inline-block;
+  padding: 0 var(--spacing-smallest);
+}
+
+.form-item label:not(.form-required):after {
+  content: var(--form-item-optional-pseudocontent);
+}
+
+.webform-confirmation {
+  border: var(--border-large);
+  border-color: var(--color-success);
+  padding: var(--spacing);
+}

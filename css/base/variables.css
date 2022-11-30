@@ -140,6 +140,8 @@ body {
   --button-border-color: var(--color-accent-contrast);
   --input-border: 2px solid var(--color-text);
   --input-border-color: var(--color-text);
+  --form-item-required-pseudocontent: "";
+  --form-item-optional-pseudocontent: " (optional)";
 
   /* Applying variables for Page Sections */
   --color-page-section-background-color-1: var(--color-accent);

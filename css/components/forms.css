@@ -2,13 +2,13 @@
   margin-bottom: var(--vertical-rhythm-spacing);
 }
 
-.form-required:after {
+.webform-submission-form .form-required:after {
   content: var(--form-item-required-pseudocontent);
   display: inline-block;
   padding: 0 var(--spacing-smallest);
 }
 
-.form-item label:not(.form-required):after {
+.webform-submission-form .form-item label:not(.form-required):after {
   content: var(--form-item-optional-pseudocontent);
 }
 

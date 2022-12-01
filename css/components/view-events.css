@@ -42,11 +42,11 @@
 .view-localgov-events-listing .views-row {
   display: grid;
   grid-auto-rows: auto;
-  grid-template-columns: var(--teaser-image-with)  auto;
+  grid-template-columns: min-content 1fr;
   gap: 0 var(--spacing) ;
 }
 
-.view-localgov-events-listing .views-row * {
+.view-localgov-events-listing .views-row > * {
   grid-column: 2;
 
 }
@@ -55,4 +55,8 @@
   order: -1;
   grid-column: 1;
   grid-row: 1 / span 4;
+}
+
+.view-localgov-events-listing .views-row .views-field-localgov-event-image article {
+  width: 200px;
 }

@@ -116,3 +116,8 @@ banner:
   css:
     theme:
       css/components/banner.css: {}
+
+forms:
+  css:
+    theme:
+      css/components/forms.css: {}

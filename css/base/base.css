@@ -53,3 +53,7 @@ a:focus {
 .callout-primary {
   color: var(--color-accent-contrast);
 }
+
+main {
+  padding-bottom: var(--spacing);
+}

@@ -57,6 +57,6 @@
   grid-row: 1 / span 4;
 }
 
-.view-localgov-events-listing .views-row .views-field-localgov-event-image article {
+.view-localgov-events-listing .views-row .views-field-localgov-event-image .field-content  {
   width: 200px;
 }

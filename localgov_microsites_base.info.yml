@@ -42,6 +42,8 @@ libraries-extend:
     - localgov_microsites_base/media-with-text
   localgov_base/banner:
     - localgov_microsites_base/banner
+  localgov_base/quote:
+    - localgov_microsites_base/quote
 
 regions:
   tabs: "Tabs"

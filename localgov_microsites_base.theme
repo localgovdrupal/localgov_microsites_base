@@ -452,12 +452,11 @@ function localgov_microsites_base_preprocess_node(&$variables) {
   }
 
   if ($group instanceof MicrositeGroupInterface) {
-
-    $node_id = $variables['node']->nid[0]->getValue()['value'];
     $front_page = \Drupal::config('domain.config.group_' . $parent_group_id . '.system.site')->get('page.front');
-    strstr($front_page, 'node') ? $front_page_id = explode("/node/", $front_page)[1] : '';
+    $current_path = \Drupal::service('path.current')->getPath();
+    $current_path_alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
 
-    if (isset($front_page_id) && $front_page_id === $node_id && $variables['view_mode'] === 'full') {
+    if (($front_page === $current_path || $front_page === $current_path_alias) && $variables['view_mode'] === 'full') {
       if (isset($group->get('lgms_hide_title')[0])) {
         if ($group->get('lgms_hide_title')[0]->getValue()['value'] === "1") {
           $variables['label']['#markup'] = '<div class="visually-hidden">' . $variables['label']['#markup'] . '</div>';

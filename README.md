@@ -1,6 +1,6 @@
 # LocalGov Microsites Base
 
-A  child theme of LocalGov Base. Please read the README there also. 
+A  sub-theme of LocalGov Base. Please read the README there also. 
 
 ## Customising the appearance through the UI
 
@@ -8,7 +8,7 @@ A _Microsite Admin_ has the permission to set a number of css variables through 
 
 ## Creating a sub-theme of LocalGov Microsites Base
 
-We recommend creating a sub-theme of LocalGov Microsites base in order to create a custom theme for one or more of your microsites. A _Microsite controller_ is able to install and set a new theme for a microsite. 
+We recommend creating a sub-theme of LocalGov Microsites Base in order to create a custom theme for one or more of your microsites. A _Microsite controller_ is able to install and set a new theme for a microsite. 
 
 
 ## Quick overview

@@ -50,3 +50,11 @@ This is where you set your colours, fonts, spacing, etc. Then you "apply" these 
 ```
 
 If you need to add any CSS overides, you can create custom CSS files for these and then a library/libraries to attach them to your components.
+
+
+## Maintainers
+
+This project is currently maintained by: 
+
+ - Mark Conroy https://github.com/markconroy
+ - Maria Young https://github.com/msayoung

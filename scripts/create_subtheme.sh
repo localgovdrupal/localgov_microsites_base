@@ -68,6 +68,8 @@ cp ../../contrib/localgov_microsites_base/scripts/subtheme-items/package.json pa
 echo "+ themes/custom/$LGD_MICRO_SUB_THEME/package.json created"
 cp ../../contrib/localgov_microsites_base/scripts/subtheme-items/.nvmrc .nvmrc
 echo "+ themes/custom/$LGD_MICRO_SUB_THEME/.nvmrc created"
+cp ../../contrib/localgov_microsites_base/scripts/subtheme-items/.stylelintrc.json .stylelintrc.json
+echo "+ themes/custom/$LGD_MICRO_SUB_THEME/.stylelintrc.json created"
 
 perl -i -pe "s/LGD_MICRO_SUB_THEME_NAME/$LGD_MICRO_SUB_THEME_NAME/g" *
 perl -i -pe "s/LGD_MICRO_SUB_THEME/$LGD_MICRO_SUB_THEME/g" *

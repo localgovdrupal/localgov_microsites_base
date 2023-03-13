@@ -4,15 +4,15 @@
 
 .accordion-pane__title button {
   padding: var(--spacing) 0;
+  color: inherit;
   border: var(--border-none);
   font-family: var(--font-heading-3);
   font-size: var(--font-size-h3);
-  color: inherit;
-  line-height: var(--heading-3-line-height);
   font-weight: var(--heading-3-font-weight);
+  line-height: var(--heading-3-line-height);
 }
 
-.paragraph--type--localgov-accordion .field--name-localgov-paragraphs{
+.paragraph--type--localgov-accordion .field--name-localgov-paragraphs {
   border-top: var(--border);
 }
 

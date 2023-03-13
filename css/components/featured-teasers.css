@@ -1,7 +1,7 @@
 .featured-teaser {
-  background-color: var(--featured-teaser-background);
   color: var(--featured-teaser-color);
   border: var(--featured-teaser-border);
+  background-color: var(--featured-teaser-background);
 }
 
 .featured-teaser a {
@@ -11,6 +11,6 @@
   color: inherit;
 }
 
-.featured-teasers__teasers>.field__items>.field__item+.field__item {
+.featured-teasers__teasers > .field__items > .field__item + .field__item {
   margin-top: var(--spacing-larger);
 }

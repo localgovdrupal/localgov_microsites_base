@@ -3,9 +3,9 @@
 }
 
 .webform-submission-form .form-required:after {
-  content: var(--form-item-required-pseudocontent);
   display: inline-block;
   padding: 0 var(--spacing-smallest);
+  content: var(--form-item-required-pseudocontent);
 }
 
 .webform-submission-form .form-item label:not(.form-required):after {
@@ -13,7 +13,7 @@
 }
 
 .webform-confirmation {
+  padding: var(--spacing);
   border: var(--border-large);
   border-color: var(--color-success);
-  padding: var(--spacing);
 }

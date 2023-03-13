@@ -44,12 +44,11 @@ body {
   --color-link: var(--color-text);
   --line-height: 1.3;
   --border-color: var(--color-text);
-  --border-none: 0px solid;
+  --border-none: 0 solid;
   --width-restricted-width-section: 800px;
-  --box-shadow: -1px 0 3px 1px rgb(0 0 0 / 33%);
+  --box-shadow: -1px 0 3px 1px rgb(0 0 0 / 0.33);
   --label-font-weight: bold;
 }
-
 
 /* Applying Variables */
 body {
@@ -66,11 +65,11 @@ body {
   --header-text-color: var(--color-accent-contrast);
   --header-link-color: var(--color-accent-contrast);
   --header-link-hover-color: var(--color-accent-2);
-  --header-search-button-color:  var(--pre-header-background-color);
-  --header-search-button-bg-color:  var(--pre-header-text-color);
-  --header-search-button-color-hover:  var(--color-accent);
-  --header-search-button-bg-color-hover:  var(--color-white);
-  --header-search-input-border:  1px solid var(--pre-header-text-color);
+  --header-search-button-color: var(--pre-header-background-color);
+  --header-search-button-bg-color: var(--pre-header-text-color);
+  --header-search-button-color-hover: var(--color-accent);
+  --header-search-button-bg-color-hover: var(--color-white);
+  --header-search-input-border: 1px solid var(--pre-header-text-color);
   --header-items-alignment: center;
   --site-name-font: var(--font-secondary);
   --menu-utility-font-size: var(--font-size-h4);
@@ -157,5 +156,4 @@ body {
   /* Banner */
   --banner-content-text-color: var(--color-accent-contrast);
   --banner-title-font: var(--font-secondary);
-
 }

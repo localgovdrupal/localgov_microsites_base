@@ -52,11 +52,11 @@
 
 .microsite-header__menu .menu--menu-level-0 {
   display: flex;
-  gap: var(--spacing);
+  align-items: center;
   justify-content: end;
   margin-bottom: 0;
   background-color: var(--header-background-color);
-  align-items: center;
+  gap: var(--spacing);
 }
 
 .microsite-header__menu .menu {
@@ -91,15 +91,14 @@
 }
 
 .microsite-header__name {
-  font-size: var(--site-name-font-size);
   font-family: var(--site-name-font);
+  font-size: var(--site-name-font-size);
   font-weight: var(--site-name-font-weight);
 }
 
 .microsite-header__main {
   align-items: var(--header-items-alignment);
 }
-
 
 .block-group-content-menulgms-main-menu {
   font-size: var(--menu-main-font-size);
@@ -111,7 +110,7 @@
   font-weight: var(--menu-utility-font-weight);
 }
 
-/*Pre Header */
+/* Pre Header */
 
 .microsite-header__pre-header .lgd-region--search label {
   color: var(--pre-header-text-color);

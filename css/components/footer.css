@@ -46,7 +46,7 @@
 .region-microsites-footer h4,
 .region-microsites-footer h5,
 .region-microsites-footer h6 {
-  color: var(--footer-text-color)
+  color: var(--footer-text-color);
 }
 
 .microsite-footer .lgd-row__one-quarter,

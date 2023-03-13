@@ -36,6 +36,7 @@
     flex: 1 1 calc(50% - var(--spacing-larger) * 2);
   }
 }
+
 @media screen and (min-width: 40rem) {
   .layout--threecol-33-34-33 > .layout__region--first,
   .layout--threecol-33-34-33 > .layout__region--second,
@@ -48,7 +49,6 @@
   margin-bottom: var(--spacing-larger);
 }
 
-
 /* Probably move to a directory css file (esp if we add any more CSS for directories */
 .full .field--name-localgov-directory-files {
   margin-bottom: var(--spacing-larger);
@@ -60,7 +60,7 @@
   gap: var(--spacing);
 }
 
-.field__label{
+.field__label {
   font-weight: var(--label-font-weight);
 }
 

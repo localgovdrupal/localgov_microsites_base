@@ -13,19 +13,19 @@ h6 {
 
 h5,
 h6 {
-  font-variant: none;
   text-decoration: none;
+  font-variant: none;
 }
 
 /* Table */
 table caption {
-  text-align: start;
   margin-bottom: var(--spacing-smaller);
+  text-align: start;
 }
 
 table th p {
-  color: var(--table-header-text-color);
   margin: 0;
+  color: var(--table-header-text-color);
 }
 table p {
   margin-bottom: var(--spacing-smaller);
@@ -35,7 +35,17 @@ thead {
   border: var(--border);
 }
 
-input[type="date"], input[type="datetime-local"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], textarea, select, .select2-container--default .select2-search--dropdown .select2-search__field {
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+textarea,
+select,
+.select2-container--default .select2-search--dropdown .select2-search__field {
   border: var(--input-border);
 }
 
@@ -44,10 +54,10 @@ a:focus-visible {
 }
 
 a:focus {
+  color: inherit;
+  outline: -webkit-focus-ring-color auto 2px;
   background-color: transparent;
   box-shadow: none;
-  outline: -webkit-focus-ring-color auto 2px;
-  color: inherit;
 }
 
 .callout-primary {

@@ -688,6 +688,18 @@ function localgov_microsites_base_preprocess_page(&$variables) {
         $variables['microsites']['pre_header']['items'][$pre_header_field] = $group->get($pre_header_field)->view('microsite');
       }
     }
+
+    $front_page = \Drupal::config('domain.config.group_' . $parent_group_id . '.system.site')->get('page.front');
+    $current_path = \Drupal::service('path.current')->getPath();
+    $current_path_alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+
+    if (($front_page === $current_path || $front_page === $current_path_alias)) {
+      if (isset($group->get('lgms_hide_home_breadcrumbs')[0])) {
+        if ($group->get('lgms_hide_home_breadcrumbs')[0]->getValue()['value'] === "1") {
+          // @todo Unset the breadcrumb block here
+        }
+      }
+    }
   }
 }
 

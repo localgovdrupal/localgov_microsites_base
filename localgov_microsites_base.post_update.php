@@ -24,6 +24,6 @@ function localgov_microsites_base_post_update_frontpage_breadcrumb() {
   }
   else {
     // Changed from default. Just set a note.
-    return \t('Breadcrumb block has been update since install. If you would like it not to be shown on front pages change the block visibility to exclude <front>.');
+    return \t('Breadcrumb block has been updated since install. If you would like it not to be shown on front pages change the block visibility to exclude <front>.');
   }
 }

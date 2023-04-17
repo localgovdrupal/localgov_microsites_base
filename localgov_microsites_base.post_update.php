@@ -16,7 +16,7 @@ function localgov_microsites_base_post_update_frontpage_breadcrumb() {
   if (empty($visibility)) {
     $breadcrumb_block->setVisibilityConfig('request_path', [
       'id' => 'request_path',
-      'negate' => true,
+      'negate' => TRUE,
       'pages' => '<front>',
     ]);
     $breadcrumb_block->save();

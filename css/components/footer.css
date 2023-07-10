@@ -49,9 +49,11 @@
   color: var(--footer-text-color);
 }
 
-.microsite-footer .lgd-row__one-quarter,
-.microsite-footer .lgd-row--quarters > * {
-  width: calc(25% - var(--footer-grid-column-spacing));
+@media screen and (min-width: 768px) {
+  .microsite-footer .lgd-row__one-quarter,
+  .microsite-footer .lgd-row--quarters > * {
+    width: calc(25% - var(--footer-grid-column-spacing));
+  }
 }
 
 .microsite-footer .lgd-row > * {

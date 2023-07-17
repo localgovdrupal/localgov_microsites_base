@@ -56,16 +56,16 @@
     gap: 0 var(--spacing);
   }
 
-  .view-localgov-events-listing .views-row > * {
+  .views-row > * {
     grid-column: 2;
   }
 
-  .view-localgov-events-listing .views-row .views-field-localgov-event-image {
+  .views-row .views-field-localgov-event-image {
     grid-row: 1 / span 4;
     grid-column: 1;
   }
 
-  .view-localgov-events-listing .views-row .views-field-localgov-event-image .field-content {
+  .views-row .views-field-localgov-event-image .field-content {
     width: 200px;
   }
 }

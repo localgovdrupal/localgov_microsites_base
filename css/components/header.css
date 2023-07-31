@@ -30,7 +30,15 @@
 
 .microsite-header__main {
   display: flex;
+  flex-direction: column;
   gap: var(--spacing);
+}
+
+@media screen and (min-width: 768px) {
+  .microsite-header__main {
+    flex-direction: row;
+    align-items: var(--header-items-alignment);
+  }
 }
 
 .microsite-header__logo {
@@ -80,8 +88,10 @@
   text-decoration: underline;
 }
 
-.microsite-header__off-canvas {
-  margin-left: auto;
+@media screen and (min-width: 768px) {
+  .microsite-header__off-canvas {
+    margin-left: auto;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -94,10 +104,6 @@
   font-family: var(--site-name-font);
   font-size: var(--site-name-font-size);
   font-weight: var(--site-name-font-weight);
-}
-
-.microsite-header__main {
-  align-items: var(--header-items-alignment);
 }
 
 .block-group-content-menulgms-main-menu {

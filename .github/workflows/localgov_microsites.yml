@@ -6,14 +6,15 @@ name: Test LocalGov Microsites localgovdrupal/localgov_microsites_base drupal-th
 on:
   push:
     branches:
-      - '1.x'
+      - '2.x'
   pull_request:
     branches:
-      - '1.x'
+      - '2.x'
 
 env:
   LOCALGOV_DRUPAL_PROJECT: localgovdrupal/localgov_microsites_base
   LOCALGOV_DRUPAL_PROJECT_PATH: web/themes/contrib/localgov_microsites_base
+  MICROSITES_VERSION: 2.1.x
 
 jobs:
 
@@ -25,11 +26,10 @@ jobs:
       fail-fast: false
       matrix:
         localgov-version:
-          - '1.x'
+          - '2.x'
         drupal-version:
           - '~9.3'
         php-version:
-          - '7.4'
           - '8.1'
 
     steps:
@@ -60,7 +60,7 @@ jobs:
       - name: Get the latest tagged release for branch version
         run: |
           LATEST_RELEASE=$(curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/${GITHUB_REPOSITORY}/git/matching-refs/tags/${GIT_BASE%'.x'} | grep -Po '(?<=refs/tags/)[^"]+' | tail -1)
-          if [ -z $LATEST_RELEASE ]; then LATEST_RELEASE=1.x-dev; fi
+          if [ -z $LATEST_RELEASE ]; then LATEST_RELEASE=2.x-dev; fi
           echo "LATEST_RELEASE=${LATEST_RELEASE}" >> $GITHUB_ENV
 
       - name: Cached workspace
@@ -83,7 +83,7 @@ jobs:
       - name: Create LocalGov Microsites project
         run: |
           composer create-project --stability dev --no-install localgovdrupal/localgov_microsites_project ./html "${{ matrix.localgov-version }}"
-          composer --working-dir=./html require --no-install localgovdrupal/localgov_microsites:${{ matrix.localgov-version }}-dev
+          composer --working-dir=./html require --no-install localgovdrupal/localgov_microsites:${MICROSITES_VERSION}-dev
           composer --working-dir=./html require --no-install drupal/core-recommended:${{ matrix.drupal-version }} drupal/core-composer-scaffold:${{ matrix.drupal-version }} drupal/core-project-message:${{ matrix.drupal-version }} drupal/core-dev:${{ matrix.drupal-version }}
           composer --working-dir=./html install
 
@@ -109,11 +109,10 @@ jobs:
       fail-fast: false
       matrix:
         localgov-version:
-          - '1.x'
+          - '2.x'
         drupal-version:
           - '~9.3'
         php-version:
-          - '7.4'
           - '8.1'
 
     steps:
@@ -145,11 +144,10 @@ jobs:
       fail-fast: false
       matrix:
         localgov-version:
-          - '1.x'
+          - '2.x'
         drupal-version:
           - '~9.3'
         php-version:
-          - '7.4'
           - '8.1'
 
     steps:
@@ -180,11 +178,10 @@ jobs:
       fail-fast: false
       matrix:
         localgov-version:
-          - '1.x'
+          - '2.x'
         drupal-version:
           - '~9.3'
         php-version:
-          - '7.4'
           - '8.1'
 
     steps:

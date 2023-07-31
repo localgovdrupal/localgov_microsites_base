@@ -40,23 +40,32 @@
   margin-bottom: 0;
 }
 
+.view-localgov-events-listing {
+  container-type: inline-size;
+  container-name: events-listing;
+}
+
 .view-localgov-events-listing .views-row {
   display: grid;
-  grid-template-columns: min-content 1fr;
-  grid-auto-rows: auto;
-  gap: 0 var(--spacing);
+  gap: var(--spacing);
 }
 
-.view-localgov-events-listing .views-row > * {
-  grid-column: 2;
-}
+@container events-listing (min-width: 35rem) {
+  .view-localgov-events-listing .views-row {
+    display: grid;
+    gap: 0 var(--spacing);
+  }
 
-.view-localgov-events-listing .views-row .views-field-localgov-event-image {
-  grid-row: 1 / span 4;
-  grid-column: 1;
-  order: -1;
-}
+  .views-row > * {
+    grid-column: 2;
+  }
 
-.view-localgov-events-listing .views-row .views-field-localgov-event-image .field-content {
-  width: 200px;
+  .views-row .views-field-localgov-event-image {
+    grid-row: 1 / span 4;
+    grid-column: 1;
+  }
+
+  .views-row .views-field-localgov-event-image .field-content {
+    width: 200px;
+  }
 }

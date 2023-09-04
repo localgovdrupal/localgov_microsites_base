@@ -52,6 +52,7 @@ function localgov_microsites_base_preprocess_html(&$variables) {
     if (!is_null($group->get('lgms_page_background_colour')[0])) {
       $page_background_colour = $group->get('lgms_page_background_colour')[0]->getValue()['value'];
       $variables['attributes']['style'][] = '--page-background-color: ' . $page_background_colour . ';';
+      $variables['attributes']['style'][] = '--breadcrumbs-background-color: ' . $page_background_colour . ';';
     }
 
     // Styleguide base spacing.

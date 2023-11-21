@@ -50,7 +50,6 @@
         layoutsWithTeaserBlocks.forEach(layout => {
           equaliseHeightsOfTheseBlocks(layoutsWithTeaserBlocks, '.featured-teaser');
         });
-        console.log('handle equalise was called');
       }
 
       handleEqualise();

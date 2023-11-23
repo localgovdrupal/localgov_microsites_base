@@ -53,10 +53,8 @@
       }
 
       handleEqualise();
-
-      window.addEventListener('resize', function(event) {
-        handleEqualise();
-      }, true);
+      
+      window.addEventListener('resize', Drupal.debounce(handleEqualise, 250, true));
     }
   };
 }(Drupal));

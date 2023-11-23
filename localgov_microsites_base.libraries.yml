@@ -23,11 +23,6 @@ header:
     theme:
       css/components/header.css: {}
 
-cookies:
-  css:
-    theme:
-      css/components/cookies.css: {}
-
 equal-heights-blocks:
   js:
     js/equal-heights-blocks.js: {}

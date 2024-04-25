@@ -439,7 +439,6 @@ function localgov_microsites_base_preprocess_node(&$variables) {
   $variables['content_type'] = $variables['node']->getType();
   $variables['teaser'] = $variables['view_mode'] == 'teaser';
 
-
   // Load the group by context. See localgov_microsites_group.module.
   $group = localgov_microsites_group_get_by_context();
 

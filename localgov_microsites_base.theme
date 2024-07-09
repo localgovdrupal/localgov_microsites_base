@@ -441,9 +441,10 @@ function localgov_microsites_base_preprocess_node(&$variables) {
 
   // Load the group by context. See localgov_microsites_group.module.
   $group = localgov_microsites_group_get_by_context();
+  $current_domain = \Drupal::service('domain.negotiator')->getActiveDomain();
 
   if ($group instanceof MicrositeGroupInterface) {
-    $front_page = \Drupal::config('domain.config.group_' . $group->id() . '.system.site')->get('page.front');
+    $front_page = \Drupal::config('domain.config.' . $current_domain->id() . '.system.site')->get('page.front');
     $current_path = \Drupal::service('path.current')->getPath();
     $current_path_alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
 

@@ -8,7 +8,6 @@
       function handleHideNestedSubMenus(toggle) {
           toggle.setAttribute('aria-expanded', 'false');
           toggle.nextElementSibling.style.display = 'none';
-          console.log('working');
       }
 
       function handleSubMenuToggle(subMenuToggle) {
@@ -29,7 +28,7 @@
               });
             }
           });
-          
+
           const expanded = subMenuToggle.getAttribute('aria-expanded');
 
           if (expanded === 'false') {

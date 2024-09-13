@@ -13,12 +13,6 @@
   display: none;
 }
 
-/* Show sub-menus on hover */
-.js .menu > .menu-item--expanded:hover > .menu {
-  display: block !important; /* Needed to override the inline display: none; from JS */
-  width: 100%;
-}
-
 /*
   This is a button element placed inside the li to trigger the sub-menu.
 */

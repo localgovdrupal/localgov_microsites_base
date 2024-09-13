@@ -3,12 +3,10 @@
     attach: function (context, settings) {
       context = context || document;
       const subMenuToggles = Array.from(context.querySelectorAll('.menu__sub-menu-toggle'));
-      const topLevelMenuItems = context.querySelectorAll('.menu-item--level-0');
 
       function handleHideNestedSubMenus(toggle) {
-          toggle.setAttribute('aria-expanded', 'false');
-          toggle.nextElementSibling.style.display = 'none';
-          console.log('working');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.nextElementSibling.style.display = 'none';
       }
 
       function handleSubMenuToggle(subMenuToggle) {
@@ -29,7 +27,7 @@
               });
             }
           });
-          
+
           const expanded = subMenuToggle.getAttribute('aria-expanded');
 
           if (expanded === 'false') {
@@ -43,19 +41,37 @@
           const nestedMenuToggles = subMenu.querySelectorAll('.menu__sub-menu-toggle');
           nestedMenuToggles.forEach(handleHideNestedSubMenus);
 
-          topLevelMenuItems.forEach(item => {
-            item.addEventListener('mouseleave', function() {
-              subMenuToggle.setAttribute('aria-expanded', 'false');
-              subMenuToggle.nextElementSibling.style.display = 'none';
-            })
-          });
-
+          // Listen for escape key.
+          // If escape key is pressed, close the menu.
           window.addEventListener("keyup", function (e) {
             if (e.code === "Escape") {
               subMenuToggle.setAttribute('aria-expanded', 'false');
               subMenuToggle.nextElementSibling.style.display = 'none';
               subMenuToggle.focus();
               nestedMenuToggles.forEach(handleHideNestedSubMenus);
+            }
+          });
+
+          // Listen for click event.
+          // If click is outside of the menu, close the menu.
+          window.addEventListener("click", function (e) {
+            if (!subMenu.contains(e.target) && !subMenuToggle.contains(e.target)) {
+              subMenuToggle.setAttribute('aria-expanded', 'false');
+              subMenuToggle.nextElementSibling.style.display = 'none';
+              nestedMenuToggles.forEach(handleHideNestedSubMenus);
+            }
+          });
+
+          // Listen for tab event.
+          // If focus is outside of the menu, close the menu.
+          window.addEventListener("keydown", function (e) {
+            if (e.code === "Tab") {
+              const focused = document.activeElement;
+              if (!subMenu.contains(focused) && !subMenuToggle.contains(focused)) {
+                subMenuToggle.setAttribute('aria-expanded', 'false');
+                subMenuToggle.nextElementSibling.style.display = 'none';
+                nestedMenuToggles.forEach(handleHideNestedSubMenus);
+              }
             }
           });
 

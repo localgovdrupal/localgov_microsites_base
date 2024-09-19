@@ -16,6 +16,7 @@
 .full .field--name-localgov-directory-standfirst,
 .full .field--name-localgov-page-summary {
   font-size: var(--font-size-h3);
+  padding-bottom: var(--spacing-large);
 }
 
 .full .field--name-body,

@@ -6,6 +6,8 @@
  */
 
 use Drupal\localgov_microsites_group\Entity\MicrositeGroupInterface;
+use Drupal\media\Entity\Media;
+use Drupal\file\Entity\File;
 use Drupal\views\ViewExecutable;
 
 /**
@@ -683,6 +685,22 @@ function localgov_microsites_base_theme_suggestions_page_alter(array &$suggestio
     $suggestions[] = 'page__node__preview__' . $node_preview->bundle();
     if ($view_mode_id = $routeMatch->getParameter('view_mode_id')) {
       $suggestions[] = 'page__node__preview__' . $node_preview->bundle() . '__' . $view_mode_id;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function localgov_microsites_base_preprocess_field(&$variables) {
+  $element = $variables['element'];
+
+  // Load the group by context. See localgov_microsites_group.module.
+  $group = localgov_microsites_group_get_by_context();
+
+  if ($group instanceof MicrositeGroupInterface) {
+    if ($element['#field_name'] === 'lgms_main_logo') {
+      $variables['items'][0]['content']['#item']->alt = t('Home');
     }
   }
 }

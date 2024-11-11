@@ -93,14 +93,18 @@
 %}
 
 <article{{ attributes.addClass(classes).removeAttribute('role') }}>
-  {{ title_prefix }}
-  {{ title_suffix }}
 
   <div class="lgd-container padding-horizontal">
 
     <div class="full__breadcrumbs">
       {{ drupal_entity('block', 'localgov_microsites_base_breadcrumbs') }}
     </div>
+
+    {{ title_prefix }}
+    <h1{{ title_attributes.addClass('full__title') }}>
+      {{ label }}
+    </h1>
+    {{ title_suffix }}
 
     <div class="node__restricted-width-section">
       {% set atc_title = node.title.value %}

@@ -2,7 +2,8 @@
   font-family: "Sporting Grotesque_Regular";
   src: url("Regular/Sporting_Grotesque-Regular_web.eot");
   src:
-    url("Regular/Sporting_Grotesque-Regular_web.eot?#iefix") format("embedded-opentype"),
+    url("Regular/Sporting_Grotesque-Regular_web.eot?#iefix")
+      format("embedded-opentype"),
     url("Regular/Sporting_Grotesque-Regular_web.woff") format("woff"),
     url("Regular/Sporting_Grotesque-Regular_web.woff2") format("woff2"),
     url("Regular/Sporting_Grotesque-Regular_web.ttf") format("truetype"),
@@ -15,7 +16,8 @@
   font-family: "Sporting Grotesque_Bold";
   src: url("Bold/Sporting_Grotesque-Bold_web.eot");
   src:
-    url("Bold/Sporting_Grotesque-Bold_web.eot?#iefix") format("embedded-opentype"),
+    url("Bold/Sporting_Grotesque-Bold_web.eot?#iefix")
+      format("embedded-opentype"),
     url("Bold/Sporting_Grotesque-Bold_web.woff") format("woff"),
     url("Bold/Sporting_Grotesque-Bold_web.woff2") format("woff2"),
     url("Bold/Sporting_Grotesque-Bold_web.ttf") format("truetype"),

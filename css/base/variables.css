@@ -46,7 +46,7 @@ body {
   --border-color: var(--color-text);
   --border-none: 0 solid;
   --width-restricted-width-section: 800px;
-  --box-shadow: -1px 0 3px 1px rgb(0 0 0 / 0.33);
+  --box-shadow: -1px 0 3px 1px rgb(0, 0, 0, /0.33);
   --label-font-weight: bold;
 }
 
@@ -143,14 +143,24 @@ body {
 
   /* Applying variables for Page Sections */
   --color-page-section-background-color-1: var(--color-accent);
-  --color-page-section-background-color-1-text-color: var(--color-accent-contrast);
-  --color-page-section-background-color-1-link-color: var(--color-page-section-background-color-1-link-color);
+  --color-page-section-background-color-1-text-color: var(
+    --color-accent-contrast
+  );
+  --color-page-section-background-color-1-link-color: var(
+    --color-page-section-background-color-1-link-color
+  );
   --color-page-section-background-color-2: var(--color-accent-2);
-  --color-page-section-background-color-2-text-color: var(--color-accent-2-contrast);
-  --color-page-section-background-color-2-link-color: var(--color-page-section-background-color-2-text-color);
+  --color-page-section-background-color-2-text-color: var(
+    --color-accent-2-contrast
+  );
+  --color-page-section-background-color-2-link-color: var(
+    --color-page-section-background-color-2-text-color
+  );
   --color-page-section-background-color-3: var(--color-grey-lightest);
   --color-page-section-background-color-3-text-color: var(--color-black);
-  --color-page-section-background-color-3-link-color: var(--color-page-section-background-color-3-text-color);
+  --color-page-section-background-color-3-link-color: var(
+    --color-page-section-background-color-3-text-color
+  );
 
   /* Banner */
   --banner-content-text-color: var(--color-accent-contrast);

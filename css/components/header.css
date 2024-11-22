@@ -51,6 +51,11 @@
   max-width: var(--header-logo-width);
 }
 
+.microsite-header__logo > a:focus-visible {
+  outline: 2px dashed var(--header-logo-focus-outline-color);
+  outline-offset: 2px;
+}
+
 .microsite-header__menus {
   display: none;
 }

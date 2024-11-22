@@ -10,11 +10,19 @@
 }
 
 .lgd-page-section--bg-colour-1 .call-out-box--has-image .call-out-box__content {
-  background: linear-gradient(to right, var(--color-page-section-background-color-1-text-color) 75%, transparent);
+  background: linear-gradient(
+    to right,
+    var(--color-page-section-background-color-1-text-color) 75%,
+    transparent
+  );
 }
 
 .lgd-page-section--bg-colour-2 .call-out-box--has-image .call-out-box__content {
-  background: linear-gradient(to right, var(--color-page-section-background-color-2-text-color) 75%, transparent);
+  background: linear-gradient(
+    to right,
+    var(--color-page-section-background-color-2-text-color) 75%,
+    transparent
+  );
 }
 
 .lgd-page-section--bg-colour-1 .call-out-box__content h2,

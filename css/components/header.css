@@ -30,7 +30,10 @@
   color: var(--header-link-color);
 }
 
-.region-microsites-header a:focus,
+.region-microsites-header a:focus {
+  color: var(--header-link-focus-color);
+}
+
 .region-microsites-header a:hover {
   color: var(--header-link-hover-color);
 }

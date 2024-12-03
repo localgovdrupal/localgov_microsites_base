@@ -122,7 +122,7 @@
   }
 
   .js .menu .menu--sub-menu-level-1 {
-    left: calc(var(--menu-item-padding)* -1);
+    left: calc(var(--menu-item-padding) * -1);
   }
 
   /* We want to make sure any sub-items on the last menu item do not overflow the screen. */

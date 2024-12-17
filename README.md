@@ -1,14 +1,14 @@
 # LocalGov Microsites Base
 
-A  sub-theme of LocalGov Base. Please read the README there also. 
+A  sub-theme of LocalGov Base. Please read the README there also.
 
 ## Customising the appearance through the UI
 
-A _Microsite Admin_ has the permission to set a number of css variables through the UI. These override the default variables set in /css/variables.css 
+A _Microsite Admin_ has the permission to set a number of css variables through the UI. These override the default variables set in /css/variables.css
 
 ## Creating a sub-theme of LocalGov Microsites Base
 
-We recommend creating a sub-theme of LocalGov Microsites Base in order to create a custom theme for one or more of your microsites. A _Microsite controller_ is able to install and set a new theme for a microsite. 
+We recommend creating a sub-theme of LocalGov Microsites Base in order to create a custom theme for one or more of your microsites. A _Microsite controller_ is able to install and set a new theme for a microsite.
 
 
 ## Quick overview
@@ -54,7 +54,7 @@ If you need to add any CSS overides, you can create custom CSS files for these a
 
 ## Maintainers
 
-This project is currently maintained by: 
+This project is currently maintained by:
 
  - Mark Conroy https://github.com/markconroy
  - Maria Young https://github.com/msayoung

@@ -61,6 +61,26 @@
   }
 }
 
+/*
+  Let me try explain this one.
+  Our default `justify-content` is `space-between` with the menus having
+  a `margin-left: auto`, meaning they float to the right, while the rest of the
+  items stay at the left.
+
+  However, if we have no menu items, but WE DO have a name and slogan, we want
+  them to stay at the left, so we change the `justify-content` to `start`.
+
+  So, the CSS here says:
+    1. If there is a name/slogan div,
+    2. And there is no menu div,
+    3. Then change the `justify-content` to `start`.
+*/
+.microsite-header__main:has(.microsite-header__name-slogan):not(
+    :has(.microsite-header__menus)
+  ) {
+  justify-content: start;
+}
+
 .microsite-header__menu .menu--menu-level-0 {
   display: flex;
   align-items: center;

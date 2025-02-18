@@ -30,7 +30,10 @@
   color: var(--header-link-color);
 }
 
-.region-microsites-header a:focus,
+.region-microsites-header a:focus {
+  color: var(--header-link-focus-color);
+}
+
 .region-microsites-header a:hover {
   color: var(--header-link-hover-color);
 }
@@ -46,6 +49,11 @@
 
 .microsite-header__logo {
   max-width: var(--header-logo-width);
+}
+
+.microsite-header__logo > a:focus-visible {
+  outline: 2px dashed var(--header-logo-focus-outline-color);
+  outline-offset: 2px;
 }
 
 .microsite-header__menus {

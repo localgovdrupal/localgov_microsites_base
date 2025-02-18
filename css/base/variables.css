@@ -65,18 +65,20 @@ body {
   --header-text-color: var(--color-accent-contrast);
   --header-link-color: var(--color-accent-contrast);
   --header-link-hover-color: var(--color-accent-2);
+  --header-link-focus-color: var(--color-black);
   --header-search-button-color: var(--pre-header-background-color);
   --header-search-button-bg-color: var(--pre-header-text-color);
   --header-search-button-color-hover: var(--color-accent);
   --header-search-button-bg-color-hover: var(--color-white);
   --header-search-input-border: 1px solid var(--pre-header-text-color);
+  --header-logo-focus-outline-color: var(--color-white);
   --site-name-font: var(--font-secondary);
+  --minimum-clickable-icon-size: 44px; /* Setting default to 44px as per https://www.w3.org/WAI/WCAG21/Understanding/target-size.html */
   --menu-utility-font-size: var(--font-size-h4);
   --menu-utility-font-weight: normal;
   --menu-sub-menu-min-width: 200px;
   --menu-main-font-size: var(--font-size-h3);
   --menu-main-font-weight: var(--heading-font-weight);
-  --minimum-clickable-icon-size: 44px; /* Setting default to 44px as per https://www.w3.org/WAI/WCAG21/Understanding/target-size.html */
   --menu-sub-menu-icon: url(../../includes/icons/chevron-right.svg);
   --menu-sub-menu-icon-size: 1.2rem;
   --menu-sub-menu-toggle-width: var(--minimum-clickable-icon-size);

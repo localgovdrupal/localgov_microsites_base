@@ -101,7 +101,7 @@ body {
   --footer-background-color: var(--color-accent);
   --footer-text-color: var(--color-accent-contrast);
   --footer-link-color: var(--color-accent-contrast);
-  --footer-link-hover-color: var(--color-accent-2);
+  --footer-link-hover-color: var(--color-accent);
   --footer-grid-column-spacing: var(--spacing-larger);
   --footer-grid-column-justification: space-between;
 

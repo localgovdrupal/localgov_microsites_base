@@ -26,5 +26,11 @@
 }
 
 .accordion-pane__title button {
-  background-color: var(--color-white);
+  background: url(../../../localgov_base/templates/includes/icons/chevron-down.svg)
+  100% 50% no-repeat;
+  background-size: 1.5rem;
+}
+
+.accordion-pane__title button[aria-expanded="true"] {
+  background-image: url(../../../localgov_base/templates/includes/icons/chevron-up.svg);
 }

@@ -27,7 +27,7 @@
 
 .accordion-pane__title button {
   background: url(../../../localgov_base/templates/includes/icons/chevron-down.svg)
-  100% 50% no-repeat;
+    100% 50% no-repeat;
   background-size: 1.5rem;
 }
 

@@ -86,7 +86,7 @@
   padding: var(--spacing-smaller);
 }
 
-.microsite-header__off-canvas-toggle:before {
+.microsite-header__off-canvas-toggle::before {
   display: inline-flex;
   width: var(--menu-sub-menu-icon-size);
   height: var(--menu-sub-menu-icon-size);

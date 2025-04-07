@@ -15,6 +15,7 @@
 
 .full .field--name-localgov-directory-standfirst,
 .full .field--name-localgov-page-summary {
+  padding-bottom: var(--spacing-large);
   font-size: var(--font-size-h3);
 }
 
@@ -72,6 +73,10 @@ fieldset .field + .field {
   margin-top: var(--spacing-largest);
 }
 
-.full .field--name-localgov-news-related > .field__items > .field__item + .field__item {
+.full
+  .field--name-localgov-news-related
+  > .field__items
+  > .field__item
+  + .field__item {
   margin-top: var(--spacing);
 }

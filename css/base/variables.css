@@ -93,7 +93,8 @@ body {
   --off-canvas-background-color: var(--header-background-color);
   --off-canvas-text-color: var(--header-text-color);
   --off-canvas-link-color: var(--header-link-color);
-  --off-canvas-link-hover-color: var(--color-accent);
+  --off-canvas-link-focus-color: var(--color-accent);
+  --off-canvas-link-hover-color: var(--header-link-hover-color);
   --off-canvas-border-color: var(--color-white);
   --off-canvas-menu-icon: url(../../includes/icons/menu.svg);
 

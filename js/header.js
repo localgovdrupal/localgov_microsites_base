@@ -14,31 +14,13 @@
           'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
         );
 
-        function toggleStates() {
-          toggleState = offCanvasToggle.getAttribute("aria-expanded");
-          offCanvasState = offCanvas.getAttribute("data-expanded");
-        }
-
-        function handleOffCanvas() {
-          toggleStates();
-          if (toggleState === "true" || offCanvasState === "true") {
-            handleCloseOffCanvas();
-          } else {
-            handleOpenOffCanvas();
-          }
-        }
-
         function handleOpenOffCanvas() {
-          toggleStates();
-          offCanvasToggle.setAttribute("aria-expanded", "true");
           offCanvas.setAttribute("data-expanded", "true");
           focusable[0].focus();
         }
 
         function handleCloseOffCanvas() {
-          toggleStates();
           offCanvasToggle.focus();
-          offCanvasToggle.setAttribute("aria-expanded", "false");
           offCanvas.setAttribute("data-expanded", "false");
         }
 
@@ -70,7 +52,7 @@
         if (!offCanvasToggle) {
           return;
         } else {
-          offCanvasToggle.addEventListener("click", handleOffCanvas);
+          offCanvasToggle.addEventListener("click", handleOpenOffCanvas);
           window.addEventListener("keyup", function (e) {
             if (e.code === "Escape") {
               handleCloseOffCanvas();

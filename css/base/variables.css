@@ -167,4 +167,8 @@ body {
   /* Banner */
   --banner-content-text-color: var(--color-accent-contrast);
   --banner-title-font: var(--font-secondary);
+
+    /* Accordion */
+    --accordion-icon-closed: "";
+    --accordion-icon-opened: "";
 }

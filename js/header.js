@@ -53,12 +53,21 @@
           return;
         } else {
           offCanvasToggle.addEventListener("click", handleOpenOffCanvas);
+          trapFocusInOffCanvasArea(offCanvas);
           window.addEventListener("keyup", function (e) {
             if (e.code === "Escape") {
               handleCloseOffCanvas();
             }
           });
-          trapFocusInOffCanvasArea(offCanvas);
+          document.addEventListener("click", function (e) {
+            if (
+              offCanvasToggle &&
+              !offCanvasToggle.contains(e.target) &&
+              !offCanvas.contains(e.target)
+            ) {
+              handleCloseOffCanvas();
+            }
+          });
         }
         offCanvasClose.addEventListener("click", () => {
           handleCloseOffCanvas();

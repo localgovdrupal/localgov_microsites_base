@@ -7,6 +7,6 @@
     "require": {
         "drupal/twig_tweak": "^3.2",
         "localgovdrupal/localgov_base": "^1.7.0",
-        "localgovdrupal/localgov_microsites_group": "^4.0.0-alpha3"
+        "localgovdrupal/localgov_microsites_group": "dev-feature/4.x/496-drupal-11 as 4.1.0"
     }
 }

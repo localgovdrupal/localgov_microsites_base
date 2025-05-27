@@ -41,7 +41,8 @@
   color: var(--off-canvas-link-color);
 }
 
-.off-canvas a:focus {
+.off-canvas a:focus,
+.off-canvas a:focus:hover {
   color: var(--off-canvas-link-focus-color);
 }
 

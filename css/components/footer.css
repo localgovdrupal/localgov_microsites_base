@@ -8,7 +8,8 @@
   color: var(--footer-link-color);
 }
 
-.region-microsites-footer a:focus {
+.region-microsites-footer a:focus,
+.region-microsites-footer a:focus:hover {
   color: var(--footer-link-focus-color);
 }
 

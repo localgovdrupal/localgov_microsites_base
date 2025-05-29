@@ -49,18 +49,6 @@
   color: var(--footer-text-color);
 }
 
-@media screen and (min-width: 768px) {
-  .microsite-footer .lgd-row__one-quarter,
-  .microsite-footer .lgd-row--quarters > * {
-    width: calc(25% - var(--footer-grid-column-spacing));
-  }
-}
-
-.microsite-footer .lgd-row > * {
-  margin-right: calc(var(--footer-grid-column-spacing) / 2);
-  margin-left: calc(var(--footer-grid-column-spacing) / 2);
-}
-
 .region-microsites-footer .lgd-region__inner > .lgd-row:first-of-type {
   justify-content: var(--footer-grid-column-justification);
 }

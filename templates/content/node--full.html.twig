@@ -124,10 +124,10 @@
     </div>
   {% endif %}
 
-  <div class="lgd-container padding-horizontal">
-    {% if content.group_page_bottom %}
+  {% if content.group_page_bottom %}
+    <div class="lgd-container padding-horizontal">
       {{ content.group_page_bottom }}
-    {% endif %}
-  </div>
+    </div>
+  {% endif %}
 
 </article>

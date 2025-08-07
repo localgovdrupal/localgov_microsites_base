@@ -63,8 +63,10 @@
             if (
               offCanvasToggle &&
               !offCanvasToggle.contains(e.target) &&
-              !offCanvas.contains(e.target)
+              !offCanvas.contains(e.target) &&
+              offCanvas.getAttribute("data-expanded") === "true"
             ) {
+              console.log("click outside off-canvas");
               handleCloseOffCanvas();
             }
           });

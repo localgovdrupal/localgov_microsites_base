@@ -63,7 +63,8 @@
             if (
               offCanvasToggle &&
               !offCanvasToggle.contains(e.target) &&
-              !offCanvas.contains(e.target)
+              !offCanvas.contains(e.target) &&
+              offCanvas.getAttribute('data-expanded') === 'true'
             ) {
               handleCloseOffCanvas();
             }

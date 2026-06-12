@@ -16,12 +16,14 @@
 
         function handleOpenOffCanvas() {
           offCanvas.setAttribute("data-expanded", "true");
+          offCanvasToggle.setAttribute("aria-expanded", "true");
           focusable[0].focus();
         }
 
         function handleCloseOffCanvas() {
           offCanvasToggle.focus();
           offCanvas.setAttribute("data-expanded", "false");
+          offCanvasToggle.setAttribute("aria-expanded", "false");
         }
 
         function trapFocusInOffCanvasArea(element) {

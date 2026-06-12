@@ -65,6 +65,6 @@
   margin-left: calc(var(--footer-grid-column-spacing) / 2);
 }
 
-.region-microsites-footer .lgd-region__inner > .lgd-row:first-of-type {
+.region-microsites-footer .lgd-region__inner > .lgd-row:first-of-type:has(.lgd-row__one-quarter) {
   justify-content: var(--footer-grid-column-justification);
 }
